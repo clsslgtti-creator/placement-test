@@ -249,7 +249,9 @@ async function endTest(isTimeout = false) {
     const testMinutes = Math.floor(testTimeSpent / 60000);
     const testSeconds = Math.floor((testTimeSpent % 60000) / 1000);
     const timeDisplay = `${testMinutes.toString().padStart(2, "0")}:${testSeconds.toString().padStart(2, "0")}`;
-    const completionTime = new Date().toLocaleString();
+    const completionDate = new Date();
+    const completionTime = completionDate.toLocaleString();
+    const completionIso = completionDate.toISOString();
     
     // Create completion message
     const completionDiv = document.createElement('div');
@@ -278,8 +280,12 @@ async function endTest(isTimeout = false) {
         // Set completion status
         scorm.set("cmi.core.lesson_status", "completed");
         
-        // Clear suspend data since test is complete
-        scorm.set("cmi.suspend_data", "");
+        // Persist completion metadata
+        const completionData = {
+            completedAt: completionIso,
+            timeSpent: timeDisplay
+        };
+        scorm.set("cmi.suspend_data", JSON.stringify(completionData));
         
         scorm.save();
     }
@@ -294,6 +300,30 @@ async function endTest(isTimeout = false) {
 // Show completed state
 function showCompletedState() {
     const score = scorm.get("cmi.core.score.raw");
+    const suspendData = scorm.get("cmi.suspend_data");
+    let completedAtDisplay = null;
+    let timeSpentDisplay = null;
+
+    if (suspendData) {
+        try {
+            const parsedData = JSON.parse(suspendData);
+            if (parsedData.completedAt) {
+                const parsedDate = new Date(parsedData.completedAt);
+                if (!Number.isNaN(parsedDate.getTime())) {
+                    completedAtDisplay = parsedDate.toLocaleString();
+                }
+            }
+            if (parsedData.timeSpent) {
+                timeSpentDisplay = parsedData.timeSpent;
+            }
+        } catch (error) {
+            console.error("Error parsing completion data:", error);
+        }
+    }
+
+    const completedAtText = completedAtDisplay || "Unavailable";
+    const timeSpentText = timeSpentDisplay || "Unavailable";
+
     document.body.innerHTML = `
         <div class="container">
             <div class="completion-message">
@@ -301,6 +331,8 @@ function showCompletedState() {
                 <h2>Test Already Completed</h2>
                 <p class="completion-info">Grammar Test was completed in a previous session</p>
                 <div class="score-display">${score}/50</div>
+                <p class="time-spent">Time Spent: ${timeSpentText}</p>
+                <p class="completion-time">Completed at: ${completedAtText}</p>
             </div>
         </div>
     `;
