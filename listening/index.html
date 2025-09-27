@@ -1,44 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Listening Placement Test</title>
-    <link rel="stylesheet" href="../assets/css/shared.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/shared.css" />
+    <link rel="stylesheet" href="../assets/css/notifications.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
 </head>
 <body>
     <div class="container">
         <header>
             <h1>PLACEMENT TEST - LISTENING</h1>
-            <p class="instructions">This section evaluates your ability to understand spoken language.</p>
+            <p class="instructions">
+                Select your training programme to begin. Each recording will play automatically twice.
+            </p>
         </header>
 
-        <div class="placeholder-container">
-            <div class="placeholder-icon">
-                <i class="fas fa-headphones"></i>
-            </div>
-            <h2 class="placeholder-title">Listening Test Coming Soon</h2>
-            <p class="placeholder-message">
-                The listening test is currently under development. When completed, this section will include 
-                audio clips and comprehension questions to evaluate your listening skills.
-            </p>
-            <p class="placeholder-message">
-                Features being developed:
-            </p>
-            <ul style="text-align: left; max-width: 400px; margin: 0 auto; margin-bottom: 30px;">
-                <li>Audio clips with native speakers</li>
-                <li>Comprehension questions</li>
-                <li>Varying difficulty levels</li>
-                <li>Different accents and speech patterns</li>
-                <li>Note-taking exercises</li>
-            </ul>
-            <a href="../index.html" class="btn back-button">Back to Main Menu</a>
+        <div class="timer hidden" id="timer">
+            <i class="fas fa-clock"></i>
+            Time Remaining: <span id="time-remaining">20:00</span>
+        </div>
+        <div class="timer-container hidden" id="timer-container">
+            <div class="timer-bar" id="timer-bar"></div>
+        </div>
+
+        <div id="program-banner" class="program-banner hidden">
+            Training Programme: <span id="selected-program-name"></span>
+        </div>
+
+        <div class="listening-content hidden" id="listening-content">
+            <section class="listening-section" id="listening-general">
+                <h2>Listening 1 &mdash; General</h2>
+                <p class="section-instruction">
+                    You must read the questions carefully before listening to the recording. The recording will be played twice.
+                </p>
+                <div class="audio-panel" data-section="general">
+                    <button class="btn btn-secondary audio-play-button" data-section="general">
+                        <i class="fas fa-play"></i>
+                        <span class="label">Play Recording</span>
+                    </button>
+                    <span class="audio-status" id="general-audio-status">Plays remaining: 2</span>
+                </div>
+                <div class="questions" id="general-questions"></div>
+            </section>
+
+            <section class="listening-section" id="listening-specific">
+                <h2>Listening 2 &mdash; Programme Specific</h2>
+                <p class="section-instruction">
+                    You must read the questions carefully before listening to the recording. The recording will be played twice.
+                </p>
+                <div class="audio-panel" data-section="specific">
+                    <button class="btn btn-secondary audio-play-button" data-section="specific">
+                        <i class="fas fa-play"></i>
+                        <span class="label">Play Recording</span>
+                    </button>
+                    <span class="audio-status" id="specific-audio-status">Plays remaining: 2</span>
+                </div>
+                <div class="questions" id="specific-questions"></div>
+            </section>
+        </div>
+
+        <div class="actions text-center hidden" id="actions">
+            <button id="submit-test" class="btn btn-primary">Complete Test</button>
         </div>
     </div>
 
-    <!-- Include SCORM API wrapper and shared JavaScript -->
+    <div id="program-selection" class="program-overlay">
+        <div class="program-modal">
+            <h2>Select Your Training Programme</h2>
+            <p>The listening test contains a general section and a programme specific section. Choose your programme to proceed.</p>
+            <label for="programme-select" class="sr-only">Training Programme</label>
+            <select id="programme-select" class="programme-select">
+                <option value="">&mdash; Select Programme &mdash;</option>
+            </select>
+            <button id="start-test" class="btn btn-primary start-btn">Start Listening Test</button>
+        </div>
+    </div>
+
     <script src="../assets/js/pipwerks-scorm.js"></script>
     <script src="../assets/js/common.js"></script>
     <script src="script.js"></script>
