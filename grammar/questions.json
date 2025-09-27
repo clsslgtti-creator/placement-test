@@ -1,0 +1,1234 @@
+{
+  "question_set_1": [
+    {
+      "question": "_____  name is Sagara.",
+      "options": ["Me", "I", "Mine", "My", "He"],
+      "answer": "My",
+      "id": "1_1"
+    },
+    {
+      "question": "They _____  from Jaffna.",
+      "options": ["is", "are", "was", "isn’t", "do"],
+      "answer": "are",
+      "id": "1_2"
+    },
+    {
+      "question": "_____  are you from?",
+      "options": ["What", "Why", "Who", "How", "Where"],
+      "answer": "Where",
+      "id": "1_3"
+    },
+    {
+      "question": "What do you do? I’m _____  student at CGTTI.",
+      "options": ["the", "a", "an", "new", "still"],
+      "answer": "a",
+      "id": "1_4"
+    },
+    {
+      "question": "Asoka _____  at seven o’clock.",
+      "options": ["goes up", "gets", "gets up", "get up", "up"],
+      "answer": "gets up",
+      "id": "1_5"
+    },
+    {
+      "question": "_____  you like this Samsung mobile model?",
+      "options": ["Are", "Have", "Do", "How", "Why"],
+      "answer": "Do",
+      "id": "1_6"
+    },
+    {
+      "question": "We _____  live in a flat.",
+      "options": ["don’t", "haven’t", "hasn’t", "doesn’t", "are"],
+      "answer": "don’t",
+      "id": "1_7"
+    },
+    {
+      "question": "Wednesday, Thursday, Friday, _____ ",
+      "options": ["Saturday", "Tuesday", "another day", "Monday", "day"],
+      "answer": "Saturday",
+      "id": "1_8"
+    },
+    {
+      "question": "_____  he play football?",
+      "options": ["Where", "Don’t", "Who", "Does", "Do"],
+      "answer": "Does",
+      "id": "1_9"
+    },
+    {
+      "question": "Have you _____  a car?",
+      "options": ["any", "have", "got", "buy", "new"],
+      "answer": "got",
+      "id": "1_10"
+    },
+    {
+      "question": "We don’t have _____  milk powder.",
+      "options": ["a", "any", "got", "one", "lot"],
+      "answer": "any",
+      "id": "1_11"
+    },
+    {
+      "question": "_____  some money here.",
+      "options": ["There’re", "There", "There are", "There’s", "Are"],
+      "answer": "There’s",
+      "id": "1_12"
+    },
+    {
+      "question": "We _____  got a garage.",
+      "options": ["do", "haven’t", "hasn’t", "don’t", "not"],
+      "answer": "haven’t",
+      "id": "1_13"
+    },
+    {
+      "question": "Those shoes are very _____ .",
+      "options": ["cheaply", "expensive", "a lot", "cost", "newer"],
+      "answer": "expensive",
+      "id": "1_14"
+    },
+    {
+      "question": "Have you got a pen? Yes, I _____ .",
+      "options": ["am", "don’t", "have", "got", "does"],
+      "answer": "have",
+      "id": "1_15"
+    },
+    {
+      "question": "It is a small, _____  apartment in a rural village.",
+      "options": ["traffic", "quite", "quiet", "biggest", "noisily"],
+      "answer": "quiet",
+      "id": "1_16"
+    },
+    {
+      "question": "Both brothers _____  at home yesterday.",
+      "options": ["not", "was", "aren’t", "are", "were"],
+      "answer": "were",
+      "id": "1_17"
+    },
+    {
+      "question": "I _____  in Dickoya  for a long time.",
+      "options": ["lived", "living", "lives", "been", "being"],
+      "answer": "lived",
+      "id": "1_18"
+    },
+    {
+      "question": "He didn’t _____  glasses.",
+      "options": ["put", "wear", "took", "had", "bought"],
+      "answer": "wear",
+      "id": "1_19"
+    },
+    {
+      "question": "The restaurant was _____  busy.",
+      "options": ["much", "very", "a lot", "many", "little"],
+      "answer": "very",
+      "id": "1_20"
+    },
+    {
+      "question": "Do you like the red _____ ?",
+      "options": ["it", "that", "one", "once", "visit"],
+      "answer": "one",
+      "id": "1_21"
+    },
+    {
+      "question": "He _____  to Mannar on business.",
+      "options": ["go", "goed", "went", "come", "often"],
+      "answer": "went",
+      "id": "1_22"
+    },
+    {
+      "question": "Yesterday was the _____  of April.",
+      "options": ["third", "three", "Monday", "day three", "day"],
+      "answer": "third",
+      "id": "1_23"
+    },
+    {
+      "question": "The rugby player has a _____  body.",
+      "options": ["longy", "strength", "short, sturdy", "plumpy", "shortly"],
+      "answer": "short, sturdy",
+      "id": "1_24"
+    },
+    {
+      "question": "We _____  get up late at the weekend.",
+      "options": ["ever", "use", "usual", "usually", "like"],
+      "answer": "usually",
+      "id": "1_25"
+    },
+    {
+      "question": "I _____  on a park bench at the moment.",
+      "options": ["sitting", "’m sitting", "sit", "sat", "seated"],
+      "answer": "’m sitting",
+      "id": "1_26"
+    },
+    {
+      "question": "My brother is older _____  me.",
+      "options": ["then", "that", "to", "by", "than"],
+      "answer": "than",
+      "id": "1_27"
+    },
+    {
+      "question": "Their house is _____  biggest on the road.",
+      "options": ["not", "this", "the", "than", "a"],
+      "answer": "the",
+      "id": "1_28"
+    },
+    {
+      "question": "It’s the _____  interesting of his novels.",
+      "options": ["more", "much", "most", "a lot", "lot"],
+      "answer": "most",
+      "id": "1_29"
+    },
+    {
+      "question": "The phone’s ringing:  _____  answer it.",
+      "options": ["I’ll", "I", "will", "won’t", "must"],
+      "answer": "I’ll",
+      "id": "1_30"
+    },
+    {
+      "question": "Do you _____  Oriental or Carnatic music?",
+      "options": ["rather", "prefer", "more", "won’t", "liked"],
+      "answer": "prefer",
+      "id": "1_31"
+    },
+    {
+      "question": "He has _____  breakfast.",
+      "options": ["ate", "eaten", "eat", "eats", "forgot"],
+      "answer": "eaten",
+      "id": "1_32"
+    },
+    {
+      "question": "The _____  have been to that mall .",
+      "options": ["childs", "child", "little child", "childrens", "children"],
+      "answer": "children",
+      "id": "1_33"
+    },
+    {
+      "question": "I’ve never met an Indian film star _____ .",
+      "options": ["before", "already", "after", "once", "ever"],
+      "answer": "before",
+      "id": "1_34"
+    },
+    {
+      "question": "_____  releases tension and relaxes the muscles.",
+      "options": ["Laughing", "To laugh", "Laugh", "Laughed", "By laugh"],
+      "answer": "Laughing",
+      "id": "1_35"
+    },
+    {
+      "question": "Have you _____  been on a Roller coaster ride?",
+      "options": ["always", "ever", "soon", "like", "gone"],
+      "answer": "ever",
+      "id": "1_36"
+    },
+    {
+      "question": "I can’t _____  a musical instrument.",
+      "options": ["playing", "plays", "to play", "played", "play"],
+      "answer": "play",
+      "id": "1_37"
+    },
+    {
+      "question": "They _____  any transport to attend the wedding.",
+      "options": ["haven’t to", "don’t have", "don’t have to", "has", "has to"],
+      "answer": "don’t have",
+      "id": "1_38"
+    },
+    {
+      "question": "_____  much is that suitcase?",
+      "options": ["What", "When", "How", "Very", "When"],
+      "answer": "How",
+      "id": "1_39"
+    },
+    {
+      "question": "Are you _____  for one subject or two?",
+      "options": ["sits", "sat", "seated", "sitting", "to sat"],
+      "answer": "sitting",
+      "id": "1_40"
+    },
+    {
+      "question": "Malini _____  to Kandy at the weekend.",
+      "options": ["will", "going", "is going", "will be", "might"],
+      "answer": "will",
+      "id": "1_41"
+    },
+    {
+      "question": "My parents don’t _____  going to the beach.",
+      "options": ["not like", "want", "want to", "enjoy", "not enjoy"],
+      "answer": "enjoy",
+      "id": "1_42"
+    },
+    {
+      "question": "My  family _____  like to climb Adam’s Peak one day.",
+      "options": ["would", "were", "will", "does", "are"],
+      "answer": "would",
+      "id": "1_43"
+    },
+    {
+      "question": "They _____  ever go out to eat.",
+      "options": ["might", "hard", "always", "harder", "hardly"],
+      "answer": "hardly",
+      "id": "1_44"
+    },
+    {
+      "question": "The teachers won’t punish us, _____  they?",
+      "options": ["wouldn’t", "come", "will", "won’t", "do"],
+      "answer": "will",
+      "id": "1_45"
+    },
+    {
+      "question": "He _____  know how to replace a flat tyre.",
+      "options": ["doesn’t", "hasn’t", "don’t", "haven’t", "can"],
+      "answer": "doesn’t",
+      "id": "1_46"
+    },
+    {
+      "question": "My mother  _____  to my toddler’s chatter all  morning.",
+      "options": ["listening", "hear", "heard", "listened", "listen"],
+      "answer": "listened",
+      "id": "1_47"
+    },
+    {
+      "question": "My friend _____  come to the party with me.",
+      "options": ["doesn’t", "not", "didn’t", "want", "like"],
+      "answer": "didn’t",
+      "id": "1_48"
+    },
+    {
+      "question": "She liked the accommodation. _____  did I.",
+      "options": ["Either", "So", "Neither", "Nor", "Too"],
+      "answer": "So",
+      "id": "1_49"
+    },
+    {
+      "question": "My friends _____  up at eight o’clock tonight.",
+      "options": ["meet", "are meet", "‘re meet", "‘re meeting", "meets"],
+      "answer": "‘re meeting",
+      "id": "1_50"
+    }
+  ],
+  "question_set_2": [
+    {
+      "question": "_____  village is Moratuwa.",
+      "options": ["Me", "I", "Mine", "My", "He"],
+      "answer": "My",
+      "id": "2_1"
+    },
+    {
+      "question": "Neil and Kamala  _____  from Kandy.",
+      "options": ["is", "are", "was", "isn’t", "do"],
+      "answer": "are",
+      "id": "2_2"
+    },
+    {
+      "question": "_____  are you coping after your illness?",
+      "options": ["What", "Why", "Who", "How", "Where"],
+      "answer": "How",
+      "id": "2_3"
+    },
+    {
+      "question": "What do you do? I’m _____  lecturer at a technical institute.",
+      "options": ["the", "still", "an", "new", "a"],
+      "answer": "a",
+      "id": "2_4"
+    },
+    {
+      "question": "Seetha _____  at nine o’clock.",
+      "options": ["goes up", "gets", "gets up", "get up", "up"],
+      "answer": "gets up",
+      "id": "2_5"
+    },
+    {
+      "question": "_____  you like this Samsung desktop model?",
+      "options": ["Are", "Have", "Do", "How", "Why"],
+      "answer": "Do",
+      "id": "2_6"
+    },
+    {
+      "question": "We _____  live in Wellawatte.",
+      "options": ["don’t", "haven’t", "hasn’t", "doesn’t", "are"],
+      "answer": "don’t",
+      "id": "2_7"
+    },
+    {
+      "question": "Sunday, Monday, Tuesday _____ ",
+      "options": ["Saturday", "Thursday", "any day", "Wednesday", "day"],
+      "answer": "Wednesday",
+      "id": "2_8"
+    },
+    {
+      "question": "_____  does he play cricket? At the school playground.",
+      "options": ["Where", "Don’t", "Who", "Whose", "What"],
+      "answer": "Where",
+      "id": "2_9"
+    },
+    {
+      "question": "Have you _____  a pen?",
+      "options": ["any", "have", "got", "buy", "new"],
+      "answer": "got",
+      "id": "2_10"
+    },
+    {
+      "question": "The shop doesn’t have _____  sugar for sale.",
+      "options": ["a", "any", "got", "one", "lot"],
+      "answer": "any",
+      "id": "2_11"
+    },
+    {
+      "question": "_____  some water spilt on the floor.",
+      "options": ["There’re", "There", "There are", "There’s", "Are"],
+      "answer": "There’s",
+      "id": "2_12"
+    },
+    {
+      "question": "We _____  got a smart TV.",
+      "options": ["do", "haven’t", "hasn’t", "don’t", "not"],
+      "answer": "haven’t",
+      "id": "2_13"
+    },
+    {
+      "question": "Those suitcases are very _____ .",
+      "options": ["cheaply", "newer", "a lot", "cost", "expensive"],
+      "answer": "expensive",
+      "id": "2_14"
+    },
+    {
+      "question": "Have you got a laptop? Yes, I _____ .",
+      "options": ["am", "don’t", "have", "got", "does"],
+      "answer": "have",
+      "id": "2_15"
+    },
+    {
+      "question": "She’s a tall,  _____  lady.",
+      "options": ["illness", "fairly", "slim", "thinnest", "firstly"],
+      "answer": "slim",
+      "id": "2_16"
+    },
+    {
+      "question": "Nihal  _____  at home yesterday, as he had to go to Kandy.",
+      "options": ["not", "was", "aren’t", "weren’t", "wasn’t"],
+      "answer": "wasn’t",
+      "id": "2_17"
+    },
+    {
+      "question": "Mr. & Mrs. De Silva _____  in Gampaha for a long time.",
+      "options": ["lived", "living", "lives", "been", "being"],
+      "answer": "lived",
+      "id": "2_18"
+    },
+    {
+      "question": "She doesn’t _____ dresses.",
+      "options": ["put", "wear", "took", "had", "bought"],
+      "answer": "wear",
+      "id": "2_19"
+    },
+    {
+      "question": "The station was _____ crowded.",
+      "options": ["much", "very", "a lot", "many", "little"],
+      "answer": "very",
+      "id": "2_20"
+    },
+    {
+      "question": "Do you like the green _____ ?",
+      "options": ["it", "that", "only", "one", "once"],
+      "answer": "one",
+      "id": "2_21"
+    },
+    {
+      "question": "Munsoor _____  to Matale on business often.",
+      "options": ["go", "goed", "goes", "come", "travel"],
+      "answer": "goes",
+      "id": "2_22"
+    },
+    {
+      "question": "Yesterday was the _____  of April.",
+      "options": ["fifth", "five", "Tuesday", "day five", "day"],
+      "answer": "fifth",
+      "id": "2_23"
+    },
+    {
+      "question": "He’s got _____  hair.",
+      "options": ["longy", "a", "short, curly", "many", "a long"],
+      "answer": "short, curly",
+      "id": "2_24"
+    },
+    {
+      "question": "We _____  play basketball at the weekend.",
+      "options": ["ever", "use", "usual", "usually", "like"],
+      "answer": "usually",
+      "id": "2_25"
+    },
+    {
+      "question": "She _____ a book at the moment.",
+      "options": ["reading", "’s reading", "reads", "read", "is read"],
+      "answer": "’s reading",
+      "id": "2_26"
+    },
+    {
+      "question": "Her sister is older _____  her.",
+      "options": ["then", "that", "to", "by", "than"],
+      "answer": "than",
+      "id": "2_27"
+    },
+    {
+      "question": "Our school bus is _____  noisiest on the road.",
+      "options": ["not", "this", "than", "the", "a"],
+      "answer": "the",
+      "id": "2_28"
+    },
+    {
+      "question": "It’s the _____  boring film I have ever seen.",
+      "options": ["more", "much", "most", "a lot", "lot"],
+      "answer": "most",
+      "id": "2_29"
+    },
+    {
+      "question": "The car behind is horning:  _____  drive faster.",
+      "options": ["I’ll", "I", "will", "won’t", "must"],
+      "answer": "must",
+      "id": "2_30"
+    },
+    {
+      "question": "Do you _____ coffee or tea?",
+      "options": ["rather", "prefer", "more", "won’t", "liked"],
+      "answer": "prefer",
+      "id": "2_31"
+    },
+    {
+      "question": "The students have  _____  breakfast.",
+      "options": ["ate", "eaten", "eat", "eats", "never"],
+      "answer": "eaten",
+      "id": "2_32"
+    },
+    {
+      "question": "The _____  have gone to the circus.",
+      "options": ["childs", "child", "little child", "childrens", "children"],
+      "answer": "children",
+      "id": "2_33"
+    },
+    {
+      "question": "I’ve never been on a plane ____.",
+      "options": ["before", "already", "after", "once", "ever"],
+      "answer": "before",
+      "id": "2_34"
+    },
+    {
+      "question": "_____  is very good exercise.",
+      "options": ["Walk", "To walk", "Walking", "Walked", "By walk"],
+      "answer": "Walking",
+      "id": "2_35"
+    },
+    {
+      "question": "Have you _____ been on a ferry?",
+      "options": ["always", "ever", "soon", "like", "gone"],
+      "answer": "ever",
+      "id": "2_36"
+    },
+    {
+      "question": "I can’t _____ very well.",
+      "options": ["sing", "singing", "to sing", "song", "sang"],
+      "answer": "sing",
+      "id": "2_37"
+    },
+    {
+      "question": "They _____ wait in a queue.",
+      "options": ["haven’t to", "don’t have", "don’t have to", "has", "has to"],
+      "answer": "don’t have to",
+      "id": "2_38"
+    },
+    {
+      "question": "_____  long is the journey?",
+      "options": ["What", "When", "How", "Very", "When"],
+      "answer": "How",
+      "id": "2_39"
+    },
+    {
+      "question": "Is your band _____  for one or two days?",
+      "options": [
+        "performing",
+        "performed",
+        "perform",
+        "performs",
+        "to perform"
+      ],
+      "answer": "performing",
+      "id": "2_40"
+    },
+    {
+      "question": "Kumaran  _____  to University next month.",
+      "options": ["will", "is going", "going", "will be", "might"],
+      "answer": "is going",
+      "id": "2_41"
+    },
+    {
+      "question": "We don’t _____  camping outdoors.",
+      "options": ["not like", "want", "want to", "enjoy", "not enjoy"],
+      "answer": "enjoy",
+      "id": "2_42"
+    },
+    {
+      "question": "We _____  like to visit a farm.",
+      "options": ["are", "were", "will", "does", "would"],
+      "answer": "would",
+      "id": "2_43"
+    },
+    {
+      "question": "My grandfather  _____  ever checks his whatsapp messages.",
+      "options": ["might", "hard", "always", "harder", "hardly"],
+      "answer": "hardly",
+      "id": "2_44"
+    },
+    {
+      "question": "They will come for the event, _____  they?",
+      "options": ["wouldn’t", "come", "will", "won’t", "do"],
+      "answer": "won’t",
+      "id": "2_45"
+    },
+    {
+      "question": "The toddler _____  know how to read yet.",
+      "options": ["doesn’t", "hasn’t", "don’t", "haven’t", "can"],
+      "answer": "doesn’t",
+      "id": "2_46"
+    },
+    {
+      "question": "My grandmother _____  to her friend on the phone all morning.",
+      "options": ["speaking", "spoke", "told", "speak", "talking"],
+      "answer": "spoke",
+      "id": "2_47"
+    },
+    {
+      "question": "The students _____  do well at the exam.",
+      "options": ["doesn’t", "not", "didn’t", "wont", "like"],
+      "answer": "didn’t",
+      "id": "2_48"
+    },
+    {
+      "question": "My brother likes vanilla ice cream.  _____  do I.",
+      "options": ["Either", "So", "Neither", "Nor", "Too"],
+      "answer": "So",
+      "id": "2_49"
+    },
+    {
+      "question": "She  _____  the lawyer at eight o’clock.",
+      "options": ["meet", "is meet", "‘s meet", "‘s meeting", "meets"],
+      "answer": "‘s meeting",
+      "id": "2_50"
+    }
+  ],
+  "question_set_3": [
+    {
+      "question": "_____  friend is Kevin.",
+      "options": ["Me", "I", "Mine", "My", "He"],
+      "answer": "My",
+      "id": "3_1"
+    },
+    {
+      "question": "My parents  _____  from Ampara.",
+      "options": ["is", "are", "was", "isn’t", "do"],
+      "answer": "are",
+      "id": "3_2"
+    },
+    {
+      "question": "_____  do you live?",
+      "options": ["What", "Why", "Who", "Whose", "Where"],
+      "answer": "Where",
+      "id": "3_3"
+    },
+    {
+      "question": "What does she do? She’s  _____  architect.",
+      "options": ["the", "a", "an", "new", "still"],
+      "answer": "an",
+      "id": "3_4"
+    },
+    {
+      "question": "My grandparents  _____  at nine o’clock.",
+      "options": ["goes up", "gets", "get up", "gets up", "up"],
+      "answer": "get up",
+      "id": "3_5"
+    },
+    {
+      "question": "_____  you like fried food?",
+      "options": ["Are", "Have", "Do", "How", "Why"],
+      "answer": "Do",
+      "id": "3_6"
+    },
+    {
+      "question": "We _____  have a pet dog.",
+      "options": ["don’t", "aren’t", "hasn’t", "doesn’t", "are"],
+      "answer": "don’t",
+      "id": "3_7"
+    },
+    {
+      "question": "April, May, June  _____ ",
+      "options": ["any month", "August", "March", "January", "July"],
+      "answer": "July",
+      "id": "3_8"
+    },
+    {
+      "question": "_____  is this umbrella? It’s not mine.",
+      "options": ["Where", "Don’t", "Whose", "Who", "What"],
+      "answer": "Whose",
+      "id": "3_9"
+    },
+    {
+      "question": "Have you _____  an ipad?",
+      "options": ["any", "got", "have", "buy", "new"],
+      "answer": "got",
+      "id": "3_10"
+    },
+    {
+      "question": "We don’t have _____  eggs.",
+      "options": ["a", "any", "got", "one", "lot"],
+      "answer": "any",
+      "id": "3_11"
+    },
+    {
+      "question": "_____  some footprints near the broken window.",
+      "options": ["There’re", "There", "Their are", "There’s", "Are"],
+      "answer": "There",
+      "id": "3_12"
+    },
+    {
+      "question": "We _____  got a swimming pool in our school.",
+      "options": ["do", "haven’t", "hasn’t", "don’t", "not"],
+      "answer": "haven’t",
+      "id": "3_13"
+    },
+    {
+      "question": "This gold chain is very _____ .",
+      "options": ["cheaply", "newer", "a lot", "cost", "expensive"],
+      "answer": "expensive",
+      "id": "3_14"
+    },
+    {
+      "question": "Has Kumari got a smart phone? Yes, she _____ .",
+      "options": ["am", "has", "have", "got", "do"],
+      "answer": "has",
+      "id": "3_15"
+    },
+    {
+      "question": "It was a crowded, _____  bus ride.",
+      "options": ["traffic", "quite", "noisy", "biggest", "noisily"],
+      "answer": "noisy",
+      "id": "3_16"
+    },
+    {
+      "question": "The teachers _____  at school yesterday for a seminar.",
+      "options": ["not", "was", "aren’t", "are", "were"],
+      "answer": "were",
+      "id": "3_17"
+    },
+    {
+      "question": "My mother_____  there for a long time, before moving to Colombo.",
+      "options": ["lived", "living", "lives", "been", "being"],
+      "answer": "lived",
+      "id": "3_18"
+    },
+    {
+      "question": "He didn’t _____  any medication.",
+      "options": ["puts", "take", "took", "had", "bought"],
+      "answer": "take",
+      "id": "3_19"
+    },
+    {
+      "question": "The supermarket was _____  busy today.",
+      "options": ["much", "very", "a lot", "many", "little"],
+      "answer": "very",
+      "id": "3_20"
+    },
+    {
+      "question": "Do you like the pink _____ ?",
+      "options": ["it", "that", "one", "once", "visit"],
+      "answer": "one",
+      "id": "3_21"
+    },
+    {
+      "question": "They _____  to the gym often.",
+      "options": ["walks", "goed", "goes", "comes", "go"],
+      "answer": "go",
+      "id": "3_22"
+    },
+    {
+      "question": "Tomorrow is the _____  of September.",
+      "options": ["thirtieth", "thirty", "Friday", "day last", "final"],
+      "answer": "thirtieth",
+      "id": "3_23"
+    },
+    {
+      "question": "The fashion model has got _____  eyes.",
+      "options": [
+        "beauty",
+        "an",
+        "beautiful, grey",
+        "plenty",
+        "a beautiful, grey"
+      ],
+      "answer": "beautiful, grey",
+      "id": "3_24"
+    },
+    {
+      "question": "Club meetings are _____  at the weekend.",
+      "options": ["ever", "use", "usual", "usually", "like"],
+      "answer": "usually",
+      "id": "3_25"
+    },
+    {
+      "question": "They_____   in the garden at the moment.",
+      "options": [
+        "is playing",
+        "’re playing",
+        "playing",
+        "were playing",
+        "played"
+      ],
+      "answer": "’re playing",
+      "id": "3_26"
+    },
+    {
+      "question": "My sister is taller _____  me.",
+      "options": ["then", "that", "to", "by", "than"],
+      "answer": "than",
+      "id": "3_27"
+    },
+    {
+      "question": "Her wedding was  _____  happiest event in our family.",
+      "options": ["not", "this", "the", "than", "a"],
+      "answer": "the",
+      "id": "3_28"
+    },
+    {
+      "question": "Reading is the _____ enjoyable hobby in my opinion.",
+      "options": ["more", "much", "most", "a lot", "lot"],
+      "answer": "most",
+      "id": "3_29"
+    },
+    {
+      "question": "____________ never answer the doorbell.",
+      "options": ["She’ll", "She", "Her", "She won’t", "Must"],
+      "answer": "She",
+      "id": "3_30"
+    },
+    {
+      "question": "Do you _____  watching a TV series or a movie?",
+      "options": ["rather", "prefer", "more", "won’t", "liked"],
+      "answer": "prefer",
+      "id": "3_31"
+    },
+    {
+      "question": "She hasn’t _____  lunch yet.",
+      "options": ["ate", "eaten", "eat", "eats", "forgot"],
+      "answer": "eaten",
+      "id": "3_32"
+    },
+    {
+      "question": "The _____  have been there before.",
+      "options": ["childs", "child", "little child", "childrens", "children"],
+      "answer": "children",
+      "id": "3_33"
+    },
+    {
+      "question": "She has never met a politician  _____ .",
+      "options": ["before", "already", "after", "once", "ever"],
+      "answer": "before",
+      "id": "3_34"
+    },
+    {
+      "question": "_____  is a good way to relax.",
+      "options": ["Painting", "To paint", "Do painting", "Painted", "Paints"],
+      "answer": "Painting",
+      "id": "3_35"
+    },
+    {
+      "question": "Have you _____  seen snow?",
+      "options": ["always", "ever", "soon", "like", "gone"],
+      "answer": "ever",
+      "id": "3_36"
+    },
+    {
+      "question": "I can’t _____  a car.",
+      "options": ["driving", "drives", "to drive", "drive", "drove"],
+      "answer": "drive",
+      "id": "3_37"
+    },
+    {
+      "question": "They _____  any money  for the tickets.",
+      "options": ["haven’t to", "don’t have", "don’t have to", "has", "has to"],
+      "answer": "don’t have",
+      "id": "3_38"
+    },
+    {
+      "question": "_____   is their car parked?",
+      "options": ["What", "Where", "Whose", "Very", "When"],
+      "answer": "Where",
+      "id": "3_39"
+    },
+    {
+      "question": "Are you _____  the room for one or two weeks?",
+      "options": ["booking", "booked", "book", "books", "to booking"],
+      "answer": "booking",
+      "id": "3_40"
+    },
+    {
+      "question": "Amal _____  to see the exhibition this weekend.",
+      "options": ["will", "going", "is going", "will be", "might"],
+      "answer": "is going",
+      "id": "3_41"
+    },
+    {
+      "question": "She doesn’t _____  shopping.",
+      "options": ["not like", "want", "want to", "enjoy", "not enjoy"],
+      "answer": "enjoy",
+      "id": "3_42"
+    },
+    {
+      "question": "We _____  like to go on a safari one day.",
+      "options": ["would", "were", "will", "does", "are"],
+      "answer": "would",
+      "id": "3_43"
+    },
+    {
+      "question": "She _____  ever sweeps her garden.",
+      "options": ["might", "hard", "always", "harder", "hardly"],
+      "answer": "hardly",
+      "id": "3_44"
+    },
+    {
+      "question": "Your friends won’t come, _____  they?",
+      "options": ["wouldn’t", "come", "will", "won’t", "do"],
+      "answer": "will",
+      "id": "3_45"
+    },
+    {
+      "question": "The little boy _____  know how to spell his name.",
+      "options": ["doesn’t", "hasn’t", "don’t", "haven’t", "can"],
+      "answer": "doesn’t",
+      "id": "3_46"
+    },
+    {
+      "question": "My grandfather _____  TV all morning.",
+      "options": ["watching", "watch", "see", "watched", "seen"],
+      "answer": "watched",
+      "id": "3_47"
+    },
+    {
+      "question": "My parents  _____  come to see the film with us.",
+      "options": ["doesn’t", "not", "didn’t", "want", "like"],
+      "answer": "want",
+      "id": "3_48"
+    },
+    {
+      "question": "Maya likes this font. _____  do I.",
+      "options": ["Either", "So", "Neither", "Nor", "Too"],
+      "answer": "So",
+      "id": "3_49"
+    },
+    {
+      "question": "They  _____  their friends at the restaurant.",
+      "options": ["meet", "are meet", "‘re meet", "‘re meeting", "meets"],
+      "answer": "‘re meeting",
+      "id": "3_50"
+    }
+  ],
+  "question_set_4": [
+    {
+      "question": "_____  school is in Colombo.",
+      "options": ["Me", "I", "Mine", "My", "He"],
+      "answer": "My",
+      "id": "4_1"
+    },
+    {
+      "question": "My grandparents   _____  in Australia.",
+      "options": ["is", "are", "was", "isn’t", "do"],
+      "answer": "are",
+      "id": "4_2"
+    },
+    {
+      "question": "_____  is your name?",
+      "options": ["What", "Why", "Who", "How", "Where"],
+      "answer": "What",
+      "id": "4_3"
+    },
+    {
+      "question": "What does your father do? He’s  _____  engineer.",
+      "options": ["the", "a", "an", "new", "still"],
+      "answer": "an",
+      "id": "4_4"
+    },
+    {
+      "question": "My brother  _____  at 5 a.m.",
+      "options": ["goes up", "gets", "gets up", "get up", "up"],
+      "answer": "gets up",
+      "id": "4_5"
+    },
+    {
+      "question": "_____  you a vegetarian?",
+      "options": ["Are", "Have", "Do", "How", "Why"],
+      "answer": "Are",
+      "id": "4_6"
+    },
+    {
+      "question": "He  _____  own a house.",
+      "options": ["don’t", "didn’t", "hasn’t", "doesn’t", "are"],
+      "answer": "doesn’t",
+      "id": "4_7"
+    },
+    {
+      "question": "October, November, December,  _____ ",
+      "options": ["July", "August", "March", "January", "any month"],
+      "answer": "January",
+      "id": "4_8"
+    },
+    {
+      "question": "_____  is that lady? She’s my neighbour.",
+      "options": ["Where", "Don’t", "Who", "Whose", "What"],
+      "answer": "Who",
+      "id": "4_9"
+    },
+    {
+      "question": "Have you _____  a printer at home?",
+      "options": ["any", "have", "got", "buy", "new"],
+      "answer": "got",
+      "id": "4_10"
+    },
+    {
+      "question": "There isn’t  _____  water in the fridge.",
+      "options": ["a", "any", "got", "one", "lot"],
+      "answer": "any",
+      "id": "4_11"
+    },
+    {
+      "question": "_____  some leaks in the roof.",
+      "options": ["There’re", "There", "There aren’t", "There’s", "Are"],
+      "answer": "There",
+      "id": "4_12"
+    },
+    {
+      "question": "They_____  got a flat.",
+      "options": ["do", "haven’t", "hasn’t", "don’t", "not"],
+      "answer": "haven’t",
+      "id": "4_13"
+    },
+    {
+      "question": "This handbag is very _____ .",
+      "options": ["cheaply", "expensive", "a lot", "cost", "newer"],
+      "answer": "expensive",
+      "id": "4_14"
+    },
+    {
+      "question": "Have you got a notebook? Yes, I _____ .",
+      "options": ["am", "do", "have", "got", "does"],
+      "answer": "have",
+      "id": "4_15"
+    },
+    {
+      "question": "Nuwara Eliya has a beautiful,  _____  climate.",
+      "options": ["cooly", "cool", "coldest", "biggest", "noisily"],
+      "answer": "cool",
+      "id": "4_16"
+    },
+    {
+      "question": "The factory workers  _____  on strike yesterday.",
+      "options": ["not", "was", "aren’t", "are", "were"],
+      "answer": "were",
+      "id": "4_17"
+    },
+    {
+      "question": "Their grandmother _____  with them for a long time.",
+      "options": ["lived", "living", "lives", "been", "being"],
+      "answer": "lived",
+      "id": "4_18"
+    },
+    {
+      "question": "She didn’t _____  make-up.",
+      "options": ["got", "wear", "took", "had", "bought"],
+      "answer": "wear",
+      "id": "4_19"
+    },
+    {
+      "question": "The bank was _____  crowded.",
+      "options": ["much", "very", "a lot", "many", "little"],
+      "answer": "very",
+      "id": "4_20"
+    },
+    {
+      "question": "Do you like the blue _____ ?",
+      "options": ["it", "that", "one", "once", "visit"],
+      "answer": "one",
+      "id": "4_21"
+    },
+    {
+      "question": "They _____  to India on a pilgrimage last week.",
+      "options": ["go", "goed", "went", "come", "often"],
+      "answer": "went",
+      "id": "4_22"
+    },
+    {
+      "question": "Yesterday was the _____  of June.",
+      "options": ["eleventh", "eleven", "Sunday", "day eleven", "day"],
+      "answer": "eleventh",
+      "id": "4_23"
+    },
+    {
+      "question": "He’s got a _____  nose.",
+      "options": [
+        "sharp, pointed",
+        "a pointing",
+        "sharply, point",
+        "many",
+        "a points"
+      ],
+      "answer": "sharp, pointed",
+      "id": "4_24"
+    },
+    {
+      "question": "They _____  visit their parents at the weekend.",
+      "options": ["ever", "use", "usual", "usually", "like"],
+      "answer": "usually",
+      "id": "4_25"
+    },
+    {
+      "question": "We _____  dinner at the moment.",
+      "options": ["‘re cooking", "was cooking", "cook", "cooked", "is cooked"],
+      "answer": "‘re cooking",
+      "id": "4_26"
+    },
+    {
+      "question": "Their house is bigger _____ ours.",
+      "options": ["then", "that", "to", "by", "than"],
+      "answer": "than",
+      "id": "4_27"
+    },
+    {
+      "question": "Her voice is _____  loudest in class.",
+      "options": ["not", "this", "the", "than", "a"],
+      "answer": "the",
+      "id": "4_28"
+    },
+    {
+      "question": "Cricketers are  the _____  popular people in Sri Lanka.",
+      "options": ["more", "much", "most", "a lot", "lot"],
+      "answer": "most",
+      "id": "4_29"
+    },
+    {
+      "question": "It’s raining:  _____  get an umbrella.",
+      "options": ["I’ll", "I", "will", "won’t", "have"],
+      "answer": "I’ll",
+      "id": "4_30"
+    },
+    {
+      "question": "Do you _____  rice or noodles?",
+      "options": ["rather", "prefer", "more", "won’t", "liked"],
+      "answer": "prefer",
+      "id": "4_31"
+    },
+    {
+      "question": "The school has _____  to his parents.",
+      "options": ["write", "written", "wrote", "writing", "wroted"],
+      "answer": "written",
+      "id": "4_32"
+    },
+    {
+      "question": "The _____  have already done their homework.",
+      "options": ["childs", "child", "little child", "childrens", "children"],
+      "answer": "children",
+      "id": "4_33"
+    },
+    {
+      "question": "I’ve never been on TV _____ .",
+      "options": ["before", "already", "after", "once", "ever"],
+      "answer": "before",
+      "id": "4_34"
+    },
+    {
+      "question": "_____  is a good way to improve our mind.",
+      "options": ["Read", "By reading", "Reading", "By read", "Reads"],
+      "answer": "Reading",
+      "id": "4_35"
+    },
+    {
+      "question": "Have you _____ climbed Sigiriya ?",
+      "options": ["always", "ever", "soon", "like", "gone"],
+      "answer": "ever",
+      "id": "4_36"
+    },
+    {
+      "question": "I can’t _____  another language.",
+      "options": ["speaking", "know", "to speak", "speak", "speaks"],
+      "answer": "speak",
+      "id": "4_37"
+    },
+    {
+      "question": "They _____  buy tickets as entrance is free.",
+      "options": ["haven’t to", "don’t have", "don’t have to", "has", "has to"],
+      "answer": "don’t have to",
+      "id": "4_38"
+    },
+    {
+      "question": "_____  old is their car?",
+      "options": ["What", "When", "How", "Very", "When"],
+      "answer": "How",
+      "id": "4_39"
+    },
+    {
+      "question": "Are you _____  for one or two weeks?",
+      "options": ["staying", "stayed", "stay", "stays", "to staying"],
+      "answer": "staying",
+      "id": "4_40"
+    },
+    {
+      "question": "Ahmed _____  to visit his parents.",
+      "options": ["will", "going", "is going", "will be", "might"],
+      "answer": "will",
+      "id": "4_41"
+    },
+    {
+      "question": "I don’t _____  getting up early.",
+      "options": ["not like", "want", "want to", "enjoy", "not enjoy"],
+      "answer": "enjoy",
+      "id": "4_42"
+    },
+    {
+      "question": "We _____  like to see the mountains.",
+      "options": ["would", "were", "will", "does", "are"],
+      "answer": "would",
+      "id": "4_43"
+    },
+    {
+      "question": "They _____  ever check their emails.",
+      "options": ["might", "hard", "always", "harder", "hardly"],
+      "answer": "hardly",
+      "id": "4_44"
+    },
+    {
+      "question": "They won’t come, _____  they?",
+      "options": ["wouldn’t", "come", "will", "won’t", "do"],
+      "answer": "will",
+      "id": "4_45"
+    },
+    {
+      "question": "He _____  know how to spell it.",
+      "options": ["doesn’t", "hasn’t", "don’t", "haven’t", "can"],
+      "answer": "doesn’t",
+      "id": "4_46"
+    },
+    {
+      "question": "Saman _____  to the radio all morning.",
+      "options": ["listening", "hear", "heard", "listened", "listen"],
+      "answer": "listened",
+      "id": "4_47"
+    },
+    {
+      "question": "They _____  come to the cinema with us.",
+      "options": ["didn’t", "not", "don’t", "want", "like"],
+      "answer": "want",
+      "id": "4_48"
+    },
+    {
+      "question": "Gita likes this song. _____  do I.",
+      "options": ["Either", "So", "Neither", "Nor", "Too"],
+      "answer": "So",
+      "id": "4_49"
+    },
+    {
+      "question": "We  _____  them at eight o’clock.",
+      "options": ["meet", "are meet", "‘re meet", "‘re meeting", "meets"],
+      "answer": "meet",
+      "id": "4_50"
+    }
+  ]
+}

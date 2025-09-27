@@ -1,0 +1,21 @@
+{
+  "writing_prompts": [
+    {
+      "id": 1,
+      "title": "Opinion Essay",
+      "prompt": "Write an essay expressing your opinion on a topic of your choice.",
+      "time_limit": 30,
+      "word_count": {
+        "min": 200,
+        "max": 300
+      },
+      "evaluation_criteria": [
+        "Content",
+        "Organization",
+        "Vocabulary",
+        "Grammar",
+        "Mechanics"
+      ]
+    }
+  ]
+}

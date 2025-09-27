@@ -1,0 +1,17 @@
+{
+  "listening_clips": [
+    {
+      "id": 1,
+      "title": "Sample Listening Exercise",
+      "audio_file": "sample.mp3",
+      "questions": [
+        {
+          "id": 1,
+          "question": "Sample question about the audio?",
+          "options": ["Option A", "Option B", "Option C", "Option D"],
+          "answer": "Option A"
+        }
+      ]
+    }
+  ]
+}

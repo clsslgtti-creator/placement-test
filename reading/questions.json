@@ -1,0 +1,17 @@
+{
+  "reading_passages": [
+    {
+      "id": 1,
+      "title": "Sample Reading Passage",
+      "text": "This is a placeholder for a reading passage. Actual content will be added later.",
+      "questions": [
+        {
+          "id": 1,
+          "question": "Sample question about the passage?",
+          "options": ["Option A", "Option B", "Option C", "Option D"],
+          "answer": "Option A"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grammar Placement Test</title>
+    <link rel="stylesheet" href="../assets/css/shared.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PLACEMENT TEST - GRAMMAR</h1>
+            <p class="instructions">Select the correct answer. You have <span id="time-remaining">45:00</span> to complete the test.</p>
+            <div class="timer-container">
+                <div class="timer-bar" id="timer-bar"></div>
+            </div>
+            
+            <!-- Top scoreboard (initially hidden) -->
+            <div id="top-results" class="score-board hidden">
+                <h2>Test Results</h2>
+                <div class="score-content">
+                    <div class="score-value"><span id="top-score">0</span>/<span id="top-total">0</span></div>
+                </div>
+                <p class="time-spent">Finished in <span id="top-time-spent">00:00</span></p>
+            </div>
+        </header>
+
+        <main>
+            <div id="questions-container">
+                <!-- Questions will be loaded here dynamically -->
+            </div>
+
+            <div class="actions">
+                <button id="check-answers" class="btn">Complete</button>
+            </div>
+        </main>
+
+        <div id="results" class="score-board results-bottom hidden">
+            <h2>Test Results</h2>
+            <div class="score-content">
+                <div class="score-value"><span id="score">0</span>/<span id="total-questions">0</span></div>
+            </div>
+            <p class="time-spent">Finished in <span id="bottom-time-spent">00:00</span></p>
+        </div>
+    </div>
+    
+    <!-- Include SCORM API wrapper and shared JavaScript -->
+    <script src="../assets/js/pipwerks-scorm.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
