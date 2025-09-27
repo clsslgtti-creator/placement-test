@@ -16,7 +16,7 @@
           <langstring xml:lang="en-US">SLGTTI Language Placement Test</langstring>
         </title>
         <description>
-          <langstring xml:lang="en-US">A comprehensive language placement test with grammar, reading, writing, listening, and speaking sections.</langstring>
+          <langstring xml:lang="en-US">A comprehensive language placement test with grammar, reading, writing, listening, and vocabulary sections.</langstring>
         </description>
         <keyword>
           <langstring xml:lang="en-US">language</langstring>
@@ -36,59 +36,34 @@
   
   <organizations default="SLGTTI_PlacementTest_Organization">
     <organization identifier="SLGTTI_PlacementTest_Organization">
-      <title>SLGTTI Language Placement Test</title>
+      <title>English Language</title>
       
-      <!-- Grammar Test SCO -->
-      <item identifier="grammar_test" isvisible="true">
-        <title>Grammar Test</title>
-        <adlcp:masteryscore>70</adlcp:masteryscore>
-        <item identifier="grammar_content" isvisible="true" identifierref="grammar_test_resource">
-          <title>Grammar Test</title>
+      <item identifier="placement_test_module" isvisible="true">
+        <title>Placement Test</title>
+        
+        <!-- Grammar Test SCO -->
+        <item identifier="grammar_test" isvisible="true" identifierref="grammar_test_resource">
+          <title>1. Grammar Test</title>
         </item>
-      </item>
-      
-      <!-- Reading Test SCO -->
-      <item identifier="reading_test" isvisible="true">
-        <title>Reading Test</title>
-        <adlcp:masteryscore>70</adlcp:masteryscore>
-        <item identifier="reading_content" isvisible="true" identifierref="reading_test_resource">
-          <title>Reading Test</title>
+        
+        <!-- Reading Test SCO -->
+        <item identifier="reading_test" isvisible="true" identifierref="reading_test_resource">
+          <title>2. Reading Test</title>
         </item>
-      </item>
-      
-      <!-- Writing Test SCO -->
-      <item identifier="writing_test" isvisible="true">
-        <title>Writing Test</title>
-        <adlcp:masteryscore>70</adlcp:masteryscore>
-        <item identifier="writing_content" isvisible="true" identifierref="writing_test_resource">
-          <title>Writing Test</title>
+        
+        <!-- Listening Test SCO -->
+        <item identifier="listening_test" isvisible="true" identifierref="listening_test_resource">
+          <title>3. Listening Test</title>
         </item>
-      </item>
-      
-      <!-- Speaking Test SCO -->
-      <item identifier="speaking_test" isvisible="true">
-        <title>Speaking Test</title>
-        <adlcp:masteryscore>70</adlcp:masteryscore>
-        <item identifier="speaking_content" isvisible="true" identifierref="speaking_test_resource">
-          <title>Speaking Test</title>
+        
+        <!-- Writing Test SCO -->
+        <item identifier="writing_test" isvisible="true" identifierref="writing_test_resource">
+          <title>4. Writing Test</title>
         </item>
-      </item>
-      
-      <!-- Vocabulary Test SCO -->
-      <item identifier="vocabulary_test" isvisible="true">
-        <title>Vocabulary Test</title>
-        <adlcp:masteryscore>70</adlcp:masteryscore>
-        <item identifier="vocabulary_content" isvisible="true" identifierref="vocabulary_test_resource">
-          <title>Vocabulary Test</title>
-        </item>
-      </item>
-
-      <!-- Listening Test SCO -->
-      <item identifier="listening_test" isvisible="true">
-        <title>Listening Test</title>
-        <adlcp:masteryscore>70</adlcp:masteryscore>
-        <item identifier="listening_content" isvisible="true" identifierref="listening_test_resource">
-          <title>Listening Test</title>
+        
+        <!-- Vocabulary Test SCO -->
+        <item identifier="vocabulary_test" isvisible="true" identifierref="vocabulary_test_resource">
+          <title>5. Vocabulary Test</title>
         </item>
       </item>
       
@@ -129,16 +104,6 @@
       <file href="assets/js/pipwerks-scorm.js"/>
     </resource>
     
-    <!-- Speaking Test Resources -->
-    <resource identifier="speaking_test_resource" type="webcontent" adlcp:scormtype="sco" href="speaking/index.html">
-      <file href="speaking/index.html"/>
-      <file href="speaking/script.js"/>
-      <file href="speaking/styles.css"/>
-      <file href="speaking/questions.json"/>
-      <file href="assets/css/shared.css"/>
-      <file href="assets/js/common.js"/>
-      <file href="assets/js/pipwerks-scorm.js"/>
-    </resource>
     
     <!-- Vocabulary Test Resources -->
     <resource identifier="vocabulary_test_resource" type="webcontent" adlcp:scormtype="sco" href="vocabulary/index.html">

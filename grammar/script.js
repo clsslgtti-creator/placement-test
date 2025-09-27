@@ -20,8 +20,8 @@ const timeRemainingElement = document.getElementById("time-remaining");
 const topTimeSpentElement = document.getElementById("top-time-spent");
 const timerBar = document.getElementById("timer-bar");
 
-// Fetch and initialize questions
-async function fetchQuestions() {
+// Load questions only without initializing
+async function loadQuestionsOnly() {
     try {
         const response = await fetch("questions.json");
         const data = await response.json();
@@ -32,7 +32,16 @@ async function fetchQuestions() {
             set3: data.question_set_3,
             set4: data.question_set_4
         };
+    } catch (error) {
+        console.error("Error loading questions:", error);
+        questionsContainer.innerHTML = '<p class="error">Failed to load questions.</p>';
+    }
+}
 
+// Fetch and initialize questions for new test
+async function fetchQuestions() {
+    try {
+        await loadQuestionsOnly();
         selectRandomQuestions();
         initializeTest();
         renderQuestions();
@@ -80,11 +89,11 @@ async function initScorm() {
                     startTimestamp = savedState.startTime;
                     userAnswers = savedState.answers || {};
                     
-                    // Load questions and restore state
-                    await fetchQuestions();
+                    // Load questions but don't select new ones
+                    await loadQuestionsOnly();
                     selectedQuestions = savedState.questionIds.map(id => {
                         const [set, num] = id.split('_');
-                        return questions[`set${set}`][num - 1];
+                        return questions[`set${set}`][parseInt(num) - 1];
                     });
                     
                     renderQuestions();
