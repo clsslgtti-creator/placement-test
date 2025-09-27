@@ -75,7 +75,6 @@
     <resource identifier="grammar_test_resource" type="webcontent" adlcp:scormtype="sco" href="grammar/index.html">
       <file href="grammar/index.html"/>
       <file href="grammar/script.js"/>
-      <file href="grammar/styles.css"/>
       <file href="grammar/questions.json"/>
       <file href="assets/css/shared.css"/>
       <file href="assets/js/common.js"/>
@@ -86,7 +85,6 @@
     <resource identifier="reading_test_resource" type="webcontent" adlcp:scormtype="sco" href="reading/index.html">
       <file href="reading/index.html"/>
       <file href="reading/script.js"/>
-      <file href="reading/styles.css"/>
       <file href="reading/questions.json"/>
       <file href="assets/css/shared.css"/>
       <file href="assets/js/common.js"/>
@@ -97,7 +95,6 @@
     <resource identifier="writing_test_resource" type="webcontent" adlcp:scormtype="sco" href="writing/index.html">
       <file href="writing/index.html"/>
       <file href="writing/script.js"/>
-      <file href="writing/styles.css"/>
       <file href="writing/questions.json"/>
       <file href="assets/css/shared.css"/>
       <file href="assets/js/common.js"/>

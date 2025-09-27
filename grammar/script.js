@@ -13,11 +13,7 @@ let scorm;
 const questionsContainer = document.getElementById("questions-container");
 const checkAnswersBtn = document.getElementById("check-answers");
 const actionsSection = document.querySelector(".actions");
-const topResultsSection = document.getElementById("top-results");
-const topScoreElement = document.getElementById("top-score");
-const topTotalElement = document.getElementById("top-total");
 const timeRemainingElement = document.getElementById("time-remaining");
-const topTimeSpentElement = document.getElementById("top-time-spent");
 const timerBar = document.getElementById("timer-bar");
 
 // Load questions only without initializing
@@ -76,9 +72,11 @@ async function initScorm() {
                 try {
                     const savedState = JSON.parse(suspendData);
                     
-                    // Check if more than 40 minutes have passed
+                    // Check if more than 40 minutes have passed from the original start time
                     const now = Date.now();
-                    const elapsedTime = now - savedState.startTime;
+                    const originalStartTime = parseInt(savedState.startTime);
+                    const elapsedTime = now - originalStartTime;
+                    
                     if (elapsedTime >= testDuration) {
                         await endTest(true); // End test and submit results
                         return;
@@ -86,7 +84,7 @@ async function initScorm() {
 
                     // Restore previous state
                     console.log("Restoring saved state:", savedState);
-                    startTimestamp = savedState.startTime;
+                    startTimestamp = originalStartTime; // Use the original start time
                     userAnswers = savedState.answers || {};
                     
                     // Load questions but don't select new ones
@@ -106,7 +104,7 @@ async function initScorm() {
             }
         }
 
-        // Start fresh test
+        // Start fresh test only if no saved state exists
         await fetchQuestions();
         
     } catch (error) {
@@ -144,6 +142,8 @@ function selectRandomQuestions() {
         question.options = shuffleArray(question.options);
         selectedQuestions.push(question);
     }
+
+    selectedQuestions = shuffleArray(selectedQuestions);
 }
 
 // Render questions to page
@@ -231,37 +231,47 @@ function updateTimerDisplay() {
 // End test and submit results
 async function endTest(isTimeout = false) {
     clearInterval(timerInterval);
-    
-    // Calculate score
-    let score = 0;
-    Object.keys(userAnswers).forEach(index => {
-        if (userAnswers[index] === selectedQuestions[index].answer) {
-            score++;
-        }
-    });
 
     // Hide questions and show results
     questionsContainer.style.display = "none";
     actionsSection.style.display = "none";
-    
-    // Show score
-    topScoreElement.textContent = score;
-    topTotalElement.textContent = totalQuestions;
-    topResultsSection.classList.remove("hidden");
+    document.querySelector('.instructions').style.display = "none";
+    document.querySelector('.timer').style.display = "none";
+    document.querySelector('.timer-container').style.display = "none";
+
+    // Calculate score and time
+    const finalScore = Object.keys(userAnswers).reduce((total, index) => {
+        return total + (userAnswers[index] === selectedQuestions[index].answer ? 1 : 0);
+    }, 0);
     
     // Calculate time spent
-    const timeSpent = Math.min(Date.now() - startTimestamp, testDuration);
-    const minutes = Math.floor(timeSpent / 60000);
-    const seconds = Math.floor((timeSpent % 60000) / 1000);
-    const formattedTime = `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
-    topTimeSpentElement.textContent = formattedTime;
+    const testTimeSpent = Math.min(Date.now() - startTimestamp, testDuration);
+    const testMinutes = Math.floor(testTimeSpent / 60000);
+    const testSeconds = Math.floor((testTimeSpent % 60000) / 1000);
+    const timeDisplay = `${testMinutes.toString().padStart(2, "0")}:${testSeconds.toString().padStart(2, "0")}`;
+    const completionTime = new Date().toLocaleString();
+    
+    // Create completion message
+    const completionDiv = document.createElement('div');
+    completionDiv.className = 'completion-message';
+    
+    completionDiv.innerHTML = `
+        <div class="tick-icon"></div>
+        <h2>Test Completed!</h2>
+        <p class="completion-info">Grammar Test Completed Successfully</p>
+        <div class="score-display">${finalScore}/${totalQuestions}</div>
+        <p class="time-spent">Time Spent: ${timeDisplay}</p>
+        <p class="completion-time">Completed at: ${completionTime}</p>
+    `;
+    
+    document.querySelector('.container').appendChild(completionDiv);
 
     // Submit to SCORM
     if (isScormMode) {
-        console.log("Submitting final score:", score);
+        console.log("Submitting final score:", finalScore);
         
         // Set score
-        scorm.set("cmi.core.score.raw", score);
+        scorm.set("cmi.core.score.raw", finalScore);
         scorm.set("cmi.core.score.min", "0");
         scorm.set("cmi.core.score.max", "50");
         
@@ -275,7 +285,7 @@ async function endTest(isTimeout = false) {
     }
 
     // Send to Google Sheets
-    await sendToGoogleSheets(score, formattedTime);
+    await sendToGoogleSheets(finalScore, timeDisplay);
 
     // Show completion message
     showNotification(isTimeout ? "Time's up! Test submitted." : "Test completed successfully!");
@@ -286,12 +296,11 @@ function showCompletedState() {
     const score = scorm.get("cmi.core.score.raw");
     document.body.innerHTML = `
         <div class="container">
-            <div class="score-board">
-                <h1>Test Completed</h1>
-                <p>You have already completed this test.</p>
-                <div class="score-content">
-                    <div class="score-value">Score: ${score}/50</div>
-                </div>
+            <div class="completion-message">
+                <div class="tick-icon"></div>
+                <h2>Test Already Completed</h2>
+                <p class="completion-info">Grammar Test was completed in a previous session</p>
+                <div class="score-display">${score}/50</div>
             </div>
         </div>
     `;
@@ -323,6 +332,17 @@ async function sendToGoogleSheets(score, timeSpent) {
         studentName = scorm.get("cmi.core.student_name") || "Anonymous";
         studentId = scorm.get("cmi.core.student_id") || "";
     }
+
+    // Prepare detailed answer data
+    let answersString = "";
+    selectedQuestions.forEach((question, index) => {
+        const userAnswer = userAnswers[index] || "N/A";
+        const isCorrect = userAnswer === question.answer;
+        answersString += `${question.id}: ${userAnswer} (${isCorrect ? '✓' : '✗'}), `;
+    });
+
+    // Remove trailing comma
+    answersString = answersString.replace(/,$/, '');
     
     const data = {
         testType: "Grammar Test",
@@ -330,8 +350,10 @@ async function sendToGoogleSheets(score, timeSpent) {
         studentId: studentId,
         score: score,
         totalQuestions: totalQuestions,
+        scorePercentage: Math.round((score / totalQuestions) * 100),
         timeSpent: timeSpent,
-        date: new Date().toISOString()
+        date: new Date().toISOString(),
+        answers: answersString // Added detailed answers
     };
 
     try {

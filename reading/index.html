@@ -5,37 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reading Placement Test</title>
     <link rel="stylesheet" href="../assets/css/shared.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../assets/css/notifications.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
         <header>
             <h1>PLACEMENT TEST - READING</h1>
-            <p class="instructions">This section evaluates your reading comprehension skills.</p>
+            <p class="instructions">Read the text carefully and answer the questions below.</p>
         </header>
 
-        <div class="placeholder-container">
-            <div class="placeholder-icon">
-                <i class="fas fa-book-reader"></i>
-            </div>
-            <h2 class="placeholder-title">Reading Test Coming Soon</h2>
-            <p class="placeholder-message">
-                The reading test is currently under development. When completed, this section will include 
-                passages and comprehension questions to evaluate your reading skills.
-            </p>
-            <p class="placeholder-message">
-                Features being developed:
-            </p>
-            <ul style="text-align: left; max-width: 400px; margin: 0 auto; margin-bottom: 30px;">
-                <li>Reading passages of varying difficulty</li>
-                <li>Comprehension questions</li>
-                <li>Vocabulary assessment</li>
-                <li>Timed reading exercises</li>
-                <li>Detailed scoring and feedback</li>
-            </ul>
-            <a href="../index.html" class="btn back-button">Back to Main Menu</a>
+        <!-- Timer Display -->
+        <div class="timer">
+            <i class="fas fa-clock"></i>
+            Time Remaining: <span id="time-remaining">15:00</span>
         </div>
+        <div class="timer-container">
+            <div class="timer-bar" id="timer-bar"></div>
+        </div>
+
+        <!-- Reading Section -->
+        <div class="reading-container">
+            <h2 id="passage-title" class="passage-title"></h2>
+            <div id="passage-text" class="passage-container"></div>
+            <div id="questions-container" class="questions-container"></div>
+        </div>
+
+        <!-- Actions Section -->
+        <div class="actions text-center">
+            <button id="check-answers" class="btn btn-primary">Complete Test</button>
+        </div>
+
     </div>
 
     <!-- Include SCORM API wrapper and shared JavaScript -->

@@ -1,17 +1,246 @@
 {
-  "reading_passages": [
-    {
-      "id": 1,
-      "title": "Sample Reading Passage",
-      "text": "This is a placeholder for a reading passage. Actual content will be added later.",
-      "questions": [
-        {
-          "id": 1,
-          "question": "Sample question about the passage?",
-          "options": ["Option A", "Option B", "Option C", "Option D"],
-          "answer": "Option A"
-        }
-      ]
-    }
-  ]
+  "question_set_1": {
+    "title": "The Bus Ride",
+    "passage": "Last Monday, I travelled by bus from Colombo to Galle. The journey had started early in the morning, and the bus was already crowded. While I was looking for a seat, I noticed a conductor who was busy  selling green tickets.\nRight now,  I am thinking about how noisy the ride was, but I must admit that it was also exciting. We don’t usually stop for tea, but that day the driver did. Tomorrow, I will leave Colombo early and take the train instead, because it might be faster and I might reach Galle before lunch.\nBy the end of next month, I will have completed several trips around Sri Lanka. Should I carry less luggage next time? Maybe I should. This time my arms really hurt carrying so much load.",
+    "question": [
+      {
+        "question": "Why was the bus ride unusual?",
+        "options": [
+          "The conductor was selling green tickets.",
+          "They had tea.",
+          "The seats were empty.",
+          "They stopped for a meal."
+        ],
+        "answer": "They had tea.",
+        "id": "1_1"
+      },
+      {
+        "question": "What is the plan for tomorrow?",
+        "options": [
+          "Take different bus to Colombo",
+          "Try out the train",
+          "Take the train back to Colombo",
+          "Walk to Galle"
+        ],
+        "answer": "Try out the train",
+        "id": "1_2"
+      },
+      {
+        "question": "Why might less luggage be better?",
+        "options": [
+          "It was too heavy",
+          "the bus was very crowded",
+          "The student had too many bags.",
+          "There was no one to help me with the bags."
+        ],
+        "answer": "the bus was very crowded",
+        "id": "1_3"
+      },
+      {
+        "question": "What was happening while the student was looking for a seat?",
+        "options": [
+          "The bus took off.",
+          "Tickets were being sold",
+          "It was very noisy.",
+          "He was thinking about sorting his tickets."
+        ],
+        "answer": "Tickets were being sold",
+        "id": "1_4"
+      },
+      {
+        "question": "By the end of next month, what will be finished?",
+        "options": [
+          "Only one trip",
+          "Many journeys",
+          "A holiday",
+          "Tickets for all the trips"
+        ],
+        "answer": "Many journeys",
+        "id": "1_5"
+      }
+    ]
+  },
+  "question_set_2": {
+    "title": "The Bus Ride",
+    "passage": "This morning, heavy rain flooded the streets, and traffic was moving slowly. Nisha normally catches the bus on time, but today it arrived almost an hour late. That’s why Nisha missed the first period of English at school. \nNisha’s  younger brother stayed at home because he was suffering from a bad cold. Their father is making tea now, and the family are sitting together in the living room, listening to the rain beating on the roof. \nBy the afternoon, the rain will probably end, and Nisha has already arranged to meet her best friend arriving from Aluthgama outside the station. She is hoping for sunshine tomorrow so she can reach school without any difficulty.",
+    "question": [
+      {
+        "question": "What was the main reason for the bus to be late?",
+        "options": [
+          "The roads were hardly passable because of the rain.",
+          "There was a lot of unusual  traffic.",
+          "It rained continuously the whole night.",
+          "The bus was flooded."
+        ],
+        "answer": "The roads were hardly passable because of the rain.",
+        "id": "2_1"
+      },
+      {
+        "question": "Why did Nisha’s brother remain at home?",
+        "options": [
+          "He had fallen ill.",
+          "He got wet in the rain.",
+          "He was drinking tea.",
+          "He was waiting for the rain to cease."
+        ],
+        "answer": "He had fallen ill.",
+        "id": "2_2"
+      },
+      {
+        "question": "What activity are the family involved in at present?",
+        "options": [
+          "Watching the rain.",
+          "Relaxing indoors with tea.",
+          "Cleaning the flooded street.",
+          "Waiting for the bus."
+        ],
+        "answer": "Relaxing indoors with tea.",
+        "id": "2_3"
+      },
+      {
+        "question": "What arrangement has Nisha made for the afternoon?",
+        "options": [
+          "She is going outside.",
+          "She is making tea.",
+          "She will look after her brother.",
+          "She will meet a close friend."
+        ],
+        "answer": "She will meet a close friend.",
+        "id": "2_4"
+      },
+      {
+        "question": "Why is Nisha wishing for clear weather tomorrow?",
+        "options": [
+          "She plans to go for a walk.",
+          "She is not feeling well.",
+          "She wants to see her friends.",
+          "She wants her journey to school to be easier."
+        ],
+        "answer": "She wants her journey to school to be easier.",
+        "id": "2_5"
+      }
+    ]
+  },
+  "question_set_3": {
+    "title": "A Rainy Morning",
+    "passage": "Behind their house, Ravi’s family has a modest garden that provides them with a steady supply of fresh vegetables. They cultivate beans and carrots, but last month they decided to include tomatoes as well. \nEach evening, Ravi is responsible for watering the plants, while his sister takes care of removing weeds.  At present, she can be seen pulling some stubborn ones from the soil. Yesterday, their mother enriched the ground with compost so that the plants would grow better. \nNext week, she intends to plant chillies, since they are frequently required for family meals. Last night, as Ravi watered vegetable beds, his father stood by the fence, chatting with a neighbour. Although the garden is relatively small, it reduces household expenses and contributes to healthier eating habits.",
+    "question": [
+      {
+        "question": "Which crops grow in the family garden?",
+        "options": [
+          "Beans, tomatoes and carrots",
+          "Beans, tomatoes and chillies",
+          "Beans and tomatoes",
+          "Chillies and beans"
+        ],
+        "answer": "Beans, tomatoes and carrots",
+        "id": "3_1"
+      },
+      {
+        "question": "What task is Ravi’s sister engaged in at the present moment?",
+        "options": [
+          "Watering the plants.",
+          "Carrying compost to the garden.",
+          "Talking to a neighbour.",
+          "Pulling weeds from the soil."
+        ],
+        "answer": "Pulling weeds from the soil.",
+        "id": "3_2"
+      },
+      {
+        "question": "What action did the mother take yesterday?",
+        "options": [
+          "She spread compost to improve the soil.",
+          "She harvested the beans for cooking.",
+          "She purchased fertiliser from the market.",
+          "She exchanged seeds with the neighbour."
+        ],
+        "answer": "She spread compost to improve the soil.",
+        "id": "3_3"
+      },
+      {
+        "question": "What was the father doing while Ravi watered the plants?",
+        "options": [
+          "Sleeping after work inside the house",
+          "Having a conversation by the fence",
+          "Helping the mother with the compost",
+          "Weeding the plants"
+        ],
+        "answer": "Having a conversation by the fence",
+        "id": "3_4"
+      },
+      {
+        "question": "Why has the mother planned to grow chillies next week?",
+        "options": [
+          "They are regularly used in family cooking.",
+          "The neighbour offered her free chilli seeds.",
+          "The soil can only support chilli plants.",
+          "She likes chillies."
+        ],
+        "answer": "They are regularly used in family cooking.",
+        "id": "3_5"
+      }
+    ]
+  },
+  "question_set_4": {
+    "title": "The Bus Ride",
+    "passage": "Last Monday, I travelled by bus from Colombo to Galle. The journey had started early in the morning, and the bus was already crowded. While I was looking for a seat, I noticed a conductor who was busy  selling green tickets.\nRight now,  I am thinking about how noisy the ride was, but I must admit that it was also exciting. We don’t usually stop for tea, but that day the driver did. Tomorrow, I will leave Colombo early and take the train instead, because it might be faster and I might reach Galle before lunch.\nBy the end of next month, I will have completed several trips around Sri Lanka. Should I carry less luggage next time? Maybe I should. This time my arms really hurt carrying so much load.",
+    "question": [
+      {
+        "question": "Why was the bus ride unusual?",
+        "options": [
+          "The conductor was selling green tickets.",
+          "They had tea.",
+          "The seats were empty.",
+          "They stopped for a meal."
+        ],
+        "answer": "They had tea.",
+        "id": "4_1"
+      },
+      {
+        "question": "What is the plan for tomorrow?",
+        "options": [
+          "Take different bus to Colombo",
+          "Try out the train",
+          "Take the train back to Colombo",
+          "Walk to Galle"
+        ],
+        "answer": "Try out the train",
+        "id": "4_2"
+      },
+      {
+        "question": "Why might less luggage be better?",
+        "options": [
+          "It was too heavy",
+          "the bus was very crowded",
+          "The student had too many bags.",
+          "There was no one to help me with the bags."
+        ],
+        "answer": "the bus was very crowded",
+        "id": "4_3"
+      },
+      {
+        "question": "What was happening while the student was looking for a seat?",
+        "options": [
+          "The bus took off.",
+          "Tickets were being sold",
+          "It was very noisy.",
+          "He was thinking about sorting his tickets."
+        ],
+        "answer": "Tickets were being sold",
+        "id": "4_4"
+      },
+      {
+        "question": "By the end of next month, what will be finished?",
+        "options": [
+          "Only one trip",
+          "Many journeys",
+          "A holiday",
+          "Tickets for all the trips"
+        ],
+        "answer": "Many journeys",
+        "id": "4_5"
+      }
+    ]
+  }
 }
