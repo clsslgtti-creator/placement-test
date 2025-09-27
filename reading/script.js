@@ -120,7 +120,7 @@ function initializeTest() {
       selectedSet: selectedSet,
       answers: {},
       // Store the shuffled questions order by their original indices
-      questionOrder: set.shuffledQuestions.map((q) => q.originalIndex),
+      questionOrder: getQuestionOrder(set),
     };
     console.log("Saving initial state:", initialState);
     scorm.set("cmi.suspend_data", JSON.stringify(initialState));
@@ -136,6 +136,19 @@ function shuffleArray(array) {
     [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
   }
   return newArray;
+}
+
+// Build question order for SCORM suspend data
+function getQuestionOrder(set) {
+  if (!set) {
+    return [];
+  }
+
+  if (set.shuffledQuestions && set.shuffledQuestions.length) {
+    return set.shuffledQuestions.map((q) => q.originalIndex);
+  }
+
+  return set.question.map((_, index) => index);
 }
 
 // Select random question set
@@ -216,10 +229,12 @@ function selectOption(questionIndex, option, optionElement) {
   userAnswers[questionIndex] = option;
 
   if (isScormMode) {
+    const set = questions[selectedSet];
     const currentState = {
       startTime: startTimestamp,
       selectedSet: selectedSet,
       answers: userAnswers,
+      questionOrder: getQuestionOrder(set),
     };
     console.log("Saving answer state:", currentState);
     scorm.set("cmi.suspend_data", JSON.stringify(currentState));
