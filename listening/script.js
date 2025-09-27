@@ -1007,6 +1007,24 @@ function endTest(isTimeout) {
     elements.actions.classList.add("hidden");
   }
 
+  if (elements.timer) {
+    elements.timer.classList.add("hidden");
+  }
+
+  if (elements.timerContainer) {
+    elements.timerContainer.classList.add("hidden");
+  }
+
+  if (elements.programBanner) {
+    elements.programBanner.classList.add("hidden");
+  }
+
+  const instructionElement = document.querySelector(".instructions");
+
+  if (instructionElement) {
+    instructionElement.classList.add("hidden");
+  }
+
   const totalQuestions = getTotalQuestionCount();
 
   const finalScore = calculateScore();
@@ -1208,7 +1226,7 @@ function buildAnswersSummary() {
     section.questions.forEach((question) => {
       const userAnswer = userAnswers[question.id] || "N/A";
 
-      const outcome = userAnswer === question.answer ? "correct" : "incorrect";
+      const outcome = userAnswer === question.answer ? '✓' : '✗';
 
       entries.push(`${question.id}: ${userAnswer} (${outcome})`);
     });
