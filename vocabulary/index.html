@@ -1,44 +1,66 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vocabulary Placement Test</title>
-    <link rel="stylesheet" href="../assets/css/shared.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/shared.css" />
+    <link rel="stylesheet" href="../assets/css/notifications.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
 </head>
 <body>
     <div class="container">
         <header>
             <h1>PLACEMENT TEST - VOCABULARY</h1>
-            <p class="instructions">This section evaluates your vocabulary knowledge and understanding.</p>
+            <p class="instructions">
+                Select your training programme to begin. Match each definition with the correct word.
+            </p>
         </header>
 
-        <div class="placeholder-container">
-            <div class="placeholder-icon">
-                <i class="fas fa-book"></i>
-            </div>
-            <h2 class="placeholder-title">Vocabulary Test Coming Soon</h2>
-            <p class="placeholder-message">
-                The vocabulary test is currently under development. When completed, this section will include 
-                various exercises to evaluate your vocabulary knowledge and usage.
-            </p>
-            <p class="placeholder-message">
-                Features being developed:
-            </p>
-            <ul style="text-align: left; max-width: 400px; margin: 0 auto; margin-bottom: 30px;">
-                <li>Word meaning and usage questions</li>
-                <li>Synonyms and antonyms</li>
-                <li>Contextual word understanding</li>
-                <li>Common phrases and idioms</li>
-                <li>Subject-specific vocabulary</li>
-            </ul>
-            <a href="../index.html" class="btn back-button">Back to Main Menu</a>
+        <div class="timer hidden" id="timer">
+            <i class="fas fa-clock"></i>
+            Time Remaining: <span id="time-remaining">05:00</span>
+        </div>
+        <div class="timer-container hidden" id="timer-container">
+            <div class="timer-bar" id="timer-bar"></div>
+        </div>
+
+        <div id="program-banner" class="program-banner hidden">
+            Training Programme: <span id="selected-program-name"></span>
+        </div>
+
+        <div class="vocabulary-content hidden" id="vocabulary-content">
+            <section class="vocab-section">
+                <h2>Vocabulary Matching</h2>
+                <div class="task-instruction" id="task-instruction">
+                    Drag or tap the correct word for each definition. Each word can be used only once.
+                </div>
+                <div class="word-bank" id="word-bank"></div>
+                <div class="matching-grid" id="matching-grid"></div>
+            </section>
+        </div>
+
+        <div class="actions text-center hidden" id="actions">
+            <button id="submit-test" class="btn btn-primary">Complete Test</button>
         </div>
     </div>
 
-    <!-- Include SCORM API wrapper and shared JavaScript -->
+    <div id="program-selection" class="program-overlay">
+        <div class="program-modal">
+            <h2>Select Your Training Programme</h2>
+            <p>The vocabulary task contains programme specific terminology. Choose your programme to proceed.</p>
+            <label for="programme-select" class="sr-only">Training Programme</label>
+            <select id="programme-select" class="programme-select">
+                <option value="">&mdash; Select Programme &mdash;</option>
+            </select>
+            <button id="start-test" class="btn btn-primary start-btn">Start Vocabulary Test</button>
+        </div>
+    </div>
+
     <script src="../assets/js/pipwerks-scorm.js"></script>
     <script src="../assets/js/common.js"></script>
     <script src="script.js"></script>

@@ -1,38 +1,500 @@
 {
-    "vocabulary_questions": [
-        {
-            "category": "Word Meanings",
-            "questions": [
-                {
-                    "id": "wm_1",
-                    "question": "Choose the correct meaning of the word 'placeholder'",
-                    "options": [
-                        "A temporary substitute",
-                        "A permanent marker",
-                        "A special container",
-                        "A type of holder",
-                        "A place marker"
-                    ],
-                    "answer": "A temporary substitute"
-                }
-            ]
-        },
-        {
-            "category": "Synonyms",
-            "questions": [
-                {
-                    "id": "syn_1",
-                    "question": "Select the word closest in meaning to 'placeholder'",
-                    "options": [
-                        "dummy",
-                        "template",
-                        "example",
-                        "sample",
-                        "model"
-                    ],
-                    "answer": "dummy"
-                }
-            ]
-        }
+  "AT": {
+    "question_set_1": [
+      {
+        "question": "Transfers power from the engine to the wheels",
+        "answer": "Transmission",
+        "id": "AT_1_1"
+      },
+      {
+        "question": "Uses exhaust gases to power a turbine that forces more air into the engine",
+        "answer": "Turbocharging",
+        "id": "AT_1_2"
+      },
+      {
+        "question": "Allows the drive wheels to rotate at different speeds",
+        "answer": "Differential",
+        "id": "AT_1_3"
+      },
+      {
+        "question": "The primary power source of the vehicle",
+        "answer": "Engine",
+        "id": "AT_1_4"
+      },
+      {
+        "question": "Converts the piston’s liner motion into rotational motion",
+        "answer": "Crankshaft",
+        "id": "AT_1_5"
+      }
+    ],
+    "question_set_2": [
+      {
+        "question": "Transfers power from the engine to the wheels",
+        "answer": "Transmission",
+        "id": "AT_22_1"
+      },
+      {
+        "question": "Uses exhaust gases to power a turbine that forces more air into the engine",
+        "answer": "Turbocharging",
+        "id": "AT_1_2"
+      },
+      {
+        "question": "Allows the drive wheels to rotate at different speeds",
+        "answer": "Differential",
+        "id": "AT_2_3"
+      },
+      {
+        "question": "The primary power source of the vehicle",
+        "answer": "Engine",
+        "id": "AT_2_4"
+      },
+      {
+        "question": "Converts the piston’s liner motion into rotational motion",
+        "answer": "Crankshaft",
+        "id": "AT_2_5"
+      }
+    ],
+    "question_set_3": [
+      {
+        "question": "Transfers power from the engine to the wheels",
+        "answer": "Transmission",
+        "id": "AT_3_1"
+      },
+      {
+        "question": "Uses exhaust gases to power a turbine that forces more air into the engine",
+        "answer": "Turbocharging",
+        "id": "AT_3_2"
+      },
+      {
+        "question": "Allows the drive wheels to rotate at different speeds",
+        "answer": "Differential",
+        "id": "AT_3_3"
+      },
+      {
+        "question": "The primary power source of the vehicle",
+        "answer": "Engine",
+        "id": "AT_3_4"
+      },
+      {
+        "question": "Converts the piston’s liner motion into rotational motion",
+        "answer": "Crankshaft",
+        "id": "AT_3_5"
+      }
     ]
+  },
+  "CT": {
+    "question_set_1": [
+      {
+        "question": "Transfers power from the engine to the wheels",
+        "answer": "Transmission",
+        "id": "CT_1_1"
+      },
+      {
+        "question": "Uses exhaust gases to power a turbine that forces more air into the engine",
+        "answer": "Turbocharging",
+        "id": "CT_1_2"
+      },
+      {
+        "question": "Allows the drive wheels to rotate at different speeds",
+        "answer": "Differential",
+        "id": "CT_1_3"
+      },
+      {
+        "question": "The primary power source of the vehicle",
+        "answer": "Engine",
+        "id": "CT_1_4"
+      },
+      {
+        "question": "Converts the piston’s liner motion into rotational motion",
+        "answer": "Crankshaft",
+        "id": "CT_1_5"
+      }
+    ],
+    "question_set_2": [
+      {
+        "question": "Transfers power from the engine to the wheels",
+        "answer": "Transmission",
+        "id": "CT_22_1"
+      },
+      {
+        "question": "Uses exhaust gases to power a turbine that forces more air into the engine",
+        "answer": "Turbocharging",
+        "id": "CT_1_2"
+      },
+      {
+        "question": "Allows the drive wheels to rotate at different speeds",
+        "answer": "Differential",
+        "id": "CT_2_3"
+      },
+      {
+        "question": "The primary power source of the vehicle",
+        "answer": "Engine",
+        "id": "CT_2_4"
+      },
+      {
+        "question": "Converts the piston’s liner motion into rotational motion",
+        "answer": "Crankshaft",
+        "id": "CT_2_5"
+      }
+    ],
+    "question_set_3": [
+      {
+        "question": "Transfers power from the engine to the wheels",
+        "answer": "Transmission",
+        "id": "CT_3_1"
+      },
+      {
+        "question": "Uses exhaust gases to power a turbine that forces more air into the engine",
+        "answer": "Turbocharging",
+        "id": "CT_3_2"
+      },
+      {
+        "question": "Allows the drive wheels to rotate at different speeds",
+        "answer": "Differential",
+        "id": "CT_3_3"
+      },
+      {
+        "question": "The primary power source of the vehicle",
+        "answer": "Engine",
+        "id": "CT_3_4"
+      },
+      {
+        "question": "Converts the piston’s liner motion into rotational motion",
+        "answer": "Crankshaft",
+        "id": "CT_3_5"
+      }
+    ]
+  },
+  "ET": {
+    "question_set_1": [
+      {
+        "question": "Transfers power from the engine to the wheels",
+        "answer": "Transmission",
+        "id": "ET_1_1"
+      },
+      {
+        "question": "Uses exhaust gases to power a turbine that forces more air into the engine",
+        "answer": "Turbocharging",
+        "id": "ET_1_2"
+      },
+      {
+        "question": "Allows the drive wheels to rotate at different speeds",
+        "answer": "Differential",
+        "id": "ET_1_3"
+      },
+      {
+        "question": "The primary power source of the vehicle",
+        "answer": "Engine",
+        "id": "ET_1_4"
+      },
+      {
+        "question": "Converts the piston’s liner motion into rotational motion",
+        "answer": "Crankshaft",
+        "id": "ET_1_5"
+      }
+    ],
+    "question_set_2": [
+      {
+        "question": "Transfers power from the engine to the wheels",
+        "answer": "Transmission",
+        "id": "ET_22_1"
+      },
+      {
+        "question": "Uses exhaust gases to power a turbine that forces more air into the engine",
+        "answer": "Turbocharging",
+        "id": "ET_1_2"
+      },
+      {
+        "question": "Allows the drive wheels to rotate at different speeds",
+        "answer": "Differential",
+        "id": "ET_2_3"
+      },
+      {
+        "question": "The primary power source of the vehicle",
+        "answer": "Engine",
+        "id": "ET_2_4"
+      },
+      {
+        "question": "Converts the piston’s liner motion into rotational motion",
+        "answer": "Crankshaft",
+        "id": "ET_2_5"
+      }
+    ],
+    "question_set_3": [
+      {
+        "question": "Transfers power from the engine to the wheels",
+        "answer": "Transmission",
+        "id": "ET_3_1"
+      },
+      {
+        "question": "Uses exhaust gases to power a turbine that forces more air into the engine",
+        "answer": "Turbocharging",
+        "id": "ET_3_2"
+      },
+      {
+        "question": "Allows the drive wheels to rotate at different speeds",
+        "answer": "Differential",
+        "id": "ET_3_3"
+      },
+      {
+        "question": "The primary power source of the vehicle",
+        "answer": "Engine",
+        "id": "ET_3_4"
+      },
+      {
+        "question": "Converts the piston’s liner motion into rotational motion",
+        "answer": "Crankshaft",
+        "id": "ET_3_5"
+      }
+    ]
+  },
+  "FT": {
+    "question_set_1": [
+      {
+        "question": "Transfers power from the engine to the wheels",
+        "answer": "Transmission",
+        "id": "FT_1_1"
+      },
+      {
+        "question": "Uses exhaust gases to power a turbine that forces more air into the engine",
+        "answer": "Turbocharging",
+        "id": "FT_1_2"
+      },
+      {
+        "question": "Allows the drive wheels to rotate at different speeds",
+        "answer": "Differential",
+        "id": "FT_1_3"
+      },
+      {
+        "question": "The primary power source of the vehicle",
+        "answer": "Engine",
+        "id": "FT_1_4"
+      },
+      {
+        "question": "Converts the piston’s liner motion into rotational motion",
+        "answer": "Crankshaft",
+        "id": "FT_1_5"
+      }
+    ],
+    "question_set_2": [
+      {
+        "question": "Transfers power from the engine to the wheels",
+        "answer": "Transmission",
+        "id": "FT_22_1"
+      },
+      {
+        "question": "Uses exhaust gases to power a turbine that forces more air into the engine",
+        "answer": "Turbocharging",
+        "id": "FT_1_2"
+      },
+      {
+        "question": "Allows the drive wheels to rotate at different speeds",
+        "answer": "Differential",
+        "id": "FT_2_3"
+      },
+      {
+        "question": "The primary power source of the vehicle",
+        "answer": "Engine",
+        "id": "FT_2_4"
+      },
+      {
+        "question": "Converts the piston’s liner motion into rotational motion",
+        "answer": "Crankshaft",
+        "id": "FT_2_5"
+      }
+    ],
+    "question_set_3": [
+      {
+        "question": "Transfers power from the engine to the wheels",
+        "answer": "Transmission",
+        "id": "FT_3_1"
+      },
+      {
+        "question": "Uses exhaust gases to power a turbine that forces more air into the engine",
+        "answer": "Turbocharging",
+        "id": "FT_3_2"
+      },
+      {
+        "question": "Allows the drive wheels to rotate at different speeds",
+        "answer": "Differential",
+        "id": "FT_3_3"
+      },
+      {
+        "question": "The primary power source of the vehicle",
+        "answer": "Engine",
+        "id": "FT_3_4"
+      },
+      {
+        "question": "Converts the piston’s liner motion into rotational motion",
+        "answer": "Crankshaft",
+        "id": "FT_3_5"
+      }
+    ]
+  },
+  "ICT": {
+    "question_set_1": [
+      {
+        "question": "Transfers power from the engine to the wheels",
+        "answer": "Transmission",
+        "id": "ICT_1_1"
+      },
+      {
+        "question": "Uses exhaust gases to power a turbine that forces more air into the engine",
+        "answer": "Turbocharging",
+        "id": "ICT_1_2"
+      },
+      {
+        "question": "Allows the drive wheels to rotate at different speeds",
+        "answer": "Differential",
+        "id": "ICT_1_3"
+      },
+      {
+        "question": "The primary power source of the vehicle",
+        "answer": "Engine",
+        "id": "ICT_1_4"
+      },
+      {
+        "question": "Converts the piston’s liner motion into rotational motion",
+        "answer": "Crankshaft",
+        "id": "ICT_1_5"
+      }
+    ],
+    "question_set_2": [
+      {
+        "question": "Transfers power from the engine to the wheels",
+        "answer": "Transmission",
+        "id": "ICT_22_1"
+      },
+      {
+        "question": "Uses exhaust gases to power a turbine that forces more air into the engine",
+        "answer": "Turbocharging",
+        "id": "ICT_1_2"
+      },
+      {
+        "question": "Allows the drive wheels to rotate at different speeds",
+        "answer": "Differential",
+        "id": "ICT_2_3"
+      },
+      {
+        "question": "The primary power source of the vehicle",
+        "answer": "Engine",
+        "id": "ICT_2_4"
+      },
+      {
+        "question": "Converts the piston’s liner motion into rotational motion",
+        "answer": "Crankshaft",
+        "id": "ICT_2_5"
+      }
+    ],
+    "question_set_3": [
+      {
+        "question": "Transfers power from the engine to the wheels",
+        "answer": "Transmission",
+        "id": "ICT_3_1"
+      },
+      {
+        "question": "Uses exhaust gases to power a turbine that forces more air into the engine",
+        "answer": "Turbocharging",
+        "id": "ICT_3_2"
+      },
+      {
+        "question": "Allows the drive wheels to rotate at different speeds",
+        "answer": "Differential",
+        "id": "ICT_3_3"
+      },
+      {
+        "question": "The primary power source of the vehicle",
+        "answer": "Engine",
+        "id": "ICT_3_4"
+      },
+      {
+        "question": "Converts the piston’s liner motion into rotational motion",
+        "answer": "Crankshaft",
+        "id": "ICT_3_5"
+      }
+    ]
+  },
+  "MT": {
+    "question_set_1": [
+      {
+        "question": "Transfers power from the engine to the wheels",
+        "answer": "Transmission",
+        "id": "MT_1_1"
+      },
+      {
+        "question": "Uses exhaust gases to power a turbine that forces more air into the engine",
+        "answer": "Turbocharging",
+        "id": "MT_1_2"
+      },
+      {
+        "question": "Allows the drive wheels to rotate at different speeds",
+        "answer": "Differential",
+        "id": "MT_1_3"
+      },
+      {
+        "question": "The primary power source of the vehicle",
+        "answer": "Engine",
+        "id": "MT_1_4"
+      },
+      {
+        "question": "Converts the piston’s liner motion into rotational motion",
+        "answer": "Crankshaft",
+        "id": "MT_1_5"
+      }
+    ],
+    "question_set_2": [
+      {
+        "question": "Transfers power from the engine to the wheels",
+        "answer": "Transmission",
+        "id": "MT_22_1"
+      },
+      {
+        "question": "Uses exhaust gases to power a turbine that forces more air into the engine",
+        "answer": "Turbocharging",
+        "id": "MT_1_2"
+      },
+      {
+        "question": "Allows the drive wheels to rotate at different speeds",
+        "answer": "Differential",
+        "id": "MT_2_3"
+      },
+      {
+        "question": "The primary power source of the vehicle",
+        "answer": "Engine",
+        "id": "MT_2_4"
+      },
+      {
+        "question": "Converts the piston’s liner motion into rotational motion",
+        "answer": "Crankshaft",
+        "id": "MT_2_5"
+      }
+    ],
+    "question_set_3": [
+      {
+        "question": "Transfers power from the engine to the wheels",
+        "answer": "Transmission",
+        "id": "MT_3_1"
+      },
+      {
+        "question": "Uses exhaust gases to power a turbine that forces more air into the engine",
+        "answer": "Turbocharging",
+        "id": "MT_3_2"
+      },
+      {
+        "question": "Allows the drive wheels to rotate at different speeds",
+        "answer": "Differential",
+        "id": "MT_3_3"
+      },
+      {
+        "question": "The primary power source of the vehicle",
+        "answer": "Engine",
+        "id": "MT_3_4"
+      },
+      {
+        "question": "Converts the piston’s liner motion into rotational motion",
+        "answer": "Crankshaft",
+        "id": "MT_3_5"
+      }
+    ]
+  }
 }
