@@ -1,0 +1,38 @@
+{
+    "vocabulary_questions": [
+        {
+            "category": "Word Meanings",
+            "questions": [
+                {
+                    "id": "wm_1",
+                    "question": "Choose the correct meaning of the word 'placeholder'",
+                    "options": [
+                        "A temporary substitute",
+                        "A permanent marker",
+                        "A special container",
+                        "A type of holder",
+                        "A place marker"
+                    ],
+                    "answer": "A temporary substitute"
+                }
+            ]
+        },
+        {
+            "category": "Synonyms",
+            "questions": [
+                {
+                    "id": "syn_1",
+                    "question": "Select the word closest in meaning to 'placeholder'",
+                    "options": [
+                        "dummy",
+                        "template",
+                        "example",
+                        "sample",
+                        "model"
+                    ],
+                    "answer": "dummy"
+                }
+            ]
+        }
+    ]
+}

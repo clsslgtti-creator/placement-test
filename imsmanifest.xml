@@ -74,6 +74,15 @@
         </item>
       </item>
       
+      <!-- Vocabulary Test SCO -->
+      <item identifier="vocabulary_test" isvisible="true">
+        <title>Vocabulary Test</title>
+        <adlcp:masteryscore>70</adlcp:masteryscore>
+        <item identifier="vocabulary_content" isvisible="true" identifierref="vocabulary_test_resource">
+          <title>Vocabulary Test</title>
+        </item>
+      </item>
+
       <!-- Listening Test SCO -->
       <item identifier="listening_test" isvisible="true">
         <title>Listening Test</title>
@@ -131,6 +140,17 @@
       <file href="assets/js/pipwerks-scorm.js"/>
     </resource>
     
+    <!-- Vocabulary Test Resources -->
+    <resource identifier="vocabulary_test_resource" type="webcontent" adlcp:scormtype="sco" href="vocabulary/index.html">
+      <file href="vocabulary/index.html"/>
+      <file href="vocabulary/script.js"/>
+      <file href="vocabulary/styles.css"/>
+      <file href="vocabulary/questions.json"/>
+      <file href="assets/css/shared.css"/>
+      <file href="assets/js/common.js"/>
+      <file href="assets/js/pipwerks-scorm.js"/>
+    </resource>
+
     <!-- Listening Test Resources -->
     <resource identifier="listening_test_resource" type="webcontent" adlcp:scormtype="sco" href="listening/index.html">
       <file href="listening/index.html"/>

@@ -1,137 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Language Placement Test</title>
-    <link rel="stylesheet" href="assets/css/shared.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/shared.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <style>
-        /* Main page specific styles */
-        :root {
-            --primary-color: #3498db;
-            --secondary-color: #2ecc71;
-            --text-color: #333;
-            --light-bg: #f8f9fa;
-            --border-color: #ddd;
-        }
+      /* Main page specific styles */
+      :root {
+        --primary-color: #3498db;
+        --secondary-color: #2ecc71;
+        --text-color: #333;
+        --light-bg: #f8f9fa;
+        --border-color: #ddd;
+      }
 
-        body {
-            padding: 20px;
-        }
+      body {
+        padding: 20px;
+      }
 
-        .description {
-            margin-bottom: 30px;
-        }
+      .description {
+        margin-bottom: 30px;
+      }
 
-        .test-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
+      .test-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+      }
 
-        .test-card {
-            background-color: white;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            padding: 20px;
-            text-align: center;
-            transition: background-color 0.3s;
-        }
+      .test-card {
+        background-color: white;
+        border-radius: 8px;
+        border: 1px solid var(--border-color);
+        padding: 20px;
+        text-align: center;
+        transition: background-color 0.3s;
+      }
 
-        .test-card:hover {
-            background-color: rgba(52, 152, 219, 0.05);
-        }
+      .test-card:hover {
+        background-color: rgba(52, 152, 219, 0.05);
+      }
 
-        .test-card h2 {
-            color: var(--primary-color);
-            margin-bottom: 15px;
-        }
+      .test-card h2 {
+        color: var(--primary-color);
+        margin-bottom: 15px;
+      }
 
-        .test-card p {
-            margin-bottom: 20px;
-            color: #666;
-        }
+      .test-card p {
+        margin-bottom: 20px;
+        color: #666;
+      }
 
-        .test-card .icon {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 15px;
-        }
+      .test-card .icon {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 15px;
+      }
 
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            color: #666;
-        }
+      footer {
+        text-align: center;
+        margin-top: 40px;
+        color: #666;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <h1>Language Placement Test</h1>
-            <p class="description">Welcome to the Language Placement Test. This assessment will evaluate your skills in different areas of language proficiency. Please complete all four sections to receive a comprehensive evaluation.</p>
-        </header>
+      <header>
+        <h1>Language Placement Test</h1>
+        <p class="description">
+          Welcome to the Language Placement Test. This assessment will evaluate
+          your skills in different areas of language proficiency. Please
+          complete all four sections to receive a comprehensive evaluation.
+        </p>
+      </header>
 
-        <div class="test-cards">
-            <div class="test-card">
-                <div class="icon"><i class="fas fa-pencil-alt"></i></div>
-                <h2>Grammar Test</h2>
-                <p>Evaluate your understanding of grammar rules and structures.</p>
-                <a href="grammar/index.html" class="btn">Start Grammar Test</a>
-            </div>
-
-            <div class="test-card">
-                <div class="icon"><i class="fas fa-pen-fancy"></i></div>
-                <h2>Writing Test</h2>
-                <p>Assess your ability to express ideas clearly in written form.</p>
-                <a href="writing/index.html" class="btn">Start Writing Test</a>
-            </div>
-
-            <div class="test-card">
-                <div class="icon"><i class="fas fa-microphone-alt"></i></div>
-                <h2>Speaking Test</h2>
-                <p>Evaluate your spoken language fluency and pronunciation.</p>
-                <a href="speaking/index.html" class="btn">Start Speaking Test</a>
-            </div>
-
-            <div class="test-card">
-                <div class="icon"><i class="fas fa-book-reader"></i></div>
-                <h2>Reading Test</h2>
-                <p>Test your reading comprehension and understanding.</p>
-                <a href="reading/index.html" class="btn">Start Reading Test</a>
-            </div>
+      <div class="test-cards">
+        <div class="test-card">
+          <div class="icon"><i class="fas fa-pencil-alt"></i></div>
+          <h2>Grammar Test</h2>
+          <p>Evaluate your understanding of grammar rules and structures.</p>
+          <a href="grammar/index.html" class="btn">Start Grammar Test</a>
         </div>
 
-        <div class="test-card" style="margin-top: 30px;">
-            <div class="icon"><i class="fas fa-headphones"></i></div>
-            <h2>Listening Test</h2>
-            <p>Assess your ability to understand spoken language.</p>
-            <a href="listening/index.html" class="btn">Start Listening Test</a>
+        <div class="test-card">
+          <div class="icon"><i class="fas fa-pen-fancy"></i></div>
+          <h2>Writing Test</h2>
+          <p>Assess your ability to express ideas clearly in written form.</p>
+          <a href="writing/index.html" class="btn">Start Writing Test</a>
         </div>
+
+        <div class="test-card">
+          <div class="icon"><i class="fas fa-microphone-alt"></i></div>
+          <h2>Speaking Test</h2>
+          <p>Evaluate your spoken language fluency and pronunciation.</p>
+          <a href="speaking/index.html" class="btn">Start Speaking Test</a>
+        </div>
+
+        <div class="test-card">
+          <div class="icon"><i class="fas fa-book-reader"></i></div>
+          <h2>Reading Test</h2>
+          <p>Test your reading comprehension and understanding.</p>
+          <a href="reading/index.html" class="btn">Start Reading Test</a>
+        </div>
+
+        <div class="test-card">
+          <div class="icon"><i class="fas fa-book"></i></div>
+          <h2>Vocabulary Test</h2>
+          <p>Evaluate your knowledge of words and their usage.</p>
+          <a href="vocabulary/index.html" class="btn">Start Vocabulary Test</a>
+        </div>
+        <div class="test-card">
+          <div class="icon"><i class="fas fa-headphones"></i></div>
+          <h2>Listening Test</h2>
+          <p>Assess your ability to understand spoken language.</p>
+          <a href="listening/index.html" class="btn">Start Listening Test</a>
+        </div>
+      </div>
     </div>
 
     <footer>
-        <p>© 2025 Language Placement Test System | All Rights Reserved</p>
+      <p>© 2025 Language Placement Test System | All Rights Reserved</p>
     </footer>
 
     <!-- Include shared JavaScript -->
     <script src="assets/js/common.js"></script>
     <script>
-        // Main page JavaScript
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('Main page loaded');
-            
-            // Check if there's any saved progress
-            const testTypes = ['grammar', 'reading', 'listening', 'speaking', 'writing'];
-            testTypes.forEach(type => {
-                const savedData = window.testUtils.getFromLocalStorage(`${type}_test_data`);
-                if (savedData) {
-                    // If there's saved data for a test, we could show a "Resume" button
-                    console.log(`Found saved progress for ${type} test`);
-                }
-            });
+      // Main page JavaScript
+      document.addEventListener("DOMContentLoaded", function () {
+        console.log("Main page loaded");
+
+        // Check if there's any saved progress
+        const testTypes = [
+          "grammar",
+          "reading",
+          "listening",
+          "speaking",
+          "writing",
+        ];
+        testTypes.forEach((type) => {
+          const savedData = window.testUtils.getFromLocalStorage(
+            `${type}_test_data`
+          );
+          if (savedData) {
+            // If there's saved data for a test, we could show a "Resume" button
+            console.log(`Found saved progress for ${type} test`);
+          }
         });
+      });
     </script>
-</body>
+  </body>
 </html>
