@@ -6,6 +6,8 @@
         {
           "question": ["Hameed", "bank", "bus", "2.00 p.m.", "tired"],
           "answers": [
+            "Hameed works at a bank. He goes to work by bus. He has lunch at 2 p.m. He is tired.",
+            "Hameed works in a bank. He goes to work by bus. He has lunch at 2 p.m. He is tired.",
             "Hameed works at a bank. He goes to work by bus. He has his lunch at 2 p.m. He is tired.",
             "Hameed works in a bank. He goes to work by bus. He has his lunch at 2 p.m. He is tired."
           ],
@@ -21,7 +23,9 @@
           ],
           "answers": [
             "Mr. & Mrs. Perera work at a shop. They walk to work. They have lunch at 12.30 p.m. They are happy.",
-            "Mr. & Mrs. Perera work in a shop. They walk to work. They have lunch at 12.30 p.m. They are happy."
+            "Mr. & Mrs. Perera work in a shop. They walk to work. They have lunch at 12.30 p.m. They are happy.",
+            "Mr. & Mrs. Perera work at a shop. They walk to work. They have lunch their at 12.30 p.m. They are happy.",
+            "Mr. & Mrs. Perera work in a shop. They walk to work. They have lunch their at 12.30 p.m. They are happy."
           ],
           "id": "MT_1_1"
         },
@@ -35,7 +39,9 @@
           ],
           "answers": [
             "Meena works at a government office. She goes to work by train. She has lunch at 12 noon. She is stressed.",
-            "Meena works in a government office. She goes to work by train. She has lunch at 12 noon. She is stressed."
+            "Meena works in a government office. She goes to work by train. She has lunch at 12 noon. She is stressed.",
+            "Meena works at a government office. She goes to work by train. She has her lunch at 12 noon. She is stressed.",
+            "Meena works in a government office. She goes to work by train. She has her lunch at 12 noon. She is stressed."
           ],
           "id": "MT_1_2"
         }
@@ -54,7 +60,10 @@
             "the",
             "last"
           ],
-          "answer": "The bearings were greased carefully last night.",
+          "answers": [
+            "The bearings were greased carefully last night.",
+            "Last night the bearings were greased carefully."
+          ],
           "id": "MT_2_1"
         },
         {
@@ -66,7 +75,10 @@
             "was",
             "yesterday"
           ],
-          "answer": "The lathe was running smoothly yesterday.",
+          "answers": [
+            "The lathe was running smoothly yesterday.",
+            "Yesterday the lathe was running smoothly."
+          ],
           "id": "MT_2_2"
         },
         {
@@ -78,7 +90,10 @@
             "the",
             "the"
           ],
-          "answer": "The worker tightened the bolts once again.",
+          "answers": [
+            "The worker tightened the bolts once again.",
+            "Once again the worker tightened the bolts."
+          ],
           "id": "MT_2_3"
         }
       ]
@@ -91,6 +106,8 @@
         {
           "question": ["Hameed", "bank", "bus", "2.00 p.m.", "tired"],
           "answers": [
+            "Hameed works at a bank. He goes to work by bus. He has lunch at 2 p.m. He is tired.",
+            "Hameed works in a bank. He goes to work by bus. He has lunch at 2 p.m. He is tired.",
             "Hameed works at a bank. He goes to work by bus. He has his lunch at 2 p.m. He is tired.",
             "Hameed works in a bank. He goes to work by bus. He has his lunch at 2 p.m. He is tired."
           ],
@@ -106,7 +123,9 @@
           ],
           "answers": [
             "Ruwan and Amal work at a garage. They go to work by bicycle. They have lunch at 12.30 p.m. They are busy.",
-            "Ruwan and Amal work in a garage. They go to work by bicycle. They have lunch at 12.30 p.m. They are busy."
+            "Ruwan and Amal work in a garage. They go to work by bicycle. They have lunch at 12.30 p.m. They are busy.",
+            "Ruwan and Amal work at a garage. They go to work by bicycle. They have their lunch at 12.30 p.m. They are busy.",
+            "Ruwan and Amal work in a garage. They go to work by bicycle. They have their lunch at 12.30 p.m. They are busy."
           ],
           "id": "AT_1_1"
         },
@@ -114,7 +133,9 @@
           "question": ["Kumara", "workshop", "tuk-tuk", "1.00 p.m.", "relaxed"],
           "answers": [
             "Kumara works at a workshop. He goes to work by tuk-tuk. He has lunch at 1.00 p.m. He is relaxed.",
-            "Kumara works in a workshop. He goes to work by tuk-tuk. He has lunch at 1.00 p.m. He is relaxed."
+            "Kumara works in a workshop. He goes to work by tuk-tuk. He has lunch at 1.00 p.m. He is relaxed.",
+            "Kumara works at a workshop. He goes to work by tuk-tuk. He has his lunch at 1.00 p.m. He is relaxed.",
+            "Kumara works in a workshop. He goes to work by tuk-tuk. He has his lunch at 1.00 p.m. He is relaxed."
           ],
           "id": "AT_1_2"
         }
@@ -125,7 +146,10 @@
       "question": [
         {
           "question": ["garage", "the", "busy", "very", "was", "two weeks ago"],
-          "answer": "The garage was very busy two weeks ago.",
+          "answers": [
+            "The garage was very busy two weeks ago.",
+            "Two weeks ago the garage was very busy."
+          ],
           "id": "AT_2_1"
         },
         {
@@ -139,7 +163,10 @@
             "check",
             "is going"
           ],
-          "answer": "The mechanic is going to check the engine carefully.",
+          "answers": [
+            "The mechanic is going to check the engine carefully.",
+            "The mechanic is going to carefully check the engine."
+          ],
           "id": "AT_2_2"
         },
         {
@@ -153,7 +180,10 @@
             "on",
             "the office"
           ],
-          "answer": "A customer sat on a chair outside the office.",
+          "answers": [
+            "A customer sat on a chair outside the office.",
+            "Outside the office a customer sat on a chair."
+          ],
           "id": "AT_2_3"
         }
       ]
@@ -166,6 +196,8 @@
         {
           "question": ["Hameed", "bank", "bus", "2.00 p.m.", "tired"],
           "answers": [
+            "Hameed works at a bank. He goes to work by bus. He has lunch at 2 p.m. He is tired.",
+            "Hameed works in a bank. He goes to work by bus. He has lunch at 2 p.m. He is tired.",
             "Hameed works at a bank. He goes to work by bus. He has his lunch at 2 p.m. He is tired.",
             "Hameed works in a bank. He goes to work by bus. He has his lunch at 2 p.m. He is tired."
           ],
@@ -181,7 +213,9 @@
           ],
           "answers": [
             "Manoj and Sanjeewa work at a power plant. They go to work by van. They have lunch at 12 noon. They are tired.",
-            "Manoj and Sanjeewa work in a power plant. They go to work by van. They have lunch at 12 noon. They are tired."
+            "Manoj and Sanjeewa work in a power plant. They go to work by van. They have lunch at 12 noon. They are tired.",
+            "Manoj and Sanjeewa work at a power plant. They go to work by van. They have their lunch at 12 noon. They are tired.",
+            "Manoj and Sanjeewa work in a power plant. They go to work by van. They have their lunch at 12 noon. They are tired."
           ],
           "id": "ET_1_1"
         },
@@ -189,7 +223,9 @@
           "question": ["Nirmala", "workshop", "bus", "12.45 p.m.", "cheerful"],
           "answers": [
             "Nirmala works at a workshop. She goes to work by bus. She has lunch at 12.45 p.m. She is cheerful.",
-            "Nirmala works in a workshop. She goes to work by bus. She has lunch at 12.45 p.m. She is cheerful."
+            "Nirmala works in a workshop. She goes to work by bus. She has lunch at 12.45 p.m. She is cheerful.",
+            "Nirmala works at a workshop. She goes to work by bus. She has her lunch at 12.45 p.m. She is cheerful.",
+            "Nirmala works in a workshop. She goes to work by bus. She has her lunch at 12.45 p.m. She is cheerful."
           ],
           "id": "ET_1_2"
         }
@@ -207,7 +243,7 @@
             "circuit",
             "the"
           ],
-          "answer": "The electrician tested the circuit continuity.",
+          "answers": ["The electrician tested the circuit continuity."],
           "id": "ET_2_1"
         },
         {
@@ -220,12 +256,18 @@
             "was",
             "there"
           ],
-          "answer": "Yesterday there was a sudden power cut.",
+          "answers": [
+            "Yesterday there was a sudden power cut.",
+            "There was a sudden power cut yesterday."
+          ],
           "id": "ET_2_2"
         },
         {
           "question": ["the", "safely", "repaired", "wires", "loose", "he"],
-          "answer": "He repaired the loose wires safely.",
+          "answers": [
+            "He repaired the loose wires safely.",
+            "He safely repaired the loose wires."
+          ],
           "id": "ET_2_3"
         }
       ]
@@ -238,6 +280,8 @@
         {
           "question": ["Hameed", "bank", "bus", "2.00 p.m.", "tired"],
           "answers": [
+            "Hameed works at a bank. He goes to work by bus. He has lunch at 2 p.m. He is tired.",
+            "Hameed works in a bank. He goes to work by bus. He has lunch at 2 p.m. He is tired.",
             "Hameed works at a bank. He goes to work by bus. He has his lunch at 2 p.m. He is tired.",
             "Hameed works in a bank. He goes to work by bus. He has his lunch at 2 p.m. He is tired."
           ],
@@ -253,7 +297,9 @@
           ],
           "answers": [
             "Mala and Anura work at a factory. They go to work by lorry. They have lunch at 12.30 p.m. They are busy.",
-            "Mala and Anura work in a factory. They go to work by lorry. They have lunch at 12.30 p.m. They are busy."
+            "Mala and Anura work in a factory. They go to work by lorry. They have lunch at 12.30 p.m. They are busy.",
+            "Mala and Anura work at a factory. They go to work by lorry. They have their lunch at 12.30 p.m. They are busy.",
+            "Mala and Anura work in a factory. They go to work by lorry. They have their lunch at 12.30 p.m. They are busy."
           ],
           "id": "FT_1_1"
         },
@@ -267,7 +313,9 @@
           ],
           "answers": [
             "Nadeesha works at a kitchen. She goes to work by scooter. She has lunch at 1.15 p.m. She is careful.",
-            "Nadeesha works in a kitchen. She goes to work by scooter. She has lunch at 1.15 p.m. She is careful."
+            "Nadeesha works in a kitchen. She goes to work by scooter. She has lunch at 1.15 p.m. She is careful.",
+            "Nadeesha works at a kitchen. She goes to work by scooter. She has her lunch at 1.15 p.m. She is careful.",
+            "Nadeesha works in a kitchen. She goes to work by scooter. She has her lunch at 1.15 p.m. She is careful."
           ],
           "id": "FT_1_2"
         }
@@ -285,7 +333,7 @@
             "the",
             "temperature"
           ],
-          "answer": "The worker checked the fridge temperature.",
+          "answers": ["The worker checked the fridge temperature."],
           "id": "FT_2_1"
         },
         {
@@ -298,7 +346,7 @@
             "the",
             "were"
           ],
-          "answer": "200 chickens were delivered to the factory.",
+          "answers": ["200 chickens were delivered to the factory."],
           "id": "FT_2_2"
         },
         {
@@ -310,7 +358,7 @@
             "the",
             "automatically"
           ],
-          "answer": "The machine packed the biscuits automatically.",
+          "answers": ["The machine packed the biscuits automatically."],
           "id": "FT_2_3"
         }
       ]
@@ -323,6 +371,8 @@
         {
           "question": ["Hameed", "bank", "bus", "2.00 p.m.", "tired"],
           "answers": [
+            "Hameed works at a bank. He goes to work by bus. He has lunch at 2 p.m. He is tired.",
+            "Hameed works in a bank. He goes to work by bus. He has lunch at 2 p.m. He is tired.",
             "Hameed works at a bank. He goes to work by bus. He has his lunch at 2 p.m. He is tired.",
             "Hameed works in a bank. He goes to work by bus. He has his lunch at 2 p.m. He is tired."
           ],
@@ -338,7 +388,9 @@
           ],
           "answers": [
             "Sunil and Ajith work at a government hospital. They go to work by bicycle. They have lunch at 12.45 p.m. They are energetic.",
-            "Sunil and Ajith work in a government hospital. They go to work by bicycle. They have lunch at 12.45 p.m. They are energetic."
+            "Sunil and Ajith work in a government hospital. They go to work by bicycle. They have lunch at 12.45 p.m. They are energetic.",
+            "Sunil and Ajith work at a government hospital. They go to work by bicycle. They have their lunch at 12.45 p.m. They are energetic.",
+            "Sunil and Ajith work in a government hospital. They go to work by bicycle. They have their lunch at 12.45 p.m. They are energetic."
           ],
           "id": "CT_1_1"
         },
@@ -346,7 +398,9 @@
           "question": ["Priyantha", "bank", "motorbike", "1.00 p.m.", "tired"],
           "answers": [
             "Priyantha works at a bank. He goes to work by motorbike. He has lunch at 1.00 p.m. He is tired.",
-            "Priyantha works in a bank. He goes to work by motorbike. He has lunch at 1.00 p.m. He is tired."
+            "Priyantha works in a bank. He goes to work by motorbike. He has lunch at 1.00 p.m. He is tired.",
+            "Priyantha works at a bank. He goes to work by motorbike. He has his lunch at 1.00 p.m. He is tired.",
+            "Priyantha works in a bank. He goes to work by motorbike. He has his lunch at 1.00 p.m. He is tired."
           ],
           "id": "CT_1_2"
         }
@@ -365,7 +419,10 @@
             "morning",
             "this"
           ],
-          "answer": "The bricks were stacked neatly this morning.",
+          "answers": [
+            "The bricks were stacked neatly this morning.",
+            "This morning the bricks were stacked neatly."
+          ],
           "id": "CT_2_1"
         },
         {
@@ -377,12 +434,18 @@
             "foreman",
             "the"
           ],
-          "answer": "The foreman checked the scaffolding carefully.",
+          "answers": [
+            "The foreman checked the scaffolding carefully.",
+            "The foreman carefully checked the scaffolding."
+          ],
           "id": "CT_2_2"
         },
         {
           "question": ["the", "cement", "mixed", "labourers", "quickly", "the"],
-          "answer": "The labourers mixed the cement quickly.",
+          "answers": [
+            "The labourers mixed the cement quickly.",
+            "The labourers quickly mixed the cement."
+          ],
           "id": "CT_2_3"
         }
       ]
@@ -395,6 +458,8 @@
         {
           "question": ["Hameed", "bank", "bus", "2.00 p.m.", "tired"],
           "answers": [
+            "Hameed works at a bank. He goes to work by bus. He has lunch at 2 p.m. He is tired.",
+            "Hameed works in a bank. He goes to work by bus. He has lunch at 2 p.m. He is tired.",
             "Hameed works at a bank. He goes to work by bus. He has his lunch at 2 p.m. He is tired.",
             "Hameed works in a bank. He goes to work by bus. He has his lunch at 2 p.m. He is tired."
           ],
@@ -410,7 +475,9 @@
           ],
           "answers": [
             "Anil and Kasun work at a computer lab. They go to work by motorbike. They have lunch at 12 noon. They are focused.",
-            "Anil and Kasun work in a computer lab. They go to work by motorbike. They have lunch at 12 noon. They are focused."
+            "Anil and Kasun work in a computer lab. They go to work by motorbike. They have lunch at 12 noon. They are focused.",
+            "Anil and Kasun work at a computer lab. They go to work by motorbike. They have their lunch at 12 noon. They are focused.",
+            "Anil and Kasun work in a computer lab. They go to work by motorbike. They have their lunch at 12 noon. They are focused."
           ],
           "id": "ICT_1_1"
         },
@@ -418,7 +485,9 @@
           "question": ["Anjali", "office", "bus", "1.00 p.m.", "worried"],
           "answers": [
             "Anjali works at an office. She goes to work by bus. She has lunch at 1.00 p.m. She is worried.",
-            "Anjali works in an office. She goes to work by bus. She has lunch at 1.00 p.m. She is worried."
+            "Anjali works in an office. She goes to work by bus. She has lunch at 1.00 p.m. She is worried.",
+            "Anjali works at an office. She goes to work by bus. She has her lunch at 1.00 p.m. She is worried.",
+            "Anjali works in an office. She goes to work by bus. She has her lunch at 1.00 p.m. She is worried."
           ],
           "id": "ICT_1_2"
         }
@@ -436,12 +505,12 @@
             "the",
             "software"
           ],
-          "answer": "The technician updated the computer software.",
+          "answers": ["The technician updated the computer software."],
           "id": "ICT_2_1"
         },
         {
           "question": ["the", "password", "forgotten", "has", "student", "the"],
-          "answer": "The student has forgotten the password.",
+          "answers": ["The student has forgotten the password."],
           "id": "ICT_2_2"
         },
         {
@@ -454,7 +523,10 @@
             "every",
             "computer"
           ],
-          "answer": "The computer system ran smoothly every morning.",
+          "answers": [
+            "The computer system ran smoothly every morning.",
+            "Every morning the computer system ran smoothly."
+          ],
           "id": "ICT_2_3"
         }
       ]
