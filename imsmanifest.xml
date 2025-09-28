@@ -48,32 +48,32 @@
 
         <!-- Grammar Test SCO -->
         <item identifier="grammar_test" isvisible="true" identifierref="grammar_test_resource">
-          <title>1. Grammar Test</title>
+          <title>Grammar Test</title>
         </item>
         
         <!-- Reading Test SCO -->
         <item identifier="reading_test" isvisible="true" identifierref="reading_test_resource">
-          <title>2. Reading Test</title>
+          <title>Reading Test</title>
         </item>
         
         <!-- Listening Test SCO -->
         <item identifier="listening_test" isvisible="true" identifierref="listening_test_resource">
-          <title>3. Listening Test</title>
+          <title>Listening Test</title>
         </item>
         
         <!-- Writing Test SCO -->
         <item identifier="writing_test" isvisible="true" identifierref="writing_test_resource">
-          <title>4. Writing Test</title>
+          <title>Writing Test</title>
         </item>
         
         <!-- Vocabulary Test SCO -->
         <item identifier="vocabulary_test" isvisible="true" identifierref="vocabulary_test_resource">
-          <title>5. Vocabulary Test</title>
+          <title>Vocabulary Test</title>
         </item>
 
         <!-- Completion Page SCO -->
         <item identifier="completion_page" isvisible="true" identifierref="completion_resource">
-          <title>6. Completion</title>
+          <title>Completion</title>
         </item>
       </item>
       
