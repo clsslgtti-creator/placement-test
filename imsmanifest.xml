@@ -70,6 +70,11 @@
         <item identifier="vocabulary_test" isvisible="true" identifierref="vocabulary_test_resource">
           <title>5. Vocabulary Test</title>
         </item>
+
+        <!-- Completion Page SCO -->
+        <item identifier="completion_page" isvisible="true" identifierref="completion_resource">
+          <title>6. Completion</title>
+        </item>
       </item>
       
     </organization>
@@ -137,6 +142,17 @@
       <file href="assets/js/common.js"/>
       <file href="assets/js/pipwerks-scorm.js"/>
     </resource>
+
+    <!-- Completion Page Resource -->
+    <resource identifier="completion_resource" type="webcontent" adlcp:scormtype="sco" href="completion/index.html">
+      <file href="completion/index.html"/>
+      <file href="completion/script.js"/>
+      <file href="assets/css/shared.css"/>
+      <file href="assets/css/notifications.css"/>
+      <file href="assets/js/pipwerks-scorm.js"/>
+    </resource>
   </resources>
   
 </manifest>
+
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Placement Test Completion</title>
+    <link rel="stylesheet" href="../assets/css/shared.css" />
+    <link rel="stylesheet" href="../assets/css/notifications.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3trAniRUH+GIfuNIebhndOJK28anvf5Qk3TLaRZs5Pcvvw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      body {
+        background-color: #f4f6f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+
+      .completion-card {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 36px;
+        max-width: 540px;
+        width: 100%;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        border: 1px solid var(--border-color);
+      }
+
+      .completion-card h1 {
+        font-size: 1.8rem;
+        color: var(--primary-color);
+        margin-bottom: 16px;
+      }
+
+      .completion-card p {
+        color: #4a4a4a;
+        margin: 0;
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="completion-card" role="status" aria-live="polite">
+      <h1>Thank You for Completing the Placement Test</h1>
+      <p>Your responses have been recorded and sent to the training team.</p>
+    </div>
+
+    <script src="../assets/js/pipwerks-scorm.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
