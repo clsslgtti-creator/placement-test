@@ -8,7 +8,7 @@
     },
     {
       "question": "They _____  from Jaffna.",
-      "options": ["is", "are", "was", "isn’t", "do"],
+      "options": ["is", "do", "was", "isn’t", "are"],
       "answer": "are",
       "id": "1_2"
     },
@@ -32,7 +32,7 @@
     },
     {
       "question": "_____  you like this Samsung mobile model?",
-      "options": ["Are", "Have", "Do", "How", "Why"],
+      "options": ["Are", "Have", "Why", "How", "Do"],
       "answer": "Do",
       "id": "1_6"
     },
@@ -91,7 +91,7 @@
       "id": "1_15"
     },
     {
-      "question": "It is a small, _____  apartment in a rural village.",
+      "question": "It is a small, _____  apartment in a village not far from the capital.",
       "options": ["traffic", "quite", "quiet", "biggest", "noisily"],
       "answer": "quiet",
       "id": "1_16"
@@ -146,7 +146,7 @@
     },
     {
       "question": "We _____  get up late at the weekend.",
-      "options": ["ever", "use", "usual", "usually", "like"],
+      "options": ["ever", "use", "usually", "usual", "like"],
       "answer": "usually",
       "id": "1_25"
     },
@@ -193,7 +193,7 @@
       "id": "1_32"
     },
     {
-      "question": "The _____  have been to that mall .",
+      "question": "The _____  have been to that mall.",
       "options": ["childs", "child", "little child", "childrens", "children"],
       "answer": "children",
       "id": "1_33"
@@ -211,7 +211,7 @@
       "id": "1_35"
     },
     {
-      "question": "Have you _____  been on a Roller coaster ride?",
+      "question": "Have you _____  been on a roller coaster ride?",
       "options": ["always", "ever", "soon", "like", "gone"],
       "answer": "ever",
       "id": "1_36"
@@ -243,7 +243,7 @@
     {
       "question": "Malini _____  to Kandy at the weekend.",
       "options": ["will", "going", "is going", "will be", "might"],
-      "answer": "will",
+      "answer": "is going",
       "id": "1_41"
     },
     {
@@ -310,7 +310,7 @@
     },
     {
       "question": "Neil and Kamala  _____  from Kandy.",
-      "options": ["is", "are", "was", "isn’t", "do"],
+      "options": ["is", "do", "was", "isn’t", "are"],
       "answer": "are",
       "id": "2_2"
     },
@@ -429,7 +429,7 @@
       "id": "2_21"
     },
     {
-      "question": "Munsoor _____  to Matale on business often.",
+      "question": "Munsoor often _____  to Matale on business.",
       "options": ["go", "goed", "goes", "come", "travel"],
       "answer": "goes",
       "id": "2_22"
@@ -442,7 +442,7 @@
     },
     {
       "question": "He’s got _____  hair.",
-      "options": ["longy", "a", "short, curly", "many", "a long"],
+      "options": ["longy", "a", "a long", "many", "short, curly"],
       "answer": "short, curly",
       "id": "2_24"
     },
@@ -479,7 +479,7 @@
     {
       "question": "The car behind is horning:  _____  drive faster.",
       "options": ["I’ll", "I", "will", "won’t", "must"],
-      "answer": "must",
+      "answer": "I’ll",
       "id": "2_30"
     },
     {
@@ -568,7 +568,7 @@
     },
     {
       "question": "My grandfather  _____  ever checks his whatsapp messages.",
-      "options": ["might", "hard", "always", "harder", "hardly"],
+      "options": ["might", "hard", "always", "hardly", "harder"],
       "answer": "hardly",
       "id": "2_44"
     },
@@ -618,7 +618,7 @@
     },
     {
       "question": "My parents  _____  from Ampara.",
-      "options": ["is", "are", "was", "isn’t", "do"],
+      "options": ["is", "was", "are", "isn’t", "do"],
       "answer": "are",
       "id": "3_2"
     },
@@ -679,7 +679,7 @@
     {
       "question": "_____  some footprints near the broken window.",
       "options": ["There’re", "There", "Their are", "There’s", "Are"],
-      "answer": "There",
+      "answer": "There’re",
       "id": "3_12"
     },
     {
@@ -799,7 +799,7 @@
     {
       "question": "____________ never answer the doorbell.",
       "options": ["She’ll", "She", "Her", "She won’t", "Must"],
-      "answer": "She",
+      "answer": "She’ll",
       "id": "3_30"
     },
     {
@@ -907,7 +907,7 @@
     {
       "question": "My parents  _____  come to see the film with us.",
       "options": ["doesn’t", "not", "didn’t", "want", "like"],
-      "answer": "want",
+      "answer": "didn’t",
       "id": "3_48"
     },
     {
@@ -918,7 +918,7 @@
     },
     {
       "question": "They  _____  their friends at the restaurant.",
-      "options": ["meet", "are meet", "‘re meet", "‘re meeting", "meets"],
+      "options": ["meet", "are see", "‘re meet", "‘re meeting", "sees"],
       "answer": "‘re meeting",
       "id": "3_50"
     }
@@ -926,7 +926,7 @@
   "question_set_4": [
     {
       "question": "_____  school is in Colombo.",
-      "options": ["Me", "I", "Mine", "My", "He"],
+      "options": ["Me", "My", "Mine", "I", "He"],
       "answer": "My",
       "id": "4_1"
     },
@@ -993,7 +993,7 @@
     {
       "question": "_____  some leaks in the roof.",
       "options": ["There’re", "There", "There aren’t", "There’s", "Are"],
-      "answer": "There",
+      "answer": "There’re",
       "id": "4_12"
     },
     {
@@ -1173,7 +1173,7 @@
     {
       "question": "Ahmed _____  to visit his parents.",
       "options": ["will", "going", "is going", "will be", "might"],
-      "answer": "will",
+      "answer": "is going",
       "id": "4_41"
     },
     {
@@ -1215,7 +1215,7 @@
     {
       "question": "They _____  come to the cinema with us.",
       "options": ["didn’t", "not", "don’t", "want", "like"],
-      "answer": "want",
+      "answer": "didn’t",
       "id": "4_48"
     },
     {
@@ -1226,8 +1226,8 @@
     },
     {
       "question": "We  _____  them at eight o’clock.",
-      "options": ["meet", "are meet", "‘re meet", "‘re meeting", "meets"],
-      "answer": "meet",
+      "options": ["meet", "are see", "‘re meet", "‘re seeing", "sees"],
+      "answer": "‘re seeing",
       "id": "4_50"
     }
   ]
