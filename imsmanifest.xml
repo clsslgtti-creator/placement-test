@@ -43,7 +43,7 @@
         
         <!-- Introduction SCO -->
         <item identifier="introduction_sco" isvisible="true" identifierref="introduction_resource">
-          <title>0. Introduction</title>
+          <title>Introduction</title>
         </item>
 
         <!-- Grammar Test SCO -->
