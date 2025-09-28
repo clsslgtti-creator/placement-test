@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Placement Test Introduction</title>
+    <link rel="stylesheet" href="../assets/css/shared.css" />
+    <link rel="stylesheet" href="../assets/css/notifications.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3trAniRUH+GIfuNIebhndOJK28anvf5Qk3TLaRZs5Pcvvw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      body {
+        background-color: #f4f6f9;
+      }
+
+      header p {
+        color: #555;
+        margin-top: 10px;
+      }
+
+      .intro-card {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 24px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+        margin-bottom: 24px;
+      }
+
+      .intro-card h2 {
+        color: var(--primary-color);
+        font-size: 1.4rem;
+        margin-bottom: 16px;
+      }
+
+      .section-list {
+        list-style: none;
+        display: grid;
+        gap: 12px;
+      }
+
+      .section-item {
+        display: flex;
+        gap: 16px;
+        background-color: #fbfcff;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 16px;
+        align-items: center;
+      }
+
+      .section-number {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: var(--primary-color);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 1rem;
+        flex-shrink: 0;
+      }
+
+      .section-details h3 {
+        font-size: 1.1rem;
+        color: #1f2f4a;
+        margin-bottom: 4px;
+      }
+
+      .section-details p {
+        margin: 0;
+        color: #4a4a4a;
+      }
+
+      .timer-guidelines {
+        display: grid;
+        gap: 12px;
+      }
+
+      .guideline-item {
+        display: flex;
+        gap: 14px;
+        border-left: 3px solid var(--primary-color);
+        padding-left: 14px;
+      }
+
+      .guideline-item i {
+        color: var(--primary-color);
+        font-size: 1.2rem;
+        margin-top: 2px;
+      }
+
+      .guideline-text strong {
+        display: block;
+        color: #1f2f4a;
+      }
+
+      .start-panel {
+        text-align: center;
+        padding: 24px 18px;
+        background-color: #fff;
+        border-radius: 8px;
+        border: 1px solid var(--border-color);
+      }
+
+      .start-panel p {
+        color: #555;
+        margin-bottom: 18px;
+      }
+
+      #start-test.loading {
+        background-color: #95a5a6;
+        cursor: wait;
+      }
+
+      .next-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        margin-top: 10px;
+        color: #1f2f4a;
+        font-weight: 600;
+      }
+
+      .next-label i {
+        color: var(--secondary-color);
+      }
+
+      @media (max-width: 600px) {
+        .section-item {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .section-number {
+          margin-bottom: 6px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>SLGTTI Placement Test</h1>
+        <p>Please read the information below before you begin the assessment.</p>
+      </header>
+
+      <section class="intro-card" aria-labelledby="overview-title">
+        <h2 id="overview-title">What to Expect</h2>
+        <p>
+          The placement test is divided into five timed sections. You must complete
+          each section in order. Once a section starts, the timer counts down until
+          the allotted time is finished.
+        </p>
+        <ul class="section-list">
+          <li class="section-item">
+            <span class="section-number">1</span>
+            <div class="section-details">
+              <h3>Grammar</h3>
+              <p>40 minutes &bull; 50 multiple-choice questions on grammar accuracy.</p>
+            </div>
+          </li>
+          <li class="section-item">
+            <span class="section-number">2</span>
+            <div class="section-details">
+              <h3>Reading</h3>
+              <p>15 minutes &bull; Read a passage and answer comprehension questions.</p>
+            </div>
+          </li>
+          <li class="section-item">
+            <span class="section-number">3</span>
+            <div class="section-details">
+              <h3>Listening</h3>
+              <p>20 minutes &bull; Two listening tasks. Headphones are recommended.</p>
+            </div>
+          </li>
+          <li class="section-item">
+            <span class="section-number">4</span>
+            <div class="section-details">
+              <h3>Writing</h3>
+              <p>20 minutes &bull; Two writing tasks tailored to your training programme.</p>
+            </div>
+          </li>
+          <li class="section-item">
+            <span class="section-number">5</span>
+            <div class="section-details">
+              <h3>Vocabulary</h3>
+              <p>5 minutes &bull; Match key terms with the correct definitions.</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="intro-card" aria-labelledby="timer-title">
+        <h2 id="timer-title">How the Timers Work</h2>
+        <div class="timer-guidelines">
+          <div class="guideline-item">
+            <i class="fas fa-play-circle" aria-hidden="true"></i>
+            <div class="guideline-text">
+              <strong>Automatic start.</strong>
+              Each timer begins as soon as a section loads. Review the instructions first,
+              then begin answering without delay.
+            </div>
+          </div>
+          <div class="guideline-item">
+            <i class="fas fa-clock" aria-hidden="true"></i>
+            <div class="guideline-text">
+              <strong>Live countdown.</strong>
+              Time remaining is displayed at the top of every page together with a progress bar.
+            </div>
+          </div>
+          <div class="guideline-item">
+            <i class="fas fa-hourglass-end" aria-hidden="true"></i>
+            <div class="guideline-text">
+              <strong>Automatic submission.</strong>
+              When the timer reaches zero the section closes and your answers are submitted automatically.
+            </div>
+          </div>
+          <div class="guideline-item">
+            <i class="fas fa-ban" aria-hidden="true"></i>
+            <div class="guideline-text">
+              <strong>No pauses or restarts.</strong>
+              Do not refresh or close the window. Leaving the page may end the section and
+              your progress cannot be recovered.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro-card" aria-labelledby="ready-title">
+        <h2 id="ready-title">Before You Begin</h2>
+        <ul class="section-list">
+          <li class="section-item">
+            <span class="section-number"><i class="fas fa-headphones" aria-hidden="true"></i></span>
+            <div class="section-details">
+              <h3>Check your audio.</h3>
+              <p>Test your headphones or speakers. You will only hear the listening tracks twice.</p>
+            </div>
+          </li>
+          <li class="section-item">
+            <span class="section-number"><i class="fas fa-wifi" aria-hidden="true"></i></span>
+            <div class="section-details">
+              <h3>Stable connection.</h3>
+              <p>Use a reliable internet connection and avoid switching devices during the test.</p>
+            </div>
+          </li>
+          <li class="section-item">
+            <span class="section-number"><i class="fas fa-book" aria-hidden="true"></i></span>
+            <div class="section-details">
+              <h3>Work independently.</h3>
+              <p>This placement determines the correct starting level. Please answer without assistance.</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <div class="start-panel">
+        <p>When you click the button below, this introduction will be marked as complete and the Grammar test will open.</p>
+        <button id="start-test" class="btn">Start Test</button>
+        <div class="next-label">
+          <i class="fas fa-arrow-circle-right" aria-hidden="true"></i>
+          Next section: Grammar
+        </div>
+      </div>
+    </div>
+
+    <script src="../assets/js/pipwerks-scorm.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

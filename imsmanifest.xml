@@ -41,6 +41,11 @@
       <item identifier="placement_test_module" isvisible="true">
         <title>Placement Test</title>
         
+        <!-- Introduction SCO -->
+        <item identifier="introduction_sco" isvisible="true" identifierref="introduction_resource">
+          <title>0. Introduction</title>
+        </item>
+
         <!-- Grammar Test SCO -->
         <item identifier="grammar_test" isvisible="true" identifierref="grammar_test_resource">
           <title>1. Grammar Test</title>
@@ -71,6 +76,15 @@
   </organizations>
   
   <resources>
+    <!-- Introduction Resource -->
+    <resource identifier="introduction_resource" type="webcontent" adlcp:scormtype="sco" href="Introduction/index.html">
+      <file href="Introduction/index.html"/>
+      <file href="Introduction/script.js"/>
+      <file href="assets/css/shared.css"/>
+      <file href="assets/css/notifications.css"/>
+      <file href="assets/js/pipwerks-scorm.js"/>
+    </resource>
+
     <!-- Grammar Test Resources -->
     <resource identifier="grammar_test_resource" type="webcontent" adlcp:scormtype="sco" href="grammar/index.html">
       <file href="grammar/index.html"/>
