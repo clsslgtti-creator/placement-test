@@ -240,9 +240,11 @@ async function endTest(isTimeout = false) {
     document.querySelector('.timer-container').style.display = "none";
 
     // Calculate score and time
-    const finalScore = Object.keys(userAnswers).reduce((total, index) => {
+    const correctAnswers = Object.keys(userAnswers).reduce((total, index) => {
         return total + (userAnswers[index] === selectedQuestions[index].answer ? 1 : 0);
     }, 0);
+    const marksAwarded = correctAnswers;
+    const maxMarks = totalQuestions;
     
     // Calculate time spent
     const testTimeSpent = Math.min(Date.now() - startTimestamp, testDuration);
@@ -261,7 +263,7 @@ async function endTest(isTimeout = false) {
         <div class="tick-icon"></div>
         <h2>Test Completed!</h2>
         <p class="completion-info">Grammar Test Completed Successfully</p>
-        <div class="score-display">${finalScore}/${totalQuestions}</div>
+        <div class="score-display">${correctAnswers}/${totalQuestions}</div>
         <p class="time-spent">Time Spent: ${timeDisplay}</p>
         <p class="completion-time">Completed at: ${completionTime}</p>
     `;
@@ -270,12 +272,11 @@ async function endTest(isTimeout = false) {
 
     // Submit to SCORM
     if (isScormMode) {
-        console.log("Submitting final score:", finalScore);
+        console.log("Submitting marks:", marksAwarded);
         
-        // Set score
-        scorm.set("cmi.core.score.raw", finalScore);
+        scorm.set("cmi.core.score.raw", marksAwarded);
         scorm.set("cmi.core.score.min", "0");
-        scorm.set("cmi.core.score.max", "50");
+        scorm.set("cmi.core.score.max", String(maxMarks));
         
         // Set completion status
         scorm.set("cmi.core.lesson_status", "completed");
@@ -291,7 +292,7 @@ async function endTest(isTimeout = false) {
     }
 
     // Send to Google Sheets
-    await sendToGoogleSheets(finalScore, timeDisplay);
+    await sendToGoogleSheets(correctAnswers, marksAwarded, timeDisplay);
 
     // Show completion message
     showNotification(isTimeout ? "Time's up! Test submitted." : "Test completed successfully!");
@@ -301,6 +302,7 @@ async function endTest(isTimeout = false) {
 function showCompletedState() {
     const score = scorm.get("cmi.core.score.raw");
     const suspendData = scorm.get("cmi.suspend_data");
+    const maxScore = scorm.get("cmi.core.score.max") || "50";
     let completedAtDisplay = null;
     let timeSpentDisplay = null;
 
@@ -330,7 +332,7 @@ function showCompletedState() {
                 <div class="tick-icon"></div>
                 <h2>Test Already Completed</h2>
                 <p class="completion-info">Grammar Test was completed in a previous session</p>
-                <div class="score-display">${score}/50</div>
+                <div class="score-display">${score}/${maxScore}</div>
                 <p class="time-spent">Time Spent: ${timeSpentText}</p>
                 <p class="completion-time">Completed at: ${completedAtText}</p>
             </div>
@@ -354,7 +356,7 @@ function restoreUserAnswers() {
 }
 
 // Send results to Google Sheets
-async function sendToGoogleSheets(score, timeSpent) {
+async function sendToGoogleSheets(correctAnswers, marks, timeSpent) {
     const SHEETS_URL = "https://script.google.com/macros/s/AKfycbxZKrhA-wXc_7ymR1wOwX-W_GzyMZwXqj3ORdvJ84QCibx2gt9_D5FvicLJdrXj36nJOQ/exec";
     
     let studentName = "Anonymous";
@@ -380,12 +382,13 @@ async function sendToGoogleSheets(score, timeSpent) {
         testType: "Grammar Test",
         name: studentName,
         studentId: studentId,
-        score: score,
+        correctAnswers: correctAnswers,
+        marks: marks,
         totalQuestions: totalQuestions,
-        scorePercentage: Math.round((score / totalQuestions) * 100),
+        totalMarks: totalQuestions,
         timeSpent: timeSpent,
         date: new Date().toISOString(),
-        answers: answersString // Added detailed answers
+        answers: answersString
     };
 
     try {

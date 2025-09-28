@@ -534,7 +534,9 @@ function endTest(isTimeout) {
   }
 
   const totalQuestions = getTotalQuestionCount();
-  const finalScore = calculateScore();
+  const correctAnswers = calculateScore();
+  const marksAwarded = correctAnswers;
+  const maxMarks = totalQuestions;
 
   const testTimeSpent = Math.min(Date.now() - startTimestamp, TEST_DURATION);
   const minutesSpent = Math.floor(testTimeSpent / 60000);
@@ -552,7 +554,7 @@ function endTest(isTimeout) {
     <div class="tick-icon"></div>
     <h2>Test Completed!</h2>
     <p class="completion-info">Writing Test Completed Successfully</p>
-    <div class="score-display">${finalScore}/${totalQuestions}</div>
+    <div class="score-display">${correctAnswers}/${totalQuestions}</div>
     <p class="time-spent">Time Spent: ${timeDisplay}</p>
     <p class="completion-time">Completed at: ${completionTime}</p>
     <p class="programme-info">Training Programme: ${formatProgrammeLabel(selectedProgram)}</p>
@@ -564,9 +566,9 @@ function endTest(isTimeout) {
   }
 
   if (isScormMode) {
-    scorm.set("cmi.core.score.raw", finalScore);
+    scorm.set("cmi.core.score.raw", marksAwarded);
     scorm.set("cmi.core.score.min", "0");
-    scorm.set("cmi.core.score.max", String(totalQuestions));
+    scorm.set("cmi.core.score.max", String(maxMarks));
     scorm.set("cmi.core.lesson_status", "completed");
 
     const completionData = {
@@ -580,7 +582,7 @@ function endTest(isTimeout) {
     scorm.save();
   }
 
-  sendToGoogleSheets(finalScore, totalQuestions, timeDisplay, completionIso);
+  sendToGoogleSheets(correctAnswers, marksAwarded, totalQuestions, maxMarks, timeDisplay, completionIso);
   showNotification(isTimeout ? "Time's up! Test submitted." : "Test completed successfully!");
 }
 
@@ -629,7 +631,7 @@ function calculateScore() {
   return score;
 }
 
-async function sendToGoogleSheets(score, totalQuestions, timeSpent, completionIso) {
+async function sendToGoogleSheets(correctAnswers, marks, totalQuestions, totalMarks, timeSpent, completionIso) {
   const SHEETS_URL =
     "https://script.google.com/macros/s/AKfycbxZKrhA-wXc_7ymR1wOwX-W_GzyMZwXqj3ORdvJ84QCibx2gt9_D5FvicLJdrXj36nJOQ/exec";
 
@@ -646,9 +648,10 @@ async function sendToGoogleSheets(score, totalQuestions, timeSpent, completionIs
     name: studentName,
     studentId,
     program: formatProgrammeLabel(selectedProgram),
-    score,
+    correctAnswers: correctAnswers,
+    marks: marks,
     totalQuestions,
-    scorePercentage: totalQuestions ? Math.round((score / totalQuestions) * 100) : 0,
+    totalMarks: totalMarks,
     timeSpent,
     date: completionIso,
     answers: buildAnswersSummary(),
