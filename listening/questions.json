@@ -126,58 +126,53 @@
       "audio": "assets/audio/AT/1.mp3",
       "question": [
         {
-          "question": "Why does Priya still need to go to  the shop?",
-          "options": [
-            "She wants to buy some clothes.",
-            "She is hungry and thirsty.",
-            "She hasn’t bought food for the journey.",
-            "She needs some bottles of water."
-          ],
-          "answer": "The roads were hardly passable because of the rain.",
+          "question": "What part was leaking during the repair?",
+          "options": ["Brake line", "Radiator", "Fuel tank", "Tyre valve"],
+          "answer": "Radiator",
           "id": "AT_1_1"
         },
         {
-          "question": "Why does Amal believe snacks are necessary?",
+          "question": "What task is left for tomorrow?",
           "options": [
-            "He doesn’t want to share his snacks.",
-            "No food is allowed on the bus.",
-            "Teachers will be hungry and thirsty.",
-            "The trip will last several hours."
+            "Replace the fan belt",
+            "Service the gearbox",
+            "Wash the van",
+            "Adjust the tyres"
           ],
-          "answer": "The trip will last several hours.",
+          "answer": "Service the gearbox",
           "id": "AT_1_2"
         },
         {
-          "question": "What did the teacher emphasise about the bus departure?",
+          "question": "What should they remind each other about?",
           "options": [
-            "It will not wait for  students who are late.",
-            "It will  leave just a few minutes after  6.30am.",
-            "The gate will be closed.",
-            "It will wait for the teachers who arrive late."
+            "The radiator",
+            "The gearbox",
+            "Using the correct tool",
+            "Using correct measurements"
           ],
-          "answer": "It will not wait for  students who are late.",
+          "answer": "Using the correct tool",
           "id": "AT_1_3"
         },
         {
-          "question": "Why does Priya say she must wake up much earlier?",
+          "question": "What mistake did one helper make?",
           "options": [
-            "She has to meet Amal.",
-            "She needs extra time to buy snacks.",
-            "She has to catch the early bus to school.",
-            "The meeting time is unusually early."
+            "He left the van outside",
+            "He used the wrong oil",
+            "He failed to clean the pools",
+            "He forgot to clean the tools"
           ],
-          "answer": "The meeting time is unusually early.",
+          "answer": "He forgot to clean the tools",
           "id": "AT_1_4"
         },
         {
-          "question": "Why does this year’s trip seem especially important?",
+          "question": "By next Friday, what is expected?",
           "options": [
-            "The previous one didn’t take place.",
-            "Priya is going to travel by bus for the first time.",
-            "The students will stay in Galle overnight.",
-            "Amal has never seen the sea before."
+            "The vehicle should be ready",
+            "The tools will be painted",
+            "The van should not touch the owner’s mouth",
+            "The owner should be disappointed with the work"
           ],
-          "answer": "The previous one didn’t take place.",
+          "answer": "The vehicle should be ready",
           "id": "AT_1_5"
         }
       ]
@@ -186,58 +181,53 @@
       "audio": "assets/audio/AT/2.mp3",
       "question": [
         {
-          "question": "Why does Priya still need to go to  the shop?",
+          "question": "Why didn’t the trainee balance the wheels yesterday?",
           "options": [
-            "She wants to buy some clothes.",
-            "She is hungry and thirsty.",
-            "She hasn’t bought food for the journey.",
-            "She needs some bottles of water."
+            "Alternator check was corroded",
+            "Wheel balancing machine was not working",
+            "Wheel balancing machine was working",
+            "Wheel balancing machine was adjusted improperly"
           ],
-          "answer": "The roads were hardly passable because of the rain.",
+          "answer": "Wheel balancing machine was working",
           "id": "AT_2_1"
         },
         {
-          "question": "Why does Amal believe snacks are necessary?",
+          "question": "The trainee …",
           "options": [
-            "He doesn’t want to share his snacks.",
-            "No food is allowed on the bus.",
-            "Teachers will be hungry and thirsty.",
-            "The trip will last several hours."
+            "is going to test the voltage",
+            "has already tested the voltage",
+            "will test the voltage soon",
+            "is in the process of testing the voltage"
           ],
-          "answer": "The trip will last several hours.",
+          "answer": "is in the process of testing the voltage",
           "id": "AT_2_2"
         },
         {
-          "question": "What did the teacher emphasise about the bus departure?",
+          "question": "What problem can dirty terminals cause?",
           "options": [
-            "It will not wait for  students who are late.",
-            "It will  leave just a few minutes after  6.30am.",
-            "The gate will be closed.",
-            "It will wait for the teachers who arrive late."
+            "Brakes stop working",
+            "Fuel level drops",
+            "Air filter gets blocked",
+            "Vehicle struggles to start"
           ],
-          "answer": "It will not wait for  students who are late.",
+          "answer": "Vehicle struggles to start",
           "id": "AT_2_3"
         },
         {
-          "question": "Why does Priya say she must wake up much earlier?",
-          "options": [
-            "She has to meet Amal.",
-            "She needs extra time to buy snacks.",
-            "She has to catch the early bus to school.",
-            "The meeting time is unusually early."
-          ],
-          "answer": "The meeting time is unusually early.",
+          "question": "What extra check did the trainee suggest?",
+          "options": ["Tyres", "Gearbox", "Alternator", "Radiator"],
+          "answer": "Alternator",
           "id": "AT_2_4"
         },
         {
-          "question": "Why does this year’s trip seem especially important?",
+          "question": "What do you think they will have for dinner?",
           "options": [
-            "The previous one didn’t take place.",
-            "Priya is going to travel by bus for the first time.",
-            "The students will stay in Galle overnight.",
-            "Amal has never seen the sea before."
+            "Hoppers and fish curry",
+            "String hoppers and fish curry",
+            "Hoppers and vegetable curry",
+            "Kottu and beef curry"
           ],
-          "answer": "The previous one didn’t take place.",
+          "answer": "Hoppers and vegetable curry",
           "id": "AT_2_5"
         }
       ]
@@ -248,58 +238,58 @@
       "audio": "assets/audio/CT/1.mp3",
       "question": [
         {
-          "question": "Why does Priya still need to go to  the shop?",
+          "question": "Why was it easier to prepare the soil yesterday?",
           "options": [
-            "She wants to buy some clothes.",
-            "She is hungry and thirsty.",
-            "She hasn’t bought food for the journey.",
-            "She needs some bottles of water."
+            "Because the workers used new machines",
+            "Because the ground was dry and clear",
+            "Because the foundation was already finished",
+            "Because the engineer worked alone"
           ],
-          "answer": "The roads were hardly passable because of the rain.",
+          "answer": "Because the ground was dry and clear",
           "id": "CT_1_1"
         },
         {
-          "question": "Why does Amal believe snacks are necessary?",
+          "question": "What had the engineer done two days before the work began?",
           "options": [
-            "He doesn’t want to share his snacks.",
-            "No food is allowed on the bus.",
-            "Teachers will be hungry and thirsty.",
-            "The trip will last several hours."
+            "He explained the safety instructions",
+            "He checked the transport arrangements",
+            "He prepared the concrete",
+            "He ignored the safety instructions"
           ],
-          "answer": "The trip will last several hours.",
+          "answer": "He explained the safety instructions",
           "id": "CT_1_2"
         },
         {
-          "question": "What did the teacher emphasise about the bus departure?",
+          "question": "What will the team do tomorrow?",
           "options": [
-            "It will not wait for  students who are late.",
-            "It will  leave just a few minutes after  6.30am.",
-            "The gate will be closed.",
-            "It will wait for the teachers who arrive late."
+            "They will paint the walls",
+            "They will pour the concrete",
+            "They will put up the shuttering",
+            "They will meet the community leaders"
           ],
-          "answer": "It will not wait for  students who are late.",
+          "answer": "They will pour the concrete",
           "id": "CT_1_3"
         },
         {
-          "question": "Why does Priya say she must wake up much earlier?",
+          "question": "Why can’t the workers postpone this stage of the project?",
           "options": [
-            "She has to meet Amal.",
-            "She needs extra time to buy snacks.",
-            "She has to catch the early bus to school.",
-            "The meeting time is unusually early."
+            "Because the machines will break",
+            "Because the supervisor is leaving",
+            "Because the workers are going on holiday",
+            "Because the festival deadline is close"
           ],
-          "answer": "The meeting time is unusually early.",
+          "answer": "Because the festival deadline is close",
           "id": "CT_1_4"
         },
         {
-          "question": "Why does this year’s trip seem especially important?",
+          "question": "What did the supervisor insist about safety?",
           "options": [
-            "The previous one didn’t take place.",
-            "Priya is going to travel by bus for the first time.",
-            "The students will stay in Galle overnight.",
-            "Amal has never seen the sea before."
+            "Workers should sometimes remove helmets",
+            "Only the carpenters should wear boots",
+            "Everyone must keep protective gear on",
+            "Helmets are not required for masons"
           ],
-          "answer": "The previous one didn’t take place.",
+          "answer": "Everyone must keep protective gear on",
           "id": "CT_1_5"
         }
       ]
@@ -308,58 +298,53 @@
       "audio": "assets/audio/CT/2.mp3",
       "question": [
         {
-          "question": "Why does Priya still need to go to  the shop?",
+          "question": "What problem did Dilshan find with the scaffolding?",
           "options": [
-            "She wants to buy some clothes.",
-            "She is hungry and thirsty.",
-            "She hasn’t bought food for the journey.",
-            "She needs some bottles of water."
+            "The joints were tight",
+            "The platform was uneven",
+            "The screws were rusty",
+            "The platform was shaky"
           ],
-          "answer": "The roads were hardly passable because of the rain.",
+          "answer": "The platform was uneven",
           "id": "CT_2_1"
         },
         {
-          "question": "Why does Amal believe snacks are necessary?",
+          "question": "What has not yet been delivered by the supplier?",
           "options": [
-            "He doesn’t want to share his snacks.",
-            "No food is allowed on the bus.",
-            "Teachers will be hungry and thirsty.",
-            "The trip will last several hours."
+            "The cement bags",
+            "The sand castles",
+            "The sand",
+            "The bricks"
           ],
-          "answer": "The trip will last several hours.",
+          "answer": "The sand",
           "id": "CT_2_2"
         },
         {
-          "question": "What did the teacher emphasise about the bus departure?",
-          "options": [
-            "It will not wait for  students who are late.",
-            "It will  leave just a few minutes after  6.30am.",
-            "The gate will be closed.",
-            "It will wait for the teachers who arrive late."
-          ],
-          "answer": "It will not wait for  students who are late.",
+          "question": "By which day will the masons start the brickwork?",
+          "options": ["Tuesday", "Wednesday", "Sunday", "Friday"],
+          "answer": "Friday",
           "id": "CT_2_3"
         },
         {
-          "question": "Why does Priya say she must wake up much earlier?",
+          "question": "Why did the foreman tell Dilshan to call the supplier again?",
           "options": [
-            "She has to meet Amal.",
-            "She needs extra time to buy snacks.",
-            "She has to catch the early bus to school.",
-            "The meeting time is unusually early."
+            "Because the materials are urgently needed",
+            "Because the supervisor changed the plan",
+            "Because the scaffolding was not ready",
+            "Because the government canceled the project"
           ],
-          "answer": "The meeting time is unusually early.",
+          "answer": "Because the materials are urgently needed",
           "id": "CT_2_4"
         },
         {
-          "question": "Why does this year’s trip seem especially important?",
+          "question": "Which project are the workers engaged in?",
           "options": [
-            "The previous one didn’t take place.",
-            "Priya is going to travel by bus for the first time.",
-            "The students will stay in Galle overnight.",
-            "Amal has never seen the sea before."
+            "A hospital renovation",
+            "A school construction",
+            "A hotel in Matara",
+            "A private school project"
           ],
-          "answer": "The previous one didn’t take place.",
+          "answer": "A school construction",
           "id": "CT_2_5"
         }
       ]
@@ -370,58 +355,58 @@
       "audio": "assets/audio/ET/1.mp3",
       "question": [
         {
-          "question": "Why does Priya still need to go to  the shop?",
+          "question": "What task was already finished by the afternoon?",
           "options": [
-            "She wants to buy some clothes.",
-            "She is hungry and thirsty.",
-            "She hasn’t bought food for the journey.",
-            "She needs some bottles of water."
+            "Installing colour lights",
+            "Completing the lighting wires",
+            "Practical training",
+            "Fixing the switches"
           ],
-          "answer": "The roads were hardly passable because of the rain.",
+          "answer": "Completing the lighting wires",
           "id": "ET_1_1"
         },
         {
-          "question": "Why does Amal believe snacks are necessary?",
+          "question": "What mistake had students made in earlier projects?",
           "options": [
-            "He doesn’t want to share his snacks.",
-            "No food is allowed on the bus.",
-            "Teachers will be hungry and thirsty.",
-            "The trip will last several hours."
+            "Forgetting safety helmets",
+            "Not using coloured wires",
+            "Damaging the distribution box",
+            "Mixing up cable colours"
           ],
-          "answer": "The trip will last several hours.",
+          "answer": "Mixing up cable colours",
           "id": "ET_1_2"
         },
         {
-          "question": "What did the teacher emphasise about the bus departure?",
+          "question": "Why did the instructor warn one trainee yesterday?",
           "options": [
-            "It will not wait for  students who are late.",
-            "It will  leave just a few minutes after  6.30am.",
-            "The gate will be closed.",
-            "It will wait for the teachers who arrive late."
+            "He worked without gloves",
+            "He connected the wrong fuse",
+            "He cut the cable too short",
+            "He wore wet gloves"
           ],
-          "answer": "It will not wait for  students who are late.",
+          "answer": "He worked without gloves",
           "id": "ET_1_3"
         },
         {
-          "question": "Why does Priya say she must wake up much earlier?",
+          "question": "What will the students check next week?",
           "options": [
-            "She has to meet Amal.",
-            "She needs extra time to buy snacks.",
-            "She has to catch the early bus to school.",
-            "The meeting time is unusually early."
+            "The sockets",
+            "The ceiling fans",
+            "The earthing arrangement",
+            "The plumbing system"
           ],
-          "answer": "The meeting time is unusually early.",
+          "answer": "The earthing arrangement",
           "id": "ET_1_4"
         },
         {
-          "question": "Why does this year’s trip seem especially important?",
+          "question": "Why is the project deadline important?",
           "options": [
-            "The previous one didn’t take place.",
-            "Priya is going to travel by bus for the first time.",
-            "The students will stay in Galle overnight.",
-            "Amal has never seen the sea before."
+            "Because the building is for festival classes",
+            "Because the college term ends",
+            "Because the inspector is leaving",
+            "Because the community is not planning New Year classes"
           ],
-          "answer": "The previous one didn’t take place.",
+          "answer": "Because the building is for festival classes",
           "id": "ET_1_5"
         }
       ]
@@ -430,58 +415,58 @@
       "audio": "assets/audio/ET/2.mp3",
       "question": [
         {
-          "question": "Why does Priya still need to go to  the shop?",
+          "question": "What problem did Nimal notice during testing?",
           "options": [
-            "She wants to buy some clothes.",
-            "She is hungry and thirsty.",
-            "She hasn’t bought food for the journey.",
-            "She needs some bottles of water."
+            "The motor didn’t start",
+            "The relay was too slow",
+            "The fuse was missing",
+            "The relay was responding too quickly"
           ],
-          "answer": "The roads were hardly passable because of the rain.",
+          "answer": "The relay was too slow",
           "id": "ET_2_1"
         },
         {
-          "question": "Why does Amal believe snacks are necessary?",
+          "question": "What part had already been repaired last week?",
           "options": [
-            "He doesn’t want to share his snacks.",
-            "No food is allowed on the bus.",
-            "Teachers will be hungry and thirsty.",
-            "The trip will last several hours."
+            "The control panel",
+            "The transformer",
+            "The starter",
+            "The fan regulator"
           ],
-          "answer": "The trip will last several hours.",
+          "answer": "The starter",
           "id": "ET_2_2"
         },
         {
-          "question": "What did the teacher emphasise about the bus departure?",
+          "question": "Why should the emergency stop be visible?",
           "options": [
-            "It will not wait for  students who are late.",
-            "It will  leave just a few minutes after  6.30am.",
-            "The gate will be closed.",
-            "It will wait for the teachers who arrive late."
+            "To ensure the machine can be halted safely",
+            "To prevent overheating of wires",
+            "To inform others of the emergency",
+            "It increases motor speed"
           ],
-          "answer": "It will not wait for  students who are late.",
+          "answer": "To ensure the machine can be halted safely",
           "id": "ET_2_3"
         },
         {
-          "question": "Why does Priya say she must wake up much earlier?",
+          "question": "What will be taught tomorrow?",
           "options": [
-            "She has to meet Amal.",
-            "She needs extra time to buy snacks.",
-            "She has to catch the early bus to school.",
-            "The meeting time is unusually early."
+            "How to operate a lathe",
+            "How to solder joints",
+            "How to install switches",
+            "How to apply lock-out steps"
           ],
-          "answer": "The meeting time is unusually early.",
+          "answer": "How to apply lock-out steps",
           "id": "ET_2_4"
         },
         {
-          "question": "Why does this year’s trip seem especially important?",
+          "question": "Which tools will Nimal get ready for the session?",
           "options": [
-            "The previous one didn’t take place.",
-            "Priya is going to travel by bus for the first time.",
-            "The students will stay in Galle overnight.",
-            "Amal has never seen the sea before."
+            "Spanners and pliers",
+            "A voltmeter and tester screwdriver",
+            "A multimeter and insulation tester",
+            "A multimeter and insulation tape"
           ],
-          "answer": "The previous one didn’t take place.",
+          "answer": "A multimeter and insulation tester",
           "id": "ET_2_5"
         }
       ]
@@ -492,58 +477,53 @@
       "audio": "assets/audio/FT/1.mp3",
       "question": [
         {
-          "question": "Why does Priya still need to go to  the shop?",
-          "options": [
-            "She wants to buy some clothes.",
-            "She is hungry and thirsty.",
-            "She hasn’t bought food for the journey.",
-            "She needs some bottles of water."
-          ],
-          "answer": "The roads were hardly passable because of the rain.",
+          "question": "What food item was stored in the cold room during the lesson?",
+          "options": ["Raw fish", "Red fish", "Cooked rice", "Frozen fries"],
+          "answer": "Raw fish",
           "id": "FT_1_1"
         },
         {
-          "question": "Why does Amal believe snacks are necessary?",
+          "question": "What danger occurs if the storage temperature is too warm?",
           "options": [
-            "He doesn’t want to share his snacks.",
-            "No food is allowed on the bus.",
-            "Teachers will be hungry and thirsty.",
-            "The trip will last several hours."
+            "Food loses its colour",
+            "Bacteria grow too fast",
+            "Machines stop working",
+            "Bacteria spreads quickly"
           ],
-          "answer": "The trip will last several hours.",
+          "answer": "Bacteria grow too fast",
           "id": "FT_1_2"
         },
         {
-          "question": "What did the teacher emphasise about the bus departure?",
+          "question": "What mistake did some trainees make?",
           "options": [
-            "It will not wait for  students who are late.",
-            "It will  leave just a few minutes after  6.30am.",
-            "The gate will be closed.",
-            "It will wait for the teachers who arrive late."
+            "They added too much flour",
+            "They washed their hands promptly",
+            "They didn’t wash their hands properly",
+            "They touched their hands too often"
           ],
-          "answer": "It will not wait for  students who are late.",
+          "answer": "They didn’t wash their hands properly",
           "id": "FT_1_3"
         },
         {
-          "question": "Why does Priya say she must wake up much earlier?",
+          "question": "What will the students do in the next session?",
           "options": [
-            "She has to meet Amal.",
-            "She needs extra time to buy snacks.",
-            "She has to catch the early bus to school.",
-            "The meeting time is unusually early."
+            "Bake bread in an oven",
+            "Mix dough with a machine",
+            "Cut vegetables into small pieces",
+            "Throw the dough away using a machine"
           ],
-          "answer": "The meeting time is unusually early.",
+          "answer": "Mix dough with a machine",
           "id": "FT_1_4"
         },
         {
-          "question": "Why does this year’s trip seem especially important?",
+          "question": "Why is cleaning the mixer important?",
           "options": [
-            "The previous one didn’t take place.",
-            "Priya is going to travel by bus for the first time.",
-            "The students will stay in Galle overnight.",
-            "Amal has never seen the sea before."
+            "It reduces electricity bills",
+            "It moves the production to cleaner areas",
+            "It requires few ingredients",
+            "It makes the bread taste sweeter"
           ],
-          "answer": "The previous one didn’t take place.",
+          "answer": "It moves the production to cleaner areas",
           "id": "FT_1_5"
         }
       ]
@@ -552,58 +532,53 @@
       "audio": "assets/audio/FT/2.mp3",
       "question": [
         {
-          "question": "Why does Priya still need to go to  the shop?",
+          "question": "Why didn’t the trainee finish labeling yesterday?",
           "options": [
-            "She wants to buy some clothes.",
-            "She is hungry and thirsty.",
-            "She hasn’t bought food for the journey.",
-            "She needs some bottles of water."
+            "Cold room was too warm",
+            "Printer was not working",
+            "Sealing machine was broken",
+            "Crates were missing"
           ],
-          "answer": "The roads were hardly passable because of the rain.",
+          "answer": "Printer was not working",
           "id": "FT_2_1"
         },
         {
-          "question": "Why does Amal believe snacks are necessary?",
-          "options": [
-            "He doesn’t want to share his snacks.",
-            "No food is allowed on the bus.",
-            "Teachers will be hungry and thirsty.",
-            "The trip will last several hours."
-          ],
-          "answer": "The trip will last several hours.",
+          "question": "Who is the trainee preparing the cold room with?",
+          "options": ["Alone", "Other trainees", "Alone", "Other teachers"],
+          "answer": "Other trainees",
           "id": "FT_2_2"
         },
         {
-          "question": "What did the teacher emphasise about the bus departure?",
+          "question": "Why should raw and cooked food be kept apart?",
           "options": [
-            "It will not wait for  students who are late.",
-            "It will  leave just a few minutes after  6.30am.",
-            "The gate will be closed.",
-            "It will wait for the teachers who arrive late."
+            "To contaminate the fish",
+            "To prevent the spread of any bacteria",
+            "To reduce the pungent smell",
+            "To keep them cold"
           ],
-          "answer": "It will not wait for  students who are late.",
+          "answer": "To prevent the spread of any bacteria",
           "id": "FT_2_3"
         },
         {
-          "question": "Why does Priya say she must wake up much earlier?",
+          "question": "What extra check did the trainee suggest?",
           "options": [
-            "She has to meet Amal.",
-            "She needs extra time to buy snacks.",
-            "She has to catch the early bus to school.",
-            "The meeting time is unusually early."
+            "Serving machine",
+            "Sealing machine",
+            "Sorting machine",
+            "Packaging machine"
           ],
-          "answer": "The meeting time is unusually early.",
+          "answer": "Sealing machine",
           "id": "FT_2_4"
         },
         {
-          "question": "Why does this year’s trip seem especially important?",
+          "question": "What food will the instructor probably buy?",
           "options": [
-            "The previous one didn’t take place.",
-            "Priya is going to travel by bus for the first time.",
-            "The students will stay in Galle overnight.",
-            "Amal has never seen the sea before."
+            "Rice and curry",
+            "String hoppers and coconut sambol",
+            "Kottu roti and coconut sambol",
+            "String hoppers and curry"
           ],
-          "answer": "The previous one didn’t take place.",
+          "answer": "String hoppers and coconut sambol",
           "id": "FT_2_5"
         }
       ]
@@ -614,58 +589,58 @@
       "audio": "assets/audio/ICT/1.mp3",
       "question": [
         {
-          "question": "Why does Priya still need to go to  the shop?",
+          "question": "What activity did the students practice in the previous lesson?",
           "options": [
-            "She wants to buy some clothes.",
-            "She is hungry and thirsty.",
-            "She hasn’t bought food for the journey.",
-            "She needs some bottles of water."
+            "Updating antivirus software",
+            "Removing dust from the computer interior",
+            "Connecting machines to a network",
+            "Cleaning the outside of the system unit"
           ],
-          "answer": "The roads were hardly passable because of the rain.",
+          "answer": "Removing dust from the computer interior",
           "id": "ICT_1_1"
         },
         {
-          "question": "Why does Amal believe snacks are necessary?",
+          "question": "Why was the blower used during maintenance?",
           "options": [
-            "He doesn’t want to share his snacks.",
-            "No food is allowed on the bus.",
-            "Teachers will be hungry and thirsty.",
-            "The trip will last several hours."
+            "To replace the power supply",
+            "To increase the storage",
+            "To remove dirt that affects cooling",
+            "To check system memory"
           ],
-          "answer": "The trip will last several hours.",
+          "answer": "To remove dirt that affects cooling",
           "id": "ICT_1_2"
         },
         {
-          "question": "What did the teacher emphasise about the bus departure?",
+          "question": "What warning did the teacher give about antivirus programs?",
           "options": [
-            "It will not wait for  students who are late.",
-            "It will  leave just a few minutes after  6.30am.",
-            "The gate will be closed.",
-            "It will wait for the teachers who arrive late."
+            "They are not necessary",
+            "They can make the computer slower",
+            "They protect the system from threats",
+            "They use too much storage"
           ],
-          "answer": "It will not wait for  students who are late.",
+          "answer": "They protect the system from threats",
           "id": "ICT_1_3"
         },
         {
-          "question": "Why does Priya say she must wake up much earlier?",
+          "question": "What will the students do in their next ICT lesson?",
           "options": [
-            "She has to meet Amal.",
-            "She needs extra time to buy snacks.",
-            "She has to catch the early bus to school.",
-            "The meeting time is unusually early."
+            "Clean the monitors again",
+            "Set up a basic office network",
+            "Study electrical wiring",
+            "They will connect several printers"
           ],
-          "answer": "The meeting time is unusually early.",
+          "answer": "Set up a basic office network",
           "id": "ICT_1_4"
         },
         {
-          "question": "Why does this year’s trip seem especially important?",
+          "question": "Where is this kind of network often found in Sri Lanka?",
           "options": [
-            "The previous one didn’t take place.",
-            "Priya is going to travel by bus for the first time.",
-            "The students will stay in Galle overnight.",
-            "Amal has never seen the sea before."
+            "In small family homes and offices",
+            "In large offices",
+            "In small offices",
+            "In street markets"
           ],
-          "answer": "The previous one didn’t take place.",
+          "answer": "In small offices",
           "id": "ICT_1_5"
         }
       ]
@@ -674,58 +649,58 @@
       "audio": "assets/audio/ICT/2.mp3",
       "question": [
         {
-          "question": "Why does Priya still need to go to  the shop?",
+          "question": "Why didn’t the trainee finish the antivirus installation yesterday?",
           "options": [
-            "She wants to buy some clothes.",
-            "She is hungry and thirsty.",
-            "She hasn’t bought food for the journey.",
-            "She needs some bottles of water."
+            "The password was not long enough",
+            "The internet was down",
+            "The computer was faulty",
+            "There were some issues with the power supply"
           ],
-          "answer": "The roads were hardly passable because of the rain.",
+          "answer": "The internet was down",
           "id": "ICT_2_1"
         },
         {
-          "question": "Why does Amal believe snacks are necessary?",
+          "question": "What is the trainee working on today?",
           "options": [
-            "He doesn’t want to share his snacks.",
-            "No food is allowed on the bus.",
-            "Teachers will be hungry and thirsty.",
-            "The trip will last several hours."
+            "Installing antivirus",
+            "Repairing the printer",
+            "Testing the projector",
+            "Rebooting the printer"
           ],
-          "answer": "The trip will last several hours.",
+          "answer": "Repairing the printer",
           "id": "ICT_2_2"
         },
         {
-          "question": "What did the teacher emphasise about the bus departure?",
+          "question": "Why are strong passwords necessary?",
           "options": [
-            "It will not wait for  students who are late.",
-            "It will  leave just a few minutes after  6.30am.",
-            "The gate will be closed.",
-            "It will wait for the teachers who arrive late."
+            "To give us enough warning",
+            "To keep the system safe",
+            "To open the computer faster",
+            "To print documents with warning signs"
           ],
-          "answer": "It will not wait for  students who are late.",
+          "answer": "To keep the system safe",
           "id": "ICT_2_3"
         },
         {
-          "question": "Why does Priya say she must wake up much earlier?",
+          "question": "What extra task did the trainee suggest?",
           "options": [
-            "She has to meet Amal.",
-            "She needs extra time to buy snacks.",
-            "She has to catch the early bus to school.",
-            "The meeting time is unusually early."
+            "Checking the router and the generator",
+            "Checking the generator and the projector",
+            "Charging the generator and the projector",
+            "Restarting the server and the generator"
           ],
-          "answer": "The meeting time is unusually early.",
+          "answer": "Checking the generator and the projector",
           "id": "ICT_2_4"
         },
         {
-          "question": "Why does this year’s trip seem especially important?",
+          "question": "What does the instructor plan to eat later?",
           "options": [
-            "The previous one didn’t take place.",
-            "Priya is going to travel by bus for the first time.",
-            "The students will stay in Galle overnight.",
-            "Amal has never seen the sea before."
+            "String hoppers",
+            "Fried snacks with tea",
+            "Milk rice and curry",
+            "Hoppers"
           ],
-          "answer": "The previous one didn’t take place.",
+          "answer": "Fried snacks with tea",
           "id": "ICT_2_5"
         }
       ]
@@ -736,58 +711,58 @@
       "audio": "assets/audio/MT/1.mp3",
       "question": [
         {
-          "question": "Why does Priya still need to go to  the shop?",
+          "question": "What measuring tool did the trainees learn to use?",
           "options": [
-            "She wants to buy some clothes.",
-            "She is hungry and thirsty.",
-            "She hasn’t bought food for the journey.",
-            "She needs some bottles of water."
+            "Screwdriver",
+            "Vernier caliper",
+            "Micrometer",
+            "Spanner"
           ],
-          "answer": "The roads were hardly passable because of the rain.",
+          "answer": "Vernier caliper",
           "id": "MT_1_1"
         },
         {
-          "question": "Why does Amal believe snacks are necessary?",
+          "question": "Why should oiling machines be done regularly?",
           "options": [
-            "He doesn’t want to share his snacks.",
-            "No food is allowed on the bus.",
-            "Teachers will be hungry and thirsty.",
-            "The trip will last several hours."
+            "To make them look shiny",
+            "To reduce noise in the workshop",
+            "To keep them operating smoothly",
+            "To avoid cleaning them later"
           ],
-          "answer": "The trip will last several hours.",
+          "answer": "To keep them operating smoothly",
           "id": "MT_1_2"
         },
         {
-          "question": "What did the teacher emphasise about the bus departure?",
+          "question": "What was the main task in today’s lesson?",
           "options": [
-            "It will not wait for  students who are late.",
-            "It will  leave just a few minutes after  6.30am.",
-            "The gate will be closed.",
-            "It will wait for the teachers who arrive late."
+            "Repairing bicycle wheels",
+            "Taking apart and rebuilding a gearbox",
+            "Polishing various parts of a gearbox",
+            "Cutting wooden parts"
           ],
-          "answer": "It will not wait for  students who are late.",
+          "answer": "Taking apart and rebuilding a gearbox",
           "id": "MT_1_3"
         },
         {
-          "question": "Why does Priya say she must wake up much earlier?",
+          "question": "What warning did the trainer give about gears?",
           "options": [
-            "She has to meet Amal.",
-            "She needs extra time to buy snacks.",
-            "She has to catch the early bus to school.",
-            "The meeting time is unusually early."
+            "Never touch them without gloves",
+            "Don’t apply too much pressure",
+            "Always heat them before use",
+            "Paint them before assembling"
           ],
-          "answer": "The meeting time is unusually early.",
+          "answer": "Don’t apply too much pressure",
           "id": "MT_1_4"
         },
         {
-          "question": "Why does this year’s trip seem especially important?",
+          "question": "How do many mechanics in Sri Lanka begin their careers?",
           "options": [
-            "The previous one didn’t take place.",
-            "Priya is going to travel by bus for the first time.",
-            "The students will stay in Galle overnight.",
-            "Amal has never seen the sea before."
+            "By designing new vehicles",
+            "By working in car showrooms",
+            "By repairing bicycles",
+            "By installing software"
           ],
-          "answer": "The previous one didn’t take place.",
+          "answer": "By repairing bicycles",
           "id": "MT_1_5"
         }
       ]
@@ -796,58 +771,58 @@
       "audio": "assets/audio/MT/2.mp3",
       "question": [
         {
-          "question": "Why does Priya still need to go to  the shop?",
+          "question": "Why didn’t the trainee finish the gearbox yesterday?",
           "options": [
-            "She wants to buy some clothes.",
-            "She is hungry and thirsty.",
-            "She hasn’t bought food for the journey.",
-            "She needs some bottles of water."
+            "A bearing was missing",
+            "The lathe was broken",
+            "The oil was finished in the morning",
+            "A bearing was found after the manager left"
           ],
-          "answer": "The roads were hardly passable because of the rain.",
+          "answer": "A bearing was missing",
           "id": "MT_2_1"
         },
         {
-          "question": "Why does Amal believe snacks are necessary?",
+          "question": "What is the trainee doing today?",
           "options": [
-            "He doesn’t want to share his snacks.",
-            "No food is allowed on the bus.",
-            "Teachers will be hungry and thirsty.",
-            "The trip will last several hours."
+            "Repairing ice-making machine",
+            "Oiling food serving machines",
+            "Oiling all metal parts in the workshop",
+            "Oiling food sorting machines"
           ],
-          "answer": "The trip will last several hours.",
+          "answer": "Oiling food serving machines",
           "id": "MT_2_2"
         },
         {
-          "question": "What did the teacher emphasise about the bus departure?",
+          "question": "Why are loose bolts dangerous?",
           "options": [
-            "It will not wait for  students who are late.",
-            "It will  leave just a few minutes after  6.30am.",
-            "The gate will be closed.",
-            "It will wait for the teachers who arrive late."
+            "Because they vibrate",
+            "They cause too much vibration",
+            "They can make trainees vibrate on the floor",
+            "They increase the risks of wetting the floor"
           ],
-          "answer": "It will not wait for  students who are late.",
+          "answer": "They cause too much vibration",
           "id": "MT_2_3"
         },
         {
-          "question": "Why does Priya say she must wake up much earlier?",
+          "question": "What extra task did the trainee suggest?",
           "options": [
-            "She has to meet Amal.",
-            "She needs extra time to buy snacks.",
-            "She has to catch the early bus to school.",
-            "The meeting time is unusually early."
+            "Checking the lathe alignment and the orders for engine oil",
+            "Ordering extra engine oil",
+            "Checking only the lathe alignment",
+            "Repairing the generator"
           ],
-          "answer": "The meeting time is unusually early.",
+          "answer": "Checking the lathe alignment and the orders for engine oil",
           "id": "MT_2_4"
         },
         {
-          "question": "Why does this year’s trip seem especially important?",
+          "question": "What food does the instructor suggest they eat after work?",
           "options": [
-            "The previous one didn’t take place.",
-            "Priya is going to travel by bus for the first time.",
-            "The students will stay in Galle overnight.",
-            "Amal has never seen the sea before."
+            "Cardamom curry and kottu rotti",
+            "Hoppers",
+            "Kottu roti and flavoured coffee",
+            "Kottu roti and flavoured tea"
           ],
-          "answer": "The previous one didn’t take place.",
+          "answer": "Kottu roti and flavoured coffee",
           "id": "MT_2_5"
         }
       ]
