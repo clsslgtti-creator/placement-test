@@ -13,7 +13,7 @@ const PROGRAM_LABEL_LOOKUP = PROGRAMS.reduce((acc, programme) => {
   return acc;
 }, {});
 
-const TEST_DURATION = 20 * 60 * 1000; // 20 minutes
+const TEST_DURATION = 25 * 60 * 1000; // 25 minutes
 
 let questionsData = null;
 let selectedProgram = null;
@@ -621,8 +621,11 @@ function calculateScore() {
         return;
       }
       const normalizedUser = normalizeText(userValue);
-      const normalizedAnswer = normalizeText(entry.answer || "");
-      if (normalizedUser === normalizedAnswer) {
+      const possibleAnswers = Array.isArray(entry.answers) ? entry.answers : entry.answer ? [entry.answer] : [];
+      const isCorrect = possibleAnswers
+        .map((answer) => normalizeText(answer))
+        .some((normalizedAnswer) => normalizedAnswer === normalizedUser);
+      if (isCorrect) {
         score += 1;
       }
     });
@@ -691,9 +694,12 @@ function buildAnswersSummary() {
       let outcome = '✗';
       if (userValue !== "N/A") {
         const normalizedUser = normalizeText(userValue);
-        const normalizedAnswer = normalizeText(entry.answer || "");
-        if (normalizedUser && normalizedAnswer) {
-          outcome = normalizedUser === normalizedAnswer ? '✓' : '✗';
+        const possibleAnswers = Array.isArray(entry.answers) ? entry.answers : entry.answer ? [entry.answer] : [];
+        if (normalizedUser && possibleAnswers.length) {
+          const hasMatch = possibleAnswers
+            .map((answer) => normalizeText(answer))
+            .some((normalizedAnswer) => normalizedAnswer === normalizedUser);
+          outcome = hasMatch ? '✓' : '✗';
         }
       }
       entries.push(`${entry.id}: ${userValue} (${outcome})`);
