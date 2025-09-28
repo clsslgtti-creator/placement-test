@@ -1,7 +1,6 @@
 (function () {
   let scorm = null;
   let isScormConnected = false;
-  const grammarUrl = "../grammar/index.html";
 
   function initScormConnection() {
     if (!window.pipwerks || !window.pipwerks.SCORM) {
@@ -35,7 +34,7 @@
     }
   }
 
-  function persistCompletion() {
+  function markIntroductionComplete() {
     if (!isScormConnected || !scorm) {
       return;
     }
@@ -54,80 +53,22 @@
     }
   }
 
-  function attemptLmsNavigation() {
-    const navFunctionNames = [
-      "doNext",
-      "nextSCO",
-      "nextSco",
-      "continueCourse",
-      "continueSCO",
-    ];
-
-    const candidateWindows = [
-      window,
-      window.parent,
-      window.top,
-      window.opener,
-    ].filter(Boolean);
-
-    for (const candidate of candidateWindows) {
-      for (const fnName of navFunctionNames) {
-        if (typeof candidate[fnName] === "function") {
-          try {
-            candidate[fnName]();
-            return true;
-          } catch (error) {
-            console.warn(`Navigation via ${fnName} failed`, error);
-          }
-        }
-      }
-    }
-
-    return false;
-  }
-
-  function goToGrammar() {
-    const navigated = attemptLmsNavigation();
-    if (navigated) {
+  function closeScormConnection() {
+    if (!isScormConnected || !scorm) {
       return;
     }
 
     try {
-      window.location.href = grammarUrl;
+      scorm.quit();
     } catch (error) {
-      console.error("Redirect to grammar failed", error);
+      console.error("Error closing SCORM connection for introduction", error);
     }
-  }
-
-  function handleStartClick(event) {
-    event.preventDefault();
-
-    const button = event.currentTarget;
-    button.disabled = true;
-    button.classList.add("loading");
-    button.textContent = "Opening Grammar Test...";
-
-    persistCompletion();
-
-    setTimeout(() => {
-      if (isScormConnected && scorm) {
-        try {
-          scorm.quit();
-        } catch (error) {
-          console.error("Error closing SCORM connection for introduction", error);
-        }
-      }
-
-      goToGrammar();
-    }, 400);
   }
 
   document.addEventListener("DOMContentLoaded", () => {
-    const button = document.getElementById("start-test");
     initScormConnection();
-
-    if (button) {
-      button.addEventListener("click", handleStartClick);
-    }
+    markIntroductionComplete();
   });
+
+  window.addEventListener("beforeunload", closeScormConnection);
 })();
