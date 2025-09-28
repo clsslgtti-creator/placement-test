@@ -29,55 +29,55 @@
     ],
     "question_set_2": [
       {
-        "question": "Transfers power from the engine to the wheels",
-        "answer": "Transmission",
-        "id": "AT_22_1"
+        "question": "A system of springs and dampers that absorb road shocks",
+        "answer": "Suspension",
+        "id": "AT_2_1"
       },
       {
-        "question": "Uses exhaust gases to power a turbine that forces more air into the engine",
-        "answer": "Turbocharging",
-        "id": "AT_1_2"
+        "question": "Shock absorbers",
+        "answer": "Damper",
+        "id": "AT_2_2"
       },
       {
-        "question": "Allows the drive wheels to rotate at different speeds",
-        "answer": "Differential",
+        "question": "Prevents wheel spin during acceleration",
+        "answer": "Traction control",
         "id": "AT_2_3"
       },
       {
-        "question": "The primary power source of the vehicle",
-        "answer": "Engine",
+        "question": "The vehicle’s structural frame",
+        "answer": "Chasis",
         "id": "AT_2_4"
       },
       {
-        "question": "Converts the piston’s liner motion into rotational motion",
-        "answer": "Crankshaft",
+        "question": "A shaft that supports a wheel and allows it to rotate",
+        "answer": "Axis",
         "id": "AT_2_5"
       }
     ],
     "question_set_3": [
       {
-        "question": "Transfers power from the engine to the wheels",
-        "answer": "Transmission",
+        "question": "Genuine part manufactured by the same car company",
+        "answer": "OEM",
         "id": "AT_3_1"
       },
       {
-        "question": "Uses exhaust gases to power a turbine that forces more air into the engine",
-        "answer": "Turbocharging",
+        "question": "A design feature that reduces air resistance improving stability",
+        "answer": "Aerodynamic",
         "id": "AT_3_2"
       },
       {
-        "question": "Allows the drive wheels to rotate at different speeds",
-        "answer": "Differential",
+        "question": "A unique 17-character code to identify a specific vehicle",
+        "answer": "VIN",
         "id": "AT_3_3"
       },
       {
-        "question": "The primary power source of the vehicle",
-        "answer": "Engine",
+        "question": "A measure of the distance a vehicle can travel on a given amount of fuel",
+        "answer": "Fuel efficiency",
         "id": "AT_3_4"
       },
       {
-        "question": "Converts the piston’s liner motion into rotational motion",
-        "answer": "Crankshaft",
+        "question": "A measure of the engine’s power output",
+        "answer": "Horsepower",
         "id": "AT_3_5"
       }
     ]
@@ -85,82 +85,82 @@
   "CT": {
     "question_set_1": [
       {
-        "question": "Transfers power from the engine to the wheels",
-        "answer": "Transmission",
+        "question": "Gypsum or plasterboards used as interior walls and ceilings",
+        "answer": "Drywall",
         "id": "CT_1_1"
       },
       {
-        "question": "Uses exhaust gases to power a turbine that forces more air into the engine",
-        "answer": "Turbocharging",
+        "question": "Detailed technical drawings that show the design and specifications of a building.",
+        "answer": "Blueprints",
         "id": "CT_1_2"
       },
       {
-        "question": "Allows the drive wheels to rotate at different speeds",
-        "answer": "Differential",
+        "question": "A combination of sand and gravel used in concrete and asphalt.",
+        "answer": "Aggregate",
         "id": "CT_1_3"
       },
       {
-        "question": "The primary power source of the vehicle",
-        "answer": "Engine",
+        "question": "Local government regulations that dictate what can be built and where.",
+        "answer": "Zoning",
         "id": "CT_1_4"
       },
       {
-        "question": "Converts the piston’s liner motion into rotational motion",
-        "answer": "Crankshaft",
+        "question": "Software used to create and modify designs digitally.",
+        "answer": "CAD",
         "id": "CT_1_5"
       }
     ],
     "question_set_2": [
       {
-        "question": "Transfers power from the engine to the wheels",
-        "answer": "Transmission",
-        "id": "CT_22_1"
+        "question": "Materials used to reduce heat transfer in buildings",
+        "answer": "Insulation",
+        "id": "CT_2_1"
       },
       {
-        "question": "Uses exhaust gases to power a turbine that forces more air into the engine",
-        "answer": "Turbocharging",
-        "id": "CT_1_2"
+        "question": "Digging the earth to prepare for a foundation",
+        "answer": "Excavation",
+        "id": "CT_2_2"
       },
       {
-        "question": "Allows the drive wheels to rotate at different speeds",
-        "answer": "Differential",
+        "question": "The systems that control indoor air quality and temperature",
+        "answer": "HVAC",
         "id": "CT_2_3"
       },
       {
-        "question": "The primary power source of the vehicle",
-        "answer": "Engine",
+        "question": "A professional evaluation of a plot of land indicating its features and limitations for construction",
+        "answer": "Site survey",
         "id": "CT_2_4"
       },
       {
-        "question": "Converts the piston’s liner motion into rotational motion",
-        "answer": "Crankshaft",
+        "question": "The bending or twisting of materials like wood due to stress or environmental conditions",
+        "answer": "Warping",
         "id": "CT_2_5"
       }
     ],
     "question_set_3": [
       {
-        "question": "Transfers power from the engine to the wheels",
-        "answer": "Transmission",
+        "question": "Sealant used to fill gaps and stop leaks or drafts",
+        "answer": "Caulking",
         "id": "CT_3_1"
       },
       {
-        "question": "Uses exhaust gases to power a turbine that forces more air into the engine",
-        "answer": "Turbocharging",
+        "question": "Diagonal supports in an X shape, stiffening structure against wind or shakes",
+        "answer": "Cross bracing",
         "id": "CT_3_2"
       },
       {
-        "question": "Allows the drive wheels to rotate at different speeds",
-        "answer": "Differential",
+        "question": "A heavy beam supporting other beams or joists, over long distances",
+        "answer": "Girder",
         "id": "CT_3_3"
       },
       {
-        "question": "The primary power source of the vehicle",
-        "answer": "Engine",
+        "question": "A beam or slab supported on one end, sticking out like a diving board",
+        "answer": "Cantilever",
         "id": "CT_3_4"
       },
       {
-        "question": "Converts the piston’s liner motion into rotational motion",
-        "answer": "Crankshaft",
+        "question": "An expert estimate of a property’s value, often linked to project costs or planning",
+        "answer": "Appraisal",
         "id": "CT_3_5"
       }
     ]
@@ -168,82 +168,82 @@
   "ET": {
     "question_set_1": [
       {
-        "question": "Transfers power from the engine to the wheels",
-        "answer": "Transmission",
+        "question": "An automatic electrical switch that opens to interrupt a short circuit or other fault.",
+        "answer": "circuit breaker",
         "id": "ET_1_1"
       },
       {
-        "question": "Uses exhaust gases to power a turbine that forces more air into the engine",
-        "answer": "Turbocharging",
+        "question": "Any television system with more than 625 scan lines",
+        "answer": "HDTV",
         "id": "ET_1_2"
       },
       {
-        "question": "Allows the drive wheels to rotate at different speeds",
-        "answer": "Differential",
+        "question": "An external power supply for portable devices that allows them to operate from wall socket electricity",
+        "answer": "battery eliminator",
         "id": "ET_1_3"
       },
       {
-        "question": "The primary power source of the vehicle",
-        "answer": "Engine",
+        "question": "A circuit that demodulates a radio signal to recover information",
+        "answer": "detector",
         "id": "ET_1_4"
       },
       {
-        "question": "Converts the piston’s liner motion into rotational motion",
-        "answer": "Crankshaft",
+        "question": "An AC adapter which allows battery operated devices to run on wall-socket AC power",
+        "answer": "AC adapter",
         "id": "ET_1_5"
       }
     ],
     "question_set_2": [
       {
-        "question": "Transfers power from the engine to the wheels",
-        "answer": "Transmission",
-        "id": "ET_22_1"
+        "question": "An optical filter used in colour digital cameras",
+        "answer": "Bayer filter",
+        "id": "ET_2_1"
       },
       {
-        "question": "Uses exhaust gases to power a turbine that forces more air into the engine",
-        "answer": "Turbocharging",
-        "id": "ET_1_2"
+        "question": "Electric power where the current reverses direction periodically",
+        "answer": "AC power",
+        "id": "ET_2_2"
       },
       {
-        "question": "Allows the drive wheels to rotate at different speeds",
-        "answer": "Differential",
+        "question": "A material that does not allow free flow of electric current",
+        "answer": "Dielectric",
         "id": "ET_2_3"
       },
       {
-        "question": "The primary power source of the vehicle",
-        "answer": "Engine",
+        "question": "A device that protects from shocks by opening a circuit when stray current or voltage is detected",
+        "answer": "Earth leakage circuit breaker",
         "id": "ET_2_4"
       },
       {
-        "question": "Converts the piston’s liner motion into rotational motion",
-        "answer": "Crankshaft",
+        "question": "A circuit where all points on the signal path have only one of two states",
+        "answer": "Digital circuit",
         "id": "ET_2_5"
       }
     ],
     "question_set_3": [
       {
-        "question": "Transfers power from the engine to the wheels",
-        "answer": "Transmission",
+        "question": "A system that converts direct current power to alternating current, without the use of rotating machines",
+        "answer": "Inverter",
         "id": "ET_3_1"
       },
       {
-        "question": "Uses exhaust gases to power a turbine that forces more air into the engine",
-        "answer": "Turbocharging",
+        "question": "A device that measures the electrical energy used by a customer for revenue purposes",
+        "answer": "Electricity meter",
         "id": "ET_3_2"
       },
       {
-        "question": "Allows the drive wheels to rotate at different speeds",
-        "answer": "Differential",
+        "question": "A network of electrical components and conductors",
+        "answer": "Electrical network",
         "id": "ET_3_3"
       },
       {
-        "question": "The primary power source of the vehicle",
-        "answer": "Engine",
+        "question": "An instrument for detecting small electric currents",
+        "answer": "Galvanometer",
         "id": "ET_3_4"
       },
       {
-        "question": "Converts the piston’s liner motion into rotational motion",
-        "answer": "Crankshaft",
+        "question": "Electromagnetic radiation produced in the nucleus of atoms",
+        "answer": "Gamma ray",
         "id": "ET_3_5"
       }
     ]
@@ -251,82 +251,82 @@
   "FT": {
     "question_set_1": [
       {
-        "question": "Transfers power from the engine to the wheels",
-        "answer": "Transmission",
+        "question": "The process of cleaning and keeping food safe",
+        "answer": "Hygiene",
         "id": "FT_1_1"
       },
       {
-        "question": "Uses exhaust gases to power a turbine that forces more air into the engine",
-        "answer": "Turbocharging",
+        "question": "A substance used to prepare a dish",
+        "answer": "Ingredient",
         "id": "FT_1_2"
       },
       {
-        "question": "Allows the drive wheels to rotate at different speeds",
-        "answer": "Differential",
+        "question": "The process of heating milk to kill bacteria",
+        "answer": "Pasteurization",
         "id": "FT_1_3"
       },
       {
-        "question": "The primary power source of the vehicle",
-        "answer": "Engine",
+        "question": "The process of changing sugar into alcohol or gas",
+        "answer": "Fermentation",
         "id": "FT_1_4"
       },
       {
-        "question": "Converts the piston’s liner motion into rotational motion",
-        "answer": "Crankshaft",
+        "question": "Wrapping food to keep it safe and fresh",
+        "answer": "Packaging",
         "id": "FT_1_5"
       }
     ],
     "question_set_2": [
       {
-        "question": "Transfers power from the engine to the wheels",
-        "answer": "Transmission",
-        "id": "FT_22_1"
+        "question": "To cook slowly in liquid just below boiling point.",
+        "answer": "Simmer",
+        "id": "FT_2_1"
       },
       {
-        "question": "Uses exhaust gases to power a turbine that forces more air into the engine",
-        "answer": "Turbocharging",
-        "id": "FT_1_2"
+        "question": "To cook meat or fish by exposure to direct heat.",
+        "answer": "Broil",
+        "id": "FT_2_2"
       },
       {
-        "question": "Allows the drive wheels to rotate at different speeds",
-        "answer": "Differential",
+        "question": "A quick process of plunging food into boiling water and then into ice-cold water to stop enzymatic action.",
+        "answer": "Blanching",
         "id": "FT_2_3"
       },
       {
-        "question": "The primary power source of the vehicle",
-        "answer": "Engine",
+        "question": "An infection of the digestive tract caused by contaminated food or drinks",
+        "answer": "Food poisoning",
         "id": "FT_2_4"
       },
       {
-        "question": "Converts the piston’s liner motion into rotational motion",
-        "answer": "Crankshaft",
+        "question": "The process of turning liquid into a solid state, often by heat, like cooking eggs.",
+        "answer": "Coagulation",
         "id": "FT_2_5"
       }
     ],
     "question_set_3": [
       {
-        "question": "Transfers power from the engine to the wheels",
-        "answer": "Transmission",
+        "question": "The use of living micro-organisms to create new products with specific characteristics and attributes.",
+        "answer": "Biotechnology",
         "id": "FT_3_1"
       },
       {
-        "question": "Uses exhaust gases to power a turbine that forces more air into the engine",
-        "answer": "Turbocharging",
+        "question": "Substances added to food by the manufacturer that are not normally consumed alone as an ingredient",
+        "answer": "Additives",
         "id": "FT_3_2"
       },
       {
-        "question": "Allows the drive wheels to rotate at different speeds",
-        "answer": "Differential",
+        "question": "A non-allergic hypersensitivity to a certain food.",
+        "answer": "Food intolerance",
         "id": "FT_3_3"
       },
       {
-        "question": "The primary power source of the vehicle",
-        "answer": "Engine",
+        "question": "A substance produced by a living organism which acts as a catalyst to bring about a biochemical change",
+        "answer": "Enzyme",
         "id": "FT_3_4"
       },
       {
-        "question": "Converts the piston’s liner motion into rotational motion",
-        "answer": "Crankshaft",
+        "question": "Chemicals found in plant foods that prevent oxidation.",
+        "answer": "Antidioxidants",
         "id": "FT_3_5"
       }
     ]
@@ -334,82 +334,82 @@
   "ICT": {
     "question_set_1": [
       {
-        "question": "Transfers power from the engine to the wheels",
-        "answer": "Transmission",
+        "question": "Processing a set of data preventing anyone except the recipient from reading it.",
+        "answer": "Encryption",
         "id": "ICT_1_1"
       },
       {
-        "question": "Uses exhaust gases to power a turbine that forces more air into the engine",
-        "answer": "Turbocharging",
+        "question": "Set of methods used to prevent junk mail",
+        "answer": "Anti-spam",
         "id": "ICT_1_2"
       },
       {
-        "question": "Allows the drive wheels to rotate at different speeds",
-        "answer": "Differential",
+        "question": "A network or system that is designed to block unauthorized access while allowing authorized communications.",
+        "answer": "Firewall",
         "id": "ICT_1_3"
       },
       {
-        "question": "The primary power source of the vehicle",
-        "answer": "Engine",
+        "question": "Home audio system with integrated virtual assistant which allows the user to control the device through verbal commands.",
+        "answer": "Smart speaker",
         "id": "ICT_1_4"
       },
       {
-        "question": "Converts the piston’s liner motion into rotational motion",
-        "answer": "Crankshaft",
+        "question": "A connection in which data is transmitted at speeds lower than broadband.",
+        "answer": "Narrow band",
         "id": "ICT_1_5"
       }
     ],
     "question_set_2": [
       {
-        "question": "Transfers power from the engine to the wheels",
-        "answer": "Transmission",
-        "id": "ICT_22_1"
+        "question": "A set of technologies that enable computers to perform a variety of advanced functions and simulate human intelligence.",
+        "answer": "Artificial intelligence",
+        "id": "ICT_2_1"
       },
       {
-        "question": "Uses exhaust gases to power a turbine that forces more air into the engine",
-        "answer": "Turbocharging",
-        "id": "ICT_1_2"
+        "question": "The primary hardware component in a computer system",
+        "answer": "Central processing unit",
+        "id": "ICT_2_2"
       },
       {
-        "question": "Allows the drive wheels to rotate at different speeds",
-        "answer": "Differential",
+        "question": "To start a computer and have it ready for use",
+        "answer": "Boot up",
         "id": "ICT_2_3"
       },
       {
-        "question": "The primary power source of the vehicle",
-        "answer": "Engine",
+        "question": "Delivery of computing and IT resources through the internet",
+        "answer": "Cloud computing",
         "id": "ICT_2_4"
       },
       {
-        "question": "Converts the piston’s liner motion into rotational motion",
-        "answer": "Crankshaft",
+        "question": "A collection of data arranged so that it’s easily accessible",
+        "answer": "Database",
         "id": "ICT_2_5"
       }
     ],
     "question_set_3": [
       {
-        "question": "Transfers power from the engine to the wheels",
-        "answer": "Transmission",
+        "question": "Malicious software that hackers use for illegal access or to harm a system",
+        "answer": "Malware",
         "id": "ICT_3_1"
       },
       {
-        "question": "Uses exhaust gases to power a turbine that forces more air into the engine",
-        "answer": "Turbocharging",
+        "question": "Any document, photo, sound or video slip that you can attach to your email",
+        "answer": "Attachment",
         "id": "ICT_3_2"
       },
       {
-        "question": "Allows the drive wheels to rotate at different speeds",
-        "answer": "Differential",
+        "question": "A noun referring to the copy of files and data that someone has made.",
+        "answer": "Backup",
         "id": "ICT_3_3"
       },
       {
-        "question": "The primary power source of the vehicle",
-        "answer": "Engine",
+        "question": "A website where a person writes about his personal experiences, opinions and interests.",
+        "answer": "Blog",
         "id": "ICT_3_4"
       },
       {
-        "question": "Converts the piston’s liner motion into rotational motion",
-        "answer": "Crankshaft",
+        "question": "Verb used in IT to look over information casually",
+        "answer": "Browse",
         "id": "ICT_3_5"
       }
     ]
@@ -417,82 +417,82 @@
   "MT": {
     "question_set_1": [
       {
-        "question": "Transfers power from the engine to the wheels",
-        "answer": "Transmission",
+        "question": "A mechanical unit with epicyclic gears which allows a vehicle to cruise at a sustained speed with reduced engine speed",
+        "answer": "Overdrive",
         "id": "MT_1_1"
       },
       {
-        "question": "Uses exhaust gases to power a turbine that forces more air into the engine",
-        "answer": "Turbocharging",
+        "question": "Internal forces within a material and its resulting deformation.",
+        "answer": "Stress & strain",
         "id": "MT_1_2"
       },
       {
-        "question": "Allows the drive wheels to rotate at different speeds",
-        "answer": "Differential",
+        "question": "A type of failure where a material fractures into layers",
+        "answer": "Delamination",
         "id": "MT_1_3"
       },
       {
-        "question": "The primary power source of the vehicle",
-        "answer": "Engine",
+        "question": "The study of forces and motion",
+        "answer": "Mechanics",
         "id": "MT_1_4"
       },
       {
-        "question": "Converts the piston’s liner motion into rotational motion",
-        "answer": "Crankshaft",
+        "question": "A material's ability to return to its original shape after deformation.",
+        "answer": "Elasticity",
         "id": "MT_1_5"
       }
     ],
     "question_set_2": [
       {
-        "question": "Transfers power from the engine to the wheels",
-        "answer": "Transmission",
-        "id": "MT_22_1"
+        "question": "The use of technology to perform tasks with minimal human intervention.",
+        "answer": "Automation",
+        "id": "MT_2_1"
       },
       {
-        "question": "Uses exhaust gases to power a turbine that forces more air into the engine",
-        "answer": "Turbocharging",
-        "id": "MT_1_2"
+        "question": "Control the flow of fluids.",
+        "answer": "Valves",
+        "id": "MT_2_2"
       },
       {
-        "question": "Allows the drive wheels to rotate at different speeds",
-        "answer": "Differential",
+        "question": "Machinery for cutting and shaping materials",
+        "answer": "Lathe",
         "id": "MT_2_3"
       },
       {
-        "question": "The primary power source of the vehicle",
-        "answer": "Engine",
+        "question": "The weakening of a material due to repeated stress cycles.",
+        "answer": "Fatigue",
         "id": "MT_2_4"
       },
       {
-        "question": "Converts the piston’s liner motion into rotational motion",
-        "answer": "Crankshaft",
+        "question": "A mixture of metals or a metal and non-metal.",
+        "answer": "Alloy",
         "id": "MT_2_5"
       }
     ],
     "question_set_3": [
       {
-        "question": "Transfers power from the engine to the wheels",
-        "answer": "Transmission",
+        "question": "Used in metal work and for fabrication such as grinding down welds",
+        "answer": "Angle grinder",
         "id": "MT_3_1"
       },
       {
-        "question": "Uses exhaust gases to power a turbine that forces more air into the engine",
-        "answer": "Turbocharging",
+        "question": "A twisting force",
+        "answer": "Torque",
         "id": "MT_3_2"
       },
       {
-        "question": "Allows the drive wheels to rotate at different speeds",
-        "answer": "Differential",
+        "question": "Uses air pressure to create motion or force",
+        "answer": "Pneumatic system",
         "id": "MT_3_3"
       },
       {
-        "question": "The primary power source of the vehicle",
-        "answer": "Engine",
+        "question": "A device that converts heat and chemical energy into mechanical energy",
+        "answer": "Combustion Engine",
         "id": "MT_3_4"
       },
       {
-        "question": "Converts the piston’s liner motion into rotational motion",
-        "answer": "Crankshaft",
+        "question": "Construction of a 3D object from a CAD model or a digital 3D model.",
+        "answer": "3D printing",
         "id": "MT_3_5"
       }
     ]
