@@ -1,4 +1,89 @@
 {
+  "MT": {
+    "question_1": {
+      "instruction": "Look at the grid and make sentences in the present tense, using the same verbs in the correct form as in the example. Make other changes where appropriate.",
+      "question": [
+        {
+          "question": ["Hameed", "bank", "bus", "2.00 p.m.", "tired"],
+          "answers": [
+            "Hameed works at a bank. He goes to work by bus. He has his lunch at 2 p.m. He is tired.",
+            "Hameed works in a bank. He goes to work by bus. He has his lunch at 2 p.m. He is tired."
+          ],
+          "id": "MT_Example"
+        },
+        {
+          "question": [
+            "Mr & Mrs. Perera",
+            "shop",
+            "walk",
+            "12.30 p.m.",
+            "happy"
+          ],
+          "answers": [
+            "Mr. & Mrs. Perera work at a shop. They walk to work. They have lunch at 12.30 p.m. They are happy.",
+            "Mr. & Mrs. Perera work in a shop. They walk to work. They have lunch at 12.30 p.m. They are happy."
+          ],
+          "id": "MT_1_1"
+        },
+        {
+          "question": [
+            "Meena",
+            "government office",
+            "train",
+            "12 noon",
+            "stressed"
+          ],
+          "answers": [
+            "Meena works at a government office. She goes to work by train. She has lunch at 12 noon. She is stressed.",
+            "Meena works in a government office. She goes to work by train. She has lunch at 12 noon. She is stressed."
+          ],
+          "id": "MT_1_2"
+        }
+      ]
+    },
+    "question_2": {
+      "instruction": "Unscramble the sentences. Drag and Drop the words to make correct sentences.",
+      "question": [
+        {
+          "question": [
+            "bearings",
+            "greased",
+            "carefully",
+            "were",
+            "night",
+            "the",
+            "last"
+          ],
+          "answer": "The bearings were greased carefully last night.",
+          "id": "MT_2_1"
+        },
+        {
+          "question": [
+            "lathe",
+            "the",
+            "running",
+            "smoothly",
+            "was",
+            "yesterday"
+          ],
+          "answer": "The lathe was running smoothly yesterday.",
+          "id": "MT_2_2"
+        },
+        {
+          "question": [
+            "tightened",
+            "bolts",
+            "once again",
+            "worker",
+            "the",
+            "the"
+          ],
+          "answer": "The worker tightened the bolts once again.",
+          "id": "MT_2_3"
+        }
+      ]
+    }
+  },
   "AT": {
     "question_1": {
       "instruction": "Look at the grid and make sentences in the present tense, using the same verbs in the correct form as in the example. Make other changes where appropriate.",
@@ -13,23 +98,23 @@
         },
         {
           "question": [
-            "Ruwan & Ama",
+            "Ruwan & Amal",
             "garage",
             "bicycle",
             "12.30 p.m.",
             "busy"
           ],
           "answers": [
-            "Ruwan and Ama work at a garage. They go to work by bicycle. They have their lunch at 12.30 p.m. They are busy.",
-            "Ruwan and Ama work in a garage. They go to work by bicycle. They have their lunch at 12.30 p.m. They are busy."
+            "Ruwan and Amal work at a garage. They go to work by bicycle. They have lunch at 12.30 p.m. They are busy.",
+            "Ruwan and Amal work in a garage. They go to work by bicycle. They have lunch at 12.30 p.m. They are busy."
           ],
           "id": "AT_1_1"
         },
         {
           "question": ["Kumara", "workshop", "tuk-tuk", "1.00 p.m.", "relaxed"],
           "answers": [
-            "Kumara works at a workshop. He goes to work by tuk-tuk. He has his lunch at 1.00 p.m. He is relaxed.",
-            "Kumara works in a workshop. He goes to work by tuk-tuk. He has his lunch at 1.00 p.m. He is relaxed."
+            "Kumara works at a workshop. He goes to work by tuk-tuk. He has lunch at 1.00 p.m. He is relaxed.",
+            "Kumara works in a workshop. He goes to work by tuk-tuk. He has lunch at 1.00 p.m. He is relaxed."
           ],
           "id": "AT_1_2"
         }
@@ -74,81 +159,6 @@
       ]
     }
   },
-  "CT": {
-    "question_1": {
-      "instruction": "Look at the grid and make sentences in the present tense, using the same verbs in the correct form as in the example. Make other changes where appropriate.",
-      "question": [
-        {
-          "question": ["Hameed", "bank", "bus", "2.00 p.m.", "tired"],
-          "answers": [
-            "Hameed works at a bank. He goes to work by bus. He has his lunch at 2 p.m. He is tired.",
-            "Hameed works in a bank. He goes to work by bus. He has his lunch at 2 p.m. He is tired."
-          ],
-          "id": "CT_Example"
-        },
-        {
-          "question": [
-            "Ruwan & Ama",
-            "garage",
-            "bicycle",
-            "12.30 p.m.",
-            "busy"
-          ],
-          "answers": [
-            "Ruwan and Ama work at a garage. They go to work by bicycle. They have their lunch at 12.30 p.m. They are busy.",
-            "Ruwan and Ama work in a garage. They go to work by bicycle. They have their lunch at 12.30 p.m. They are busy."
-          ],
-          "id": "CT_1_1"
-        },
-        {
-          "question": ["Kumara", "workshop", "tuk-tuk", "1.00 p.m.", "relaxed"],
-          "answers": [
-            "Kumara works at a workshop. He goes to work by tuk-tuk. He has his lunch at 1.00 p.m. He is relaxed.",
-            "Kumara works in a workshop. He goes to work by tuk-tuk. He has his lunch at 1.00 p.m. He is relaxed."
-          ],
-          "id": "CT_1_2"
-        }
-      ]
-    },
-    "question_2": {
-      "instruction": "Unscramble the sentences. Drag and Drop the words to make correct sentences.",
-      "question": [
-        {
-          "question": ["garage", "the", "busy", "very", "was", "two weeks ago"],
-          "answer": "The garage was very busy two weeks ago.",
-          "id": "CT_2_1"
-        },
-        {
-          "question": [
-            "mechanic",
-            "to",
-            "the",
-            "carefully",
-            "engine",
-            "the",
-            "check",
-            "is going"
-          ],
-          "answer": "The mechanic is going to check the engine carefully.",
-          "id": "CT_2_2"
-        },
-        {
-          "question": [
-            "outside",
-            "sat",
-            "customer",
-            "a",
-            "chair",
-            "a",
-            "on",
-            "the office"
-          ],
-          "answer": "A customer sat on a chair outside the office.",
-          "id": "CT_2_3"
-        }
-      ]
-    }
-  },
   "ET": {
     "question_1": {
       "instruction": "Look at the grid and make sentences in the present tense, using the same verbs in the correct form as in the example. Make other changes where appropriate.",
@@ -163,23 +173,23 @@
         },
         {
           "question": [
-            "Ruwan & Ama",
-            "garage",
-            "bicycle",
-            "12.30 p.m.",
-            "busy"
+            "Manoj & Sanjeewa",
+            "power plant",
+            "van",
+            "12 noon",
+            "tired"
           ],
           "answers": [
-            "Ruwan and Ama work at a garage. They go to work by bicycle. They have their lunch at 12.30 p.m. They are busy.",
-            "Ruwan and Ama work in a garage. They go to work by bicycle. They have their lunch at 12.30 p.m. They are busy."
+            "Manoj and Sanjeewa work at a power plant. They go to work by van. They have lunch at 12 noon. They are tired.",
+            "Manoj and Sanjeewa work in a power plant. They go to work by van. They have lunch at 12 noon. They are tired."
           ],
           "id": "ET_1_1"
         },
         {
-          "question": ["Kumara", "workshop", "tuk-tuk", "1.00 p.m.", "relaxed"],
+          "question": ["Nirmala", "workshop", "bus", "12.45 p.m.", "cheerful"],
           "answers": [
-            "Kumara works at a workshop. He goes to work by tuk-tuk. He has his lunch at 1.00 p.m. He is relaxed.",
-            "Kumara works in a workshop. He goes to work by tuk-tuk. He has his lunch at 1.00 p.m. He is relaxed."
+            "Nirmala works at a workshop. She goes to work by bus. She has lunch at 12.45 p.m. She is cheerful.",
+            "Nirmala works in a workshop. She goes to work by bus. She has lunch at 12.45 p.m. She is cheerful."
           ],
           "id": "ET_1_2"
         }
@@ -189,36 +199,33 @@
       "instruction": "Unscramble the sentences. Drag and Drop the words to make correct sentences.",
       "question": [
         {
-          "question": ["garage", "the", "busy", "very", "was", "two weeks ago"],
-          "answer": "The garage was very busy two weeks ago.",
+          "question": [
+            "continuity",
+            "the",
+            "tested",
+            "electrician",
+            "circuit",
+            "the"
+          ],
+          "answer": "The electrician tested the circuit continuity.",
           "id": "ET_2_1"
         },
         {
           "question": [
-            "mechanic",
-            "to",
-            "the",
-            "carefully",
-            "engine",
-            "the",
-            "check",
-            "is going"
+            "power",
+            "cut",
+            "sudden",
+            "a",
+            "yesterday",
+            "was",
+            "there"
           ],
-          "answer": "The mechanic is going to check the engine carefully.",
+          "answer": "Yesterday there was a sudden power cut.",
           "id": "ET_2_2"
         },
         {
-          "question": [
-            "outside",
-            "sat",
-            "customer",
-            "a",
-            "chair",
-            "a",
-            "on",
-            "the office"
-          ],
-          "answer": "A customer sat on a chair outside the office.",
+          "question": ["the", "safely", "repaired", "wires", "loose", "he"],
+          "answer": "He repaired the loose wires safely.",
           "id": "ET_2_3"
         }
       ]
@@ -238,23 +245,29 @@
         },
         {
           "question": [
-            "Ruwan & Ama",
-            "garage",
-            "bicycle",
+            "Mala & Anura",
+            "factory",
+            "lorry",
             "12.30 p.m.",
             "busy"
           ],
           "answers": [
-            "Ruwan and Ama work at a garage. They go to work by bicycle. They have their lunch at 12.30 p.m. They are busy.",
-            "Ruwan and Ama work in a garage. They go to work by bicycle. They have their lunch at 12.30 p.m. They are busy."
+            "Mala and Anura work at a factory. They go to work by lorry. They have lunch at 12.30 p.m. They are busy.",
+            "Mala and Anura work in a factory. They go to work by lorry. They have lunch at 12.30 p.m. They are busy."
           ],
           "id": "FT_1_1"
         },
         {
-          "question": ["Kumara", "workshop", "tuk-tuk", "1.00 p.m.", "relaxed"],
+          "question": [
+            "Nadeesha",
+            "kitchen",
+            "scooter",
+            "1.15 p.m.",
+            "careful"
+          ],
           "answers": [
-            "Kumara works at a workshop. He goes to work by tuk-tuk. He has his lunch at 1.00 p.m. He is relaxed.",
-            "Kumara works in a workshop. He goes to work by tuk-tuk. He has his lunch at 1.00 p.m. He is relaxed."
+            "Nadeesha works at a kitchen. She goes to work by scooter. She has lunch at 1.15 p.m. She is careful.",
+            "Nadeesha works in a kitchen. She goes to work by scooter. She has lunch at 1.15 p.m. She is careful."
           ],
           "id": "FT_1_2"
         }
@@ -264,37 +277,113 @@
       "instruction": "Unscramble the sentences. Drag and Drop the words to make correct sentences.",
       "question": [
         {
-          "question": ["garage", "the", "busy", "very", "was", "two weeks ago"],
-          "answer": "The garage was very busy two weeks ago.",
+          "question": [
+            "the",
+            "fridge",
+            "checked",
+            "worker",
+            "the",
+            "temperature"
+          ],
+          "answer": "The worker checked the fridge temperature.",
           "id": "FT_2_1"
         },
         {
           "question": [
-            "mechanic",
+            "factory",
             "to",
+            "delivered",
+            "chickens",
+            "200",
             "the",
-            "carefully",
-            "engine",
-            "the",
-            "check",
-            "is going"
+            "were"
           ],
-          "answer": "The mechanic is going to check the engine carefully.",
+          "answer": "200 chickens were delivered to the factory.",
           "id": "FT_2_2"
         },
         {
           "question": [
-            "outside",
-            "sat",
-            "customer",
-            "a",
-            "chair",
-            "a",
-            "on",
-            "the office"
+            "the",
+            "packed",
+            "biscuits",
+            "machine",
+            "the",
+            "automatically"
           ],
-          "answer": "A customer sat on a chair outside the office.",
+          "answer": "The machine packed the biscuits automatically.",
           "id": "FT_2_3"
+        }
+      ]
+    }
+  },
+  "CT": {
+    "question_1": {
+      "instruction": "Look at the grid and make sentences in the present tense, using the same verbs in the correct form as in the example. Make other changes where appropriate.",
+      "question": [
+        {
+          "question": ["Hameed", "bank", "bus", "2.00 p.m.", "tired"],
+          "answers": [
+            "Hameed works at a bank. He goes to work by bus. He has his lunch at 2 p.m. He is tired.",
+            "Hameed works in a bank. He goes to work by bus. He has his lunch at 2 p.m. He is tired."
+          ],
+          "id": "CT_Example"
+        },
+        {
+          "question": [
+            "Sunil & Ajith",
+            "government hospital",
+            "bicycle",
+            "12.45 p.m.",
+            "energetic"
+          ],
+          "answers": [
+            "Sunil and Ajith work at a government hospital. They go to work by bicycle. They have lunch at 12.45 p.m. They are energetic.",
+            "Sunil and Ajith work in a government hospital. They go to work by bicycle. They have lunch at 12.45 p.m. They are energetic."
+          ],
+          "id": "CT_1_1"
+        },
+        {
+          "question": ["Priyantha", "bank", "motorbike", "1.00 p.m.", "tired"],
+          "answers": [
+            "Priyantha works at a bank. He goes to work by motorbike. He has lunch at 1.00 p.m. He is tired.",
+            "Priyantha works in a bank. He goes to work by motorbike. He has lunch at 1.00 p.m. He is tired."
+          ],
+          "id": "CT_1_2"
+        }
+      ]
+    },
+    "question_2": {
+      "instruction": "Unscramble the sentences. Drag and Drop the words to make correct sentences.",
+      "question": [
+        {
+          "question": [
+            "bricks",
+            "stacked",
+            "neatly",
+            "were",
+            "the",
+            "morning",
+            "this"
+          ],
+          "answer": "The bricks were stacked neatly this morning.",
+          "id": "CT_2_1"
+        },
+        {
+          "question": [
+            "scaffolding",
+            "checked",
+            "the",
+            "carefully",
+            "foreman",
+            "the"
+          ],
+          "answer": "The foreman checked the scaffolding carefully.",
+          "id": "CT_2_2"
+        },
+        {
+          "question": ["the", "cement", "mixed", "labourers", "quickly", "the"],
+          "answer": "The labourers mixed the cement quickly.",
+          "id": "CT_2_3"
         }
       ]
     }
@@ -313,23 +402,23 @@
         },
         {
           "question": [
-            "Ruwan & Ama",
-            "garage",
-            "bicycle",
-            "12.30 p.m.",
-            "busy"
+            "Anil & Kasun",
+            "computer lab",
+            "motorbike",
+            "12 noon",
+            "focused"
           ],
           "answers": [
-            "Ruwan and Ama work at a garage. They go to work by bicycle. They have their lunch at 12.30 p.m. They are busy.",
-            "Ruwan and Ama work in a garage. They go to work by bicycle. They have their lunch at 12.30 p.m. They are busy."
+            "Anil and Kasun work at a computer lab. They go to work by motorbike. They have lunch at 12 noon. They are focused.",
+            "Anil and Kasun work in a computer lab. They go to work by motorbike. They have lunch at 12 noon. They are focused."
           ],
           "id": "ICT_1_1"
         },
         {
-          "question": ["Kumara", "workshop", "tuk-tuk", "1.00 p.m.", "relaxed"],
+          "question": ["Anjali", "office", "bus", "1.00 p.m.", "worried"],
           "answers": [
-            "Kumara works at a workshop. He goes to work by tuk-tuk. He has his lunch at 1.00 p.m. He is relaxed.",
-            "Kumara works in a workshop. He goes to work by tuk-tuk. He has his lunch at 1.00 p.m. He is relaxed."
+            "Anjali works at an office. She goes to work by bus. She has lunch at 1.00 p.m. She is worried.",
+            "Anjali works in an office. She goes to work by bus. She has lunch at 1.00 p.m. She is worried."
           ],
           "id": "ICT_1_2"
         }
@@ -339,112 +428,34 @@
       "instruction": "Unscramble the sentences. Drag and Drop the words to make correct sentences.",
       "question": [
         {
-          "question": ["garage", "the", "busy", "very", "was", "two weeks ago"],
-          "answer": "The garage was very busy two weeks ago.",
+          "question": [
+            "computer",
+            "the",
+            "updated",
+            "technician",
+            "the",
+            "software"
+          ],
+          "answer": "The technician updated the computer software.",
           "id": "ICT_2_1"
         },
         {
-          "question": [
-            "mechanic",
-            "to",
-            "the",
-            "carefully",
-            "engine",
-            "the",
-            "check",
-            "is going"
-          ],
-          "answer": "The mechanic is going to check the engine carefully.",
+          "question": ["the", "password", "forgotten", "has", "student", "the"],
+          "answer": "The student has forgotten the password.",
           "id": "ICT_2_2"
         },
         {
           "question": [
-            "outside",
-            "sat",
-            "customer",
-            "a",
-            "chair",
-            "a",
-            "on",
-            "the office"
+            "morning",
+            "system",
+            "ran",
+            "smoothly",
+            "the",
+            "every",
+            "computer"
           ],
-          "answer": "A customer sat on a chair outside the office.",
+          "answer": "The computer system ran smoothly every morning.",
           "id": "ICT_2_3"
-        }
-      ]
-    }
-  },
-  "MT": {
-    "question_1": {
-      "instruction": "Look at the grid and make sentences in the present tense, using the same verbs in the correct form as in the example. Make other changes where appropriate.",
-      "question": [
-        {
-          "question": ["Hameed", "bank", "bus", "2.00 p.m.", "tired"],
-          "answers": [
-            "Hameed works at a bank. He goes to work by bus. He has his lunch at 2 p.m. He is tired.",
-            "Hameed works in a bank. He goes to work by bus. He has his lunch at 2 p.m. He is tired."
-          ],
-          "id": "MT_Example"
-        },
-        {
-          "question": [
-            "Ruwan & Ama",
-            "garage",
-            "bicycle",
-            "12.30 p.m.",
-            "busy"
-          ],
-          "answers": [
-            "Ruwan and Ama work at a garage. They go to work by bicycle. They have their lunch at 12.30 p.m. They are busy.",
-            "Ruwan and Ama work in a garage. They go to work by bicycle. They have their lunch at 12.30 p.m. They are busy."
-          ],
-          "id": "MT_1_1"
-        },
-        {
-          "question": ["Kumara", "workshop", "tuk-tuk", "1.00 p.m.", "relaxed"],
-          "answers": [
-            "Kumara works at a workshop. He goes to work by tuk-tuk. He has his lunch at 1.00 p.m. He is relaxed.",
-            "Kumara works in a workshop. He goes to work by tuk-tuk. He has his lunch at 1.00 p.m. He is relaxed."
-          ],
-          "id": "MT_1_2"
-        }
-      ]
-    },
-    "question_2": {
-      "instruction": "Unscramble the sentences. Drag and Drop the words to make correct sentences.",
-      "question": [
-        {
-          "question": ["garage", "the", "busy", "very", "was", "two weeks ago"],
-          "answer": "The garage was very busy two weeks ago.",
-          "id": "MT_2_1"
-        },
-        {
-          "question": [
-            "mechanic",
-            "to",
-            "the",
-            "carefully",
-            "engine",
-            "the",
-            "check",
-            "is going"
-          ],
-          "answer": "The mechanic is going to check the engine carefully.",
-          "id": "MT_2_2"
-        },
-        {
-          "question": [
-            "outside",
-            "sat",
-            "customer",
-            "a",
-            "chair",
-            "a",
-            "on",
-            "the office"
-          ],
-          "answer": "A customer sat on a chair outside the office.",
-          "id": "MT_2_3"
         }
       ]
     }
