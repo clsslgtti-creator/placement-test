@@ -61,7 +61,7 @@
     ]
   },
   "question_set_2": {
-    "title": "The Bus Ride",
+    "title": "A Rainy Morning",
     "passage": "This morning, heavy rain flooded the streets, and traffic was moving slowly. Nisha normally catches the bus on time, but today it arrived almost an hour late. That’s why Nisha missed the first period of English at school. \nNisha’s  younger brother stayed at home because he was suffering from a bad cold. Their father is making tea now, and the family are sitting together in the living room, listening to the rain beating on the roof. \nBy the afternoon, the rain will probably end, and Nisha has already arranged to meet her best friend arriving from Aluthgama outside the station. She is hoping for sunshine tomorrow so she can reach school without any difficulty.",
     "question": [
       {
@@ -122,7 +122,7 @@
     ]
   },
   "question_set_3": {
-    "title": "A Rainy Morning",
+    "title": "The Family Garden",
     "passage": "Behind their house, Ravi’s family has a modest garden that provides them with a steady supply of fresh vegetables. They cultivate beans and carrots, but last month they decided to include tomatoes as well. \nEach evening, Ravi is responsible for watering the plants, while his sister takes care of removing weeds.  At present, she can be seen pulling some stubborn ones from the soil. Yesterday, their mother enriched the ground with compost so that the plants would grow better. \nNext week, she intends to plant chillies, since they are frequently required for family meals. Last night, as Ravi watered vegetable beds, his father stood by the fence, chatting with a neighbour. Although the garden is relatively small, it reduces household expenses and contributes to healthier eating habits.",
     "question": [
       {
@@ -183,64 +183,64 @@
     ]
   },
   "question_set_4": {
-    "title": "The Bus Ride",
-    "passage": "Last Monday, I travelled by bus from Colombo to Galle. The journey had started early in the morning, and the bus was already crowded. While I was looking for a seat, I noticed a conductor who was busy  selling green tickets.\nRight now,  I am thinking about how noisy the ride was, but I must admit that it was also exciting. We don’t usually stop for tea, but that day the driver did. Tomorrow, I will leave Colombo early and take the train instead, because it might be faster and I might reach Galle before lunch.\nBy the end of next month, I will have completed several trips around Sri Lanka. Should I carry less luggage next time? Maybe I should. This time my arms really hurt carrying so much load.",
-    "question": [
-      {
-        "question": "Why was the bus ride unusual?",
-        "options": [
-          "The conductor was selling green tickets.",
-          "They had tea.",
-          "The seats were empty.",
-          "They stopped for a meal."
-        ],
-        "answer": "They had tea.",
-        "id": "4_1"
-      },
-      {
-        "question": "What is the plan for tomorrow?",
-        "options": [
-          "Take different bus to Colombo",
-          "Try out the train",
-          "Take the train back to Colombo",
-          "Walk to Galle"
-        ],
-        "answer": "Try out the train",
-        "id": "4_2"
-      },
-      {
-        "question": "Why might less luggage be better?",
-        "options": [
-          "It was too heavy",
-          "the bus was very crowded",
-          "The student had too many bags.",
-          "There was no one to help me with the bags."
-        ],
-        "answer": "the bus was very crowded",
-        "id": "4_3"
-      },
-      {
-        "question": "What was happening while the student was looking for a seat?",
-        "options": [
-          "The bus took off.",
-          "Tickets were being sold",
-          "It was very noisy.",
-          "He was thinking about sorting his tickets."
-        ],
-        "answer": "Tickets were being sold",
-        "id": "4_4"
-      },
-      {
-        "question": "By the end of next month, what will be finished?",
-        "options": [
-          "Only one trip",
-          "Many journeys",
-          "A holiday",
-          "Tickets for all the trips"
-        ],
-        "answer": "Many journeys",
-        "id": "4_5"
-      }
-    ]
-  }
+  "title": "Visiting Grandmother",
+  "passage": "Next week, Sita and her parents will travel to Kandy to spend time with her grandmother, who resides in a quiet neighbourhood beside the river. The family normally uses the bus, but on this occasion, they have decided to use the train, considering it both faster and more comfortable. \nSita is especially enthusiastic, as she enjoys observing the hills and streams through the carriage window. At present, her grandmother is preparing traditional sweets and tidying the house so that everything is ready when they arrive. \nLast year, the journey could not take place, since the family had been occupied with work and school commitments. Yesterday, while her mother was carefully folding clothes into a suitcase, Sita kept asking questions about the duration of their stay and the gifts they should take. Tomorrow, she is going to finish packing her own bag.",
+  "question": [
+    {
+      "question": "Where exactly does Sita’s grandmother live?",
+      "options": [
+        "In a peaceful riverside area of Kandy.",
+        "In a noisy neighbourhood in Kandy.",
+        "In a house with lots of neighbours",
+        "Far from the river in Kandy."
+      ],
+      "answer": "In a peaceful riverside area of Kandy.",
+      "id": "4_1"
+    },
+    {
+      "question": "Why is the family travelling by train instead of by bus?",
+      "options": [
+        "The bus they normally use isn’t running.",
+        "Their grandmother said the train is more comfortable.",
+        "The train is considered quicker and more comfortable.",
+        "The train is a cheaper and more comfortable way to travel."
+      ],
+      "answer": "The train is considered quicker and more comfortable.",
+      "id": "4_2"
+    },
+    {
+      "question": "What is the grandmother occupied with at the moment?",
+      "options": [
+        "Cleaning and preparing festive food",
+        "Cleaning her garden",
+        "Talking to neighbours about Sita’s arrival",
+        "Buying traditional sweets and other festive food"
+      ],
+      "answer": "Cleaning and preparing festive food",
+      "id": "4_3"
+    },
+    {
+      "question": "Why was the trip postponed last year?",
+      "options": [
+        "They were very busy with sports activities.",
+        "The grandmother was ill.",
+        "Family responsibilities prevented them from travelling",
+        "The grandmother wasn’t at home."
+      ],
+      "answer": "Family responsibilities prevented them from travelling",
+      "id": "4_4"
+    },
+    {
+      "question": "What was Sita doing while her mother was packing?",
+      "options": [
+        "Constantly asking about the visit",
+        "Packing her own clothes",
+        "Helping her mother pack the clothes",
+        "Helping to fold clothes into the bag"
+      ],
+      "answer": "Constantly asking about the visit",
+      "id": "4_5"
+    }
+  ]
+}
 }
