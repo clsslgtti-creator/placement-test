@@ -63,9 +63,9 @@
         </item>
 
         <!-- Writing Test SCO -->
-        <item identifier="writing_test" isvisible="true" identifierref="writing_test_resource">
+        <!-- <item identifier="writing_test" isvisible="true" identifierref="writing_test_resource">
           <title>Writing Test</title>
-        </item>
+        </item> -->
 
         <!-- Vocabulary Test SCO -->
         <item identifier="vocabulary_test" isvisible="true" identifierref="vocabulary_test_resource">
@@ -99,7 +99,7 @@
       <file href="grammar/script.js" />
       <file href="grammar/questions.json" />
       <file href="assets/css/shared.css" />
-      <file href="assets/js/common.js" />
+      <!-- <file href="assets/js/common.js" /> -->
       <file href="assets/js/pipwerks-scorm.js" />
     </resource>
 
@@ -110,12 +110,12 @@
       <file href="reading/script.js" />
       <file href="reading/questions.json" />
       <file href="assets/css/shared.css" />
-      <file href="assets/js/common.js" />
+      <!-- <file href="assets/js/common.js" /> -->
       <file href="assets/js/pipwerks-scorm.js" />
     </resource>
 
     <!-- Writing Test Resources -->
-    <resource identifier="writing_test_resource" type="webcontent" adlcp:scormtype="sco"
+    <!-- <resource identifier="writing_test_resource" type="webcontent" adlcp:scormtype="sco"
       href="writing/index.html">
       <file href="writing/index.html" />
       <file href="writing/script.js" />
@@ -123,7 +123,7 @@
       <file href="assets/css/shared.css" />
       <file href="assets/js/common.js" />
       <file href="assets/js/pipwerks-scorm.js" />
-    </resource>
+    </resource> -->
 
 
     <!-- Vocabulary Test Resources -->
@@ -134,7 +134,7 @@
       <file href="vocabulary/styles.css" />
       <file href="vocabulary/questions.json" />
       <file href="assets/css/shared.css" />
-      <file href="assets/js/common.js" />
+      <!-- <file href="assets/js/common.js" /> -->
       <file href="assets/js/pipwerks-scorm.js" />
     </resource>
 
@@ -146,7 +146,7 @@
       <file href="listening/styles.css" />
       <file href="listening/questions.json" />
       <file href="assets/css/shared.css" />
-      <file href="assets/js/common.js" />
+      <!-- <file href="assets/js/common.js" /> -->
       <file href="assets/js/pipwerks-scorm.js" />
     </resource>
 
