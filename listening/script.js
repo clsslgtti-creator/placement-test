@@ -22,7 +22,6 @@ const PROGRAM_LABEL_LOOKUP = PROGRAMS.reduce((acc, programme) => {
 
 const TEST_DURATION = 20 * 60 * 1000; // 20 minutes in milliseconds
 
-const SECOND_PLAY_DELAY = 30 * 1000; // 30 seconds between plays
 
 let questionsData = null;
 
@@ -499,11 +498,8 @@ function createAudioController(sectionKey, audioSrc, initialState = {}) {
 
     awaitingSecondPlay: false,
 
-    cooldownEnd: null,
 
-    autoTimeout: null,
 
-    countdownInterval: null,
 
     isPlaying: false,
   };
@@ -561,11 +557,7 @@ function handleAudioButtonClick(controller) {
   }
 
   if (controller.awaitingSecondPlay) {
-    clearSecondPlayCountdown(controller);
-
     controller.awaitingSecondPlay = false;
-
-    controller.cooldownEnd = null;
   }
 
   startAudioPlayback(controller);
@@ -583,7 +575,7 @@ function startAudioPlayback(controller) {
   if (controller.button) {
     controller.button.disabled = true;
 
-    controller.button.classList.remove("countdown", "completed");
+    controller.button.classList.remove("completed");
 
     if (controller.label) {
       controller.label.textContent =
@@ -625,8 +617,6 @@ function handlePlaybackFailure(controller, error, previousPlays) {
 
   if (previousPlays === 1) {
     controller.awaitingSecondPlay = true;
-
-    controller.cooldownEnd = null;
   }
 
   if (controller.button) {
@@ -656,7 +646,17 @@ function handleAudioEnded(controller) {
   if (controller.playsUsed === 1) {
     controller.awaitingSecondPlay = true;
 
-    startSecondPlayCountdown(controller);
+    if (controller.button) {
+      controller.button.disabled = false;
+      if (controller.label) {
+        controller.label.textContent = "Play Second Time";
+      }
+    }
+
+    updateAudioStatus(
+      controller,
+      "Second play ready. Tap to play the final time."
+    );
   } else if (controller.playsUsed >= 2) {
     finaliseAudioPlayback(controller);
   }
@@ -666,95 +666,8 @@ function handleAudioEnded(controller) {
   saveProgressToScorm();
 }
 
-function startSecondPlayCountdown(controller, remaining = SECOND_PLAY_DELAY) {
-  clearSecondPlayCountdown(controller);
-
-  controller.awaitingSecondPlay = true;
-
-  controller.cooldownEnd = Date.now() + remaining;
-
-  if (controller.button) {
-    controller.button.disabled = false;
-
-    controller.button.classList.add("countdown");
-  }
-
-  const updateCountdown = () => {
-    const msRemaining = controller.cooldownEnd - Date.now();
-
-    if (msRemaining <= 0) {
-      clearSecondPlayCountdown(controller);
-
-      if (controller.playsUsed < 2 && !controller.isPlaying) {
-        controller.awaitingSecondPlay = false;
-
-        controller.cooldownEnd = null;
-
-        startAudioPlayback(controller);
-      }
-
-      return;
-    }
-
-    if (controller.label) {
-      controller.label.textContent = `Play Second Time (${formatCountdown(
-        msRemaining
-      )})`;
-    }
-
-    updateAudioStatus(
-      controller,
-
-      `Second play will start automatically in ${formatCountdown(msRemaining)}`
-    );
-  };
-
-  updateCountdown();
-
-  controller.countdownInterval = setInterval(updateCountdown, 1000);
-
-  controller.autoTimeout = setTimeout(() => {
-    clearSecondPlayCountdown(controller);
-
-    if (controller.playsUsed < 2 && !controller.isPlaying) {
-      controller.awaitingSecondPlay = false;
-
-      controller.cooldownEnd = null;
-
-      startAudioPlayback(controller);
-    }
-  }, remaining);
-
-  updateAudioStateFromController(controller);
-
-  saveProgressToScorm();
-}
-
-function clearSecondPlayCountdown(controller) {
-  if (controller.autoTimeout) {
-    clearTimeout(controller.autoTimeout);
-
-    controller.autoTimeout = null;
-  }
-
-  if (controller.countdownInterval) {
-    clearInterval(controller.countdownInterval);
-
-    controller.countdownInterval = null;
-  }
-
-  if (controller.button) {
-    controller.button.classList.remove("countdown");
-  }
-}
-
 function finaliseAudioPlayback(controller) {
-  clearSecondPlayCountdown(controller);
-
   controller.awaitingSecondPlay = false;
-
-  controller.cooldownEnd = null;
-
   if (controller.button) {
     controller.button.disabled = true;
 
@@ -795,16 +708,7 @@ function updateAudioStatus(controller, overrideText) {
   }
 
   if (controller.awaitingSecondPlay) {
-    if (controller.cooldownEnd) {
-      const remaining = controller.cooldownEnd - Date.now();
-
-      controller.status.textContent =
-        remaining > 0
-          ? `Second play available in ${formatCountdown(remaining)}`
-          : "Second play ready.";
-    } else {
-      controller.status.textContent = "Second play ready.";
-    }
+    controller.status.textContent = "Second play ready.";
 
     return;
   }
@@ -821,20 +725,6 @@ function applyInitialAudioState(controller, initialState) {
   controller.awaitingSecondPlay =
     initialState && initialState.awaitingSecondPlay && controller.playsUsed < 2;
 
-  controller.cooldownEnd = null;
-
-  if (
-    controller.awaitingSecondPlay &&
-    initialState &&
-    initialState.cooldownEnd
-  ) {
-    const parsedCooldown = parseInt(initialState.cooldownEnd, 10);
-
-    if (!Number.isNaN(parsedCooldown)) {
-      controller.cooldownEnd = parsedCooldown;
-    }
-  }
-
   if (controller.playsUsed >= 2) {
     controller.playsUsed = 2;
 
@@ -844,32 +734,18 @@ function applyInitialAudioState(controller, initialState) {
   }
 
   if (controller.awaitingSecondPlay) {
-    const remaining = controller.cooldownEnd
-      ? controller.cooldownEnd - Date.now()
-      : 0;
+    if (controller.button) {
+      controller.button.disabled = false;
 
-    if (remaining > 0) {
-      startSecondPlayCountdown(controller, remaining);
-    } else {
-      controller.cooldownEnd = null;
-
-      controller.awaitingSecondPlay = true;
-
-      if (controller.button) {
-        controller.button.disabled = false;
-
-        controller.button.classList.add("countdown");
-
-        if (controller.label) {
-          controller.label.textContent = "Play Second Time";
-        }
+      if (controller.label) {
+        controller.label.textContent = "Play Second Time";
       }
-
-      updateAudioStatus(
-        controller,
-        "Second play ready. Tap to play the final time."
-      );
     }
+
+    updateAudioStatus(
+      controller,
+      "Second play ready. Tap to play the final time."
+    );
 
     return;
   }
@@ -886,29 +762,11 @@ function applyInitialAudioState(controller, initialState) {
   updateAudioStatus(controller);
 }
 
-function formatCountdown(milliseconds) {
-  const totalSeconds = Math.ceil(milliseconds / 1000);
-
-  const safeSeconds = totalSeconds < 0 ? 0 : totalSeconds;
-
-  const minutes = Math.floor(safeSeconds / 60);
-
-  const seconds = safeSeconds % 60;
-
-  return `${minutes}:${seconds.toString().padStart(2, "0")}`;
-}
-
 function updateAudioStateFromController(controller) {
   const state = {
     playsUsed: controller.playsUsed,
-
     awaitingSecondPlay:
       controller.awaitingSecondPlay && controller.playsUsed < 2,
-
-    cooldownEnd:
-      controller.awaitingSecondPlay && controller.cooldownEnd
-        ? controller.cooldownEnd
-        : null,
   };
 
   audioState[controller.key] = state;
@@ -916,9 +774,8 @@ function updateAudioStateFromController(controller) {
 
 function createDefaultAudioState() {
   return {
-    general: { playsUsed: 0, awaitingSecondPlay: false, cooldownEnd: null },
-
-    specific: { playsUsed: 0, awaitingSecondPlay: false, cooldownEnd: null },
+    general: { playsUsed: 0, awaitingSecondPlay: false },
+    specific: { playsUsed: 0, awaitingSecondPlay: false },
   };
 }
 
@@ -991,9 +848,6 @@ function endTest(isTimeout) {
     if (controller.audio) {
       controller.audio.pause();
     }
-
-    clearSecondPlayCountdown(controller);
-
     if (controller.button) {
       controller.button.disabled = true;
     }
@@ -1288,12 +1142,12 @@ function restoreFromSavedState(savedState) {
     general:
       savedState.audioState && savedState.audioState.general
         ? savedState.audioState.general
-        : { playsUsed: 0, awaitingSecondPlay: false, cooldownEnd: null },
+        : { playsUsed: 0, awaitingSecondPlay: false },
 
     specific:
       savedState.audioState && savedState.audioState.specific
         ? savedState.audioState.specific
-        : { playsUsed: 0, awaitingSecondPlay: false, cooldownEnd: null },
+        : { playsUsed: 0, awaitingSecondPlay: false },
   };
 
   selectedQuestions = {
@@ -1429,3 +1283,4 @@ function handleBeforeUnload() {
     scorm.quit();
   }
 }
+
