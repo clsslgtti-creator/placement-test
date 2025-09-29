@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Listening Placement Test</title>
@@ -11,79 +11,118 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <h1>PLACEMENT TEST - LISTENING</h1>
-            <p class="instructions">
-                Select your training programme to begin. Each recording will play automatically twice.
-            </p>
-        </header>
+      <header>
+        <h1>PLACEMENT TEST - LISTENING</h1>
+        <p class="instructions">
+          Listen and answer the questions.
+          <br />
+          கேட்டு கேள்விகளுக்கு பதிலளிக்கவும்.
+          <br />
+          සවන් දී ප්‍රශ්න පිළිතුරු දෙන්න.
+        </p>
+      </header>
 
-        <div class="timer hidden" id="timer">
-            <i class="fas fa-clock"></i>
-            Time Remaining: <span id="time-remaining">20:00</span>
-        </div>
-        <div class="timer-container hidden" id="timer-container">
-            <div class="timer-bar" id="timer-bar"></div>
-        </div>
+      <div class="timer hidden" id="timer">
+        <i class="fas fa-clock"></i>
+        Time Remaining: <span id="time-remaining">20:00</span>
+      </div>
+      <div class="timer-container hidden" id="timer-container">
+        <div class="timer-bar" id="timer-bar"></div>
+      </div>
 
-        <div id="program-banner" class="program-banner hidden">
-            Training Programme: <span id="selected-program-name"></span>
-        </div>
+      <div id="program-banner" class="program-banner hidden">
+        Training Programme: <span id="selected-program-name"></span>
+      </div>
 
-        <div class="listening-content hidden" id="listening-content">
-            <section class="listening-section" id="listening-general">
-                <h2>Listening 1 &mdash; General</h2>
-                <p class="section-instruction">
-                    You must read the questions carefully before listening to the recording. The recording will be played twice.
-                </p>
-                <div class="audio-panel" data-section="general">
-                    <button class="btn btn-secondary audio-play-button" data-section="general">
-                        <i class="fas fa-play"></i>
-                        <span class="label">Play Recording</span>
-                    </button>
-                    <span class="audio-status" id="general-audio-status">Plays remaining: 2</span>
-                </div>
-                <div class="questions" id="general-questions"></div>
-            </section>
+      <div class="listening-content hidden" id="listening-content">
+        <section class="listening-section" id="listening-general">
+          <h2>Listening 1 &mdash; General</h2>
+          <p class="section-instruction">
+            You must read the questions carefully before listening to the
+            recording. The recording will be played twice.
+            <br />
+            பதிவைக் கேட்கும் முன் கேள்விகளை கவனமாக வாசிக்க வேண்டும். பதிவு
+            இரண்டு முறை மட்டுமே இயங்கும்.
+            <br />
+            සවන් දීමේ පරීක්‍ෂාව පටන් ගන්නට පෙර, ඔබ ප්‍රශ්න හොඳින් කියවිය යුතුය.
+            පටිගත කිරීම දෙවරක් වාදනය කෙරේ.
+          </p>
+          <div class="audio-panel" data-section="general">
+            <button
+              class="btn btn-secondary audio-play-button"
+              data-section="general"
+            >
+              <i class="fas fa-play"></i>
+              <span class="label">Play Recording</span>
+            </button>
+            <span class="audio-status" id="general-audio-status"
+              >Plays remaining: 2</span
+            >
+          </div>
+          <div class="questions" id="general-questions"></div>
+        </section>
 
-            <section class="listening-section" id="listening-specific">
-                <h2>Listening 2 &mdash; Programme Specific</h2>
-                <p class="section-instruction">
-                    You must read the questions carefully before listening to the recording. The recording will be played twice.
-                </p>
-                <div class="audio-panel" data-section="specific">
-                    <button class="btn btn-secondary audio-play-button" data-section="specific">
-                        <i class="fas fa-play"></i>
-                        <span class="label">Play Recording</span>
-                    </button>
-                    <span class="audio-status" id="specific-audio-status">Plays remaining: 2</span>
-                </div>
-                <div class="questions" id="specific-questions"></div>
-            </section>
-        </div>
+        <section class="listening-section" id="listening-specific">
+          <h2>Listening 2 &mdash; Programme Specific</h2>
+          <p class="section-instruction">
+            You must read the questions carefully before listening to the
+            recording. The recording will be played twice.
+            <br />
+            பதிவைக் கேட்கும் முன் கேள்விகளை கவனமாக வாசிக்க வேண்டும். பதிவு
+            இரண்டு முறை மட்டுமே இயங்கும்.
+            <br />
+            සවන් දීමේ පරීක්‍ෂාව පටන් ගන්නට පෙර, ඔබ ප්‍රශ්න හොඳින් කියවිය යුතුය.
+            පටිගත කිරීම දෙවරක් වාදනය කෙරේ.
+          </p>
+          <div class="audio-panel" data-section="specific">
+            <button
+              class="btn btn-secondary audio-play-button"
+              data-section="specific"
+            >
+              <i class="fas fa-play"></i>
+              <span class="label">Play Recording</span>
+            </button>
+            <span class="audio-status" id="specific-audio-status"
+              >Plays remaining: 2</span
+            >
+          </div>
+          <div class="questions" id="specific-questions"></div>
+        </section>
+      </div>
 
-        <div class="actions text-center hidden" id="actions">
-            <button id="submit-test" class="btn btn-primary">Complete Test</button>
-        </div>
+      <div class="actions text-center hidden" id="actions">
+        <button id="submit-test" class="btn btn-primary">Complete Test</button>
+      </div>
     </div>
 
     <div id="program-selection" class="program-overlay">
-        <div class="program-modal">
-            <h2>Select Your Training Programme</h2>
-            <p>The listening test contains a general section and a programme specific section. Choose your programme to proceed.</p>
-            <label for="programme-select" class="sr-only">Training Programme</label>
-            <select id="programme-select" class="programme-select">
-                <option value="">&mdash; Select Programme &mdash;</option>
-            </select>
-            <button id="start-test" class="btn btn-primary start-btn">Start Listening Test</button>
-        </div>
+      <div class="program-modal">
+        <h2>Select Your Training Programme</h2>
+        <p>
+          The listening test contains a general section and a programme specific
+          section. Choose your programme to proceed.
+          <br />
+          கேட்கும் தேர்வில் ஒரு பொதுப் பகுதி மற்றும் ஒரு திட்டத்திற்கான சிறப்பு
+          பகுதி உள்ளது. தொடர்வதற்கு உங்கள் திட்டத்தைத் தேர்ந்தெடுக்கவும்.
+          <br />
+          සවන් දීමේ පරීක්ෂාවට පොදු කොටසක් සහ වැඩසටහනට විශේෂිත කොටසක් අඩංගු වේ.
+          ඉදිරියට යාමට ඔබේ වැඩසටහන තෝරන්න.
+        </p>
+        <label for="programme-select" class="sr-only">Training Programme</label>
+        <select id="programme-select" class="programme-select">
+          <option value="">&mdash; Select Programme &mdash;</option>
+        </select>
+        <button id="start-test" class="btn btn-primary start-btn">
+          Start Listening Test
+        </button>
+      </div>
     </div>
 
     <script src="../assets/js/pipwerks-scorm.js"></script>
     <script src="../assets/js/common.js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
