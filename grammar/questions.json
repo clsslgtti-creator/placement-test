@@ -737,7 +737,7 @@
       "id": "3_21"
     },
     {
-      "question": "They _____  to the gym often.",
+      "question": "They often _____  to the gym.",
       "options": ["walks", "goed", "goes", "comes", "go"],
       "answer": "go",
       "id": "3_22"
@@ -1214,7 +1214,7 @@
     },
     {
       "question": "They _____  come to the cinema with us.",
-      "options": ["didn’t", "not", "don’t", "want", "like"],
+      "options": ["didn’t", "not", "doesn’t", "want", "like"],
       "answer": "didn’t",
       "id": "4_48"
     },
