@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vocabulary Placement Test</title>
@@ -11,58 +11,80 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <h1>PLACEMENT TEST - VOCABULARY</h1>
-            <p class="instructions">
-                Select your training programme to begin. Match each definition with the correct word.
-            </p>
-        </header>
+      <header>
+        <h1>PLACEMENT TEST - VOCABULARY</h1>
+        <p class="instructions">
+          Match each definition with the correct word.
+          <br />ஒவ்வொரு விளக்கத்தையும் சரியான சொல்லுடன் பொருத்துக. <br />සෑම
+          අර්ථ දැක්වීමකටම නිවැරදි වචනය ගැළපිය යුතුය.
+        </p>
+      </header>
 
-        <div class="timer hidden" id="timer">
-            <i class="fas fa-clock"></i>
-            Time Remaining: <span id="time-remaining">05:00</span>
-        </div>
-        <div class="timer-container hidden" id="timer-container">
-            <div class="timer-bar" id="timer-bar"></div>
-        </div>
+      <div class="timer hidden" id="timer">
+        <i class="fas fa-clock"></i>
+        Time Remaining: <span id="time-remaining">05:00</span>
+      </div>
+      <div class="timer-container hidden" id="timer-container">
+        <div class="timer-bar" id="timer-bar"></div>
+      </div>
 
-        <div id="program-banner" class="program-banner hidden">
-            Training Programme: <span id="selected-program-name"></span>
-        </div>
+      <div id="program-banner" class="program-banner hidden">
+        Training Programme: <span id="selected-program-name"></span>
+      </div>
 
-        <div class="vocabulary-content hidden" id="vocabulary-content">
-            <section class="vocab-section">
-                <h2>Vocabulary Matching</h2>
-                <div class="task-instruction" id="task-instruction">
-                    Drag or tap the correct word for each definition. Each word can be used only once.
-                </div>
-                <div class="word-bank" id="word-bank"></div>
-                <div class="matching-grid" id="matching-grid"></div>
-            </section>
-        </div>
+      <div class="vocabulary-content hidden" id="vocabulary-content">
+        <section class="vocab-section">
+          <h2>Vocabulary Matching</h2>
+          <div class="task-instruction" id="task-instruction">
+            Select the correct word for each definition. Click on the correct
+            word from the list above, then click inside the box where it
+            belongs.
+            <br />
+            ஒவ்வொரு விளக்கத்திற்கும் சரியான சொல்லைத் தேர்ந்தெடுக்கவும். மேலே
+            உள்ள பட்டியலில் இருந்து சரியான சொல்லை கிளிக் செய்து, அது சேரவேண்டிய
+            பெட்டியில் கிளிக் செய்யவும்.
+            <br />
+            සෑම අර්ථ දැක්වීමකටම නිවැරදි වචනය තෝරන්න. ඉහත ලැයිස්තුවෙන් නිවැරදි
+            වචනය ක්ලික් කර, එය ඇතුළත් කළ යුතු කොටුවේ ක්ලික් කරන්න.
+          </div>
+          <div class="word-bank" id="word-bank"></div>
+          <div class="matching-grid" id="matching-grid"></div>
+        </section>
+      </div>
 
-        <div class="actions text-center hidden" id="actions">
-            <button id="submit-test" class="btn btn-primary">Complete Test</button>
-        </div>
+      <div class="actions text-center hidden" id="actions">
+        <button id="submit-test" class="btn btn-primary">Complete Test</button>
+      </div>
     </div>
 
     <div id="program-selection" class="program-overlay">
-        <div class="program-modal">
-            <h2>Select Your Training Programme</h2>
-            <p>The vocabulary task contains programme specific terminology. Choose your programme to proceed.</p>
-            <label for="programme-select" class="sr-only">Training Programme</label>
-            <select id="programme-select" class="programme-select">
-                <option value="">&mdash; Select Programme &mdash;</option>
-            </select>
-            <button id="start-test" class="btn btn-primary start-btn">Start Vocabulary Test</button>
-        </div>
+      <div class="program-modal">
+        <h2>Select Your Training Programme</h2>
+        <p>
+          The vocabulary task contains programme specific terminology. Choose
+          your programme to proceed.
+          <br />
+          சொற்கள் தேர்வில் திட்டத்திற்கான சிறப்பு சொற்கள் உள்ளன. தொடர்வதற்கு
+          உங்கள் திட்டத்தைத் தேர்ந்தெடுக்கவும்.
+          <br />
+          ශබ්දකෝෂ කාර්යය තුළ වැඩසටහනට විශේෂිත පද ඇතුළත් වේ. ඉදිරියට යාමට ඔබේ
+          වැඩසටහන තෝරන්න.
+        </p>
+        <label for="programme-select" class="sr-only">Training Programme</label>
+        <select id="programme-select" class="programme-select">
+          <option value="">&mdash; Select Programme &mdash;</option>
+        </select>
+        <button id="start-test" class="btn btn-primary start-btn">
+          Start Vocabulary Test
+        </button>
+      </div>
     </div>
 
     <script src="../assets/js/pipwerks-scorm.js"></script>
     <script src="../assets/js/common.js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
