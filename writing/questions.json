@@ -358,7 +358,10 @@
             "the",
             "automatically"
           ],
-          "answers": ["The machine packed the biscuits automatically."],
+          "answers": [
+            "The machine packed the biscuits automatically.",
+            "The machine automatically packed the biscuits."
+          ],
           "id": "FT_2_3"
         }
       ]

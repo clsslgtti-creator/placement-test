@@ -188,7 +188,7 @@
             "Wheel balancing machine was working",
             "Wheel balancing machine was adjusted improperly"
           ],
-          "answer": "Wheel balancing machine was working",
+          "answer": "Wheel balancing machine was not working",
           "id": "AT_2_1"
         },
         {
