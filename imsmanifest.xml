@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<manifest identifier="SLGTTI_PlacementTest_SCORM" version="1.0" 
-         xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
-         xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
-                             http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd
-                             http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
-  
+<manifest identifier="SLGTTI_PlacementTest_SCORM" version="1.0"
+  xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+  xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+                      http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd
+                      http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+
   <metadata>
     <schema>ADL SCORM</schema>
     <schemaversion>1.2</schemaversion>
@@ -16,7 +16,8 @@
           <langstring xml:lang="en-US">SLGTTI Language Placement Test</langstring>
         </title>
         <description>
-          <langstring xml:lang="en-US">A comprehensive language placement test with grammar, reading, writing, listening, and vocabulary sections.</langstring>
+          <langstring xml:lang="en-US">A comprehensive language placement test with grammar,
+            reading, writing, listening, and vocabulary sections.</langstring>
         </description>
         <keyword>
           <langstring xml:lang="en-US">language</langstring>
@@ -33,14 +34,14 @@
       </general>
     </lom>
   </metadata>
-  
+
   <organizations default="SLGTTI_PlacementTest_Organization">
     <organization identifier="SLGTTI_PlacementTest_Organization">
       <title>English Language</title>
-      
+
       <item identifier="placement_test_module" isvisible="true">
         <title>Placement Test</title>
-        
+
         <!-- Introduction SCO -->
         <item identifier="introduction_sco" isvisible="true" identifierref="introduction_resource">
           <title>Introduction</title>
@@ -50,22 +51,22 @@
         <item identifier="grammar_test" isvisible="true" identifierref="grammar_test_resource">
           <title>Grammar Test</title>
         </item>
-        
+
         <!-- Reading Test SCO -->
         <item identifier="reading_test" isvisible="true" identifierref="reading_test_resource">
           <title>Reading Test</title>
         </item>
-        
+
         <!-- Listening Test SCO -->
         <item identifier="listening_test" isvisible="true" identifierref="listening_test_resource">
           <title>Listening Test</title>
         </item>
-        
+
         <!-- Writing Test SCO -->
         <item identifier="writing_test" isvisible="true" identifierref="writing_test_resource">
           <title>Writing Test</title>
         </item>
-        
+
         <!-- Vocabulary Test SCO -->
         <item identifier="vocabulary_test" isvisible="true" identifierref="vocabulary_test_resource">
           <title>Vocabulary Test</title>
@@ -76,83 +77,88 @@
           <title>Completion</title>
         </item>
       </item>
-      
+
     </organization>
   </organizations>
-  
+
   <resources>
     <!-- Introduction Resource -->
-    <resource identifier="introduction_resource" type="webcontent" adlcp:scormtype="sco" href="Introduction/index.html">
-      <file href="Introduction/index.html"/>
-      <file href="Introduction/script.js"/>
-      <file href="assets/css/shared.css"/>
-      <file href="assets/css/notifications.css"/>
-      <file href="assets/js/pipwerks-scorm.js"/>
+    <resource identifier="introduction_resource" type="webcontent" adlcp:scormtype="sco"
+      href="Introduction/index.html">
+      <file href="Introduction/index.html" />
+      <file href="Introduction/script.js" />
+      <file href="assets/css/shared.css" />
+      <file href="assets/css/notifications.css" />
+      <file href="assets/js/pipwerks-scorm.js" />
     </resource>
 
     <!-- Grammar Test Resources -->
-    <resource identifier="grammar_test_resource" type="webcontent" adlcp:scormtype="sco" href="grammar/index.html">
-      <file href="grammar/index.html"/>
-      <file href="grammar/script.js"/>
-      <file href="grammar/questions.json"/>
-      <file href="assets/css/shared.css"/>
-      <file href="assets/js/common.js"/>
-      <file href="assets/js/pipwerks-scorm.js"/>
+    <resource identifier="grammar_test_resource" type="webcontent" adlcp:scormtype="sco"
+      href="grammar/index.html">
+      <file href="grammar/index.html" />
+      <file href="grammar/script.js" />
+      <file href="grammar/questions.json" />
+      <file href="assets/css/shared.css" />
+      <file href="assets/js/common.js" />
+      <file href="assets/js/pipwerks-scorm.js" />
     </resource>
-    
+
     <!-- Reading Test Resources -->
-    <resource identifier="reading_test_resource" type="webcontent" adlcp:scormtype="sco" href="reading/index.html">
-      <file href="reading/index.html"/>
-      <file href="reading/script.js"/>
-      <file href="reading/questions.json"/>
-      <file href="assets/css/shared.css"/>
-      <file href="assets/js/common.js"/>
-      <file href="assets/js/pipwerks-scorm.js"/>
+    <resource identifier="reading_test_resource" type="webcontent" adlcp:scormtype="sco"
+      href="reading/index.html">
+      <file href="reading/index.html" />
+      <file href="reading/script.js" />
+      <file href="reading/questions.json" />
+      <file href="assets/css/shared.css" />
+      <file href="assets/js/common.js" />
+      <file href="assets/js/pipwerks-scorm.js" />
     </resource>
-    
+
     <!-- Writing Test Resources -->
-    <resource identifier="writing_test_resource" type="webcontent" adlcp:scormtype="sco" href="writing/index.html">
-      <file href="writing/index.html"/>
-      <file href="writing/script.js"/>
-      <file href="writing/questions.json"/>
-      <file href="assets/css/shared.css"/>
-      <file href="assets/js/common.js"/>
-      <file href="assets/js/pipwerks-scorm.js"/>
+    <resource identifier="writing_test_resource" type="webcontent" adlcp:scormtype="sco"
+      href="writing/index.html">
+      <file href="writing/index.html" />
+      <file href="writing/script.js" />
+      <file href="writing/questions.json" />
+      <file href="assets/css/shared.css" />
+      <file href="assets/js/common.js" />
+      <file href="assets/js/pipwerks-scorm.js" />
     </resource>
-    
-    
+
+
     <!-- Vocabulary Test Resources -->
-    <resource identifier="vocabulary_test_resource" type="webcontent" adlcp:scormtype="sco" href="vocabulary/index.html">
-      <file href="vocabulary/index.html"/>
-      <file href="vocabulary/script.js"/>
-      <file href="vocabulary/styles.css"/>
-      <file href="vocabulary/questions.json"/>
-      <file href="assets/css/shared.css"/>
-      <file href="assets/js/common.js"/>
-      <file href="assets/js/pipwerks-scorm.js"/>
+    <resource identifier="vocabulary_test_resource" type="webcontent" adlcp:scormtype="sco"
+      href="vocabulary/index.html">
+      <file href="vocabulary/index.html" />
+      <file href="vocabulary/script.js" />
+      <file href="vocabulary/styles.css" />
+      <file href="vocabulary/questions.json" />
+      <file href="assets/css/shared.css" />
+      <file href="assets/js/common.js" />
+      <file href="assets/js/pipwerks-scorm.js" />
     </resource>
 
     <!-- Listening Test Resources -->
-    <resource identifier="listening_test_resource" type="webcontent" adlcp:scormtype="sco" href="listening/index.html">
-      <file href="listening/index.html"/>
-      <file href="listening/script.js"/>
-      <file href="listening/styles.css"/>
-      <file href="listening/questions.json"/>
-      <file href="assets/css/shared.css"/>
-      <file href="assets/js/common.js"/>
-      <file href="assets/js/pipwerks-scorm.js"/>
+    <resource identifier="listening_test_resource" type="webcontent" adlcp:scormtype="sco"
+      href="listening/index.html">
+      <file href="listening/index.html" />
+      <file href="listening/script.js" />
+      <file href="listening/styles.css" />
+      <file href="listening/questions.json" />
+      <file href="assets/css/shared.css" />
+      <file href="assets/js/common.js" />
+      <file href="assets/js/pipwerks-scorm.js" />
     </resource>
 
     <!-- Completion Page Resource -->
-    <resource identifier="completion_resource" type="webcontent" adlcp:scormtype="sco" href="completion/index.html">
-      <file href="completion/index.html"/>
-      <file href="completion/script.js"/>
-      <file href="assets/css/shared.css"/>
-      <file href="assets/css/notifications.css"/>
-      <file href="assets/js/pipwerks-scorm.js"/>
+    <resource identifier="completion_resource" type="webcontent" adlcp:scormtype="sco"
+      href="completion/index.html">
+      <file href="completion/index.html" />
+      <file href="completion/script.js" />
+      <file href="assets/css/shared.css" />
+      <file href="assets/css/notifications.css" />
+      <file href="assets/js/pipwerks-scorm.js" />
     </resource>
   </resources>
-  
+
 </manifest>
-
-

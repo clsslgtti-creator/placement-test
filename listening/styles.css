@@ -136,3 +136,17 @@
     color: #e2e8f0;
     border-color: #0f172a;
 }
+
+.listening-section.locked {
+    opacity: 0.55;
+    transition: opacity 0.2s ease;
+}
+
+.listening-section.locked .audio-play-button {
+    pointer-events: none;
+}
+
+.listening-section.locked .audio-status {
+    color: #94a3b8;
+}
+

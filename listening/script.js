@@ -91,6 +91,10 @@ function cacheDomElements() {
   elements.generalStatus = document.getElementById("general-audio-status");
 
   elements.specificStatus = document.getElementById("specific-audio-status");
+
+  elements.generalSection = document.getElementById("listening-general");
+
+  elements.specificSection = document.getElementById("listening-specific");
 }
 
 function populateProgramOptions() {
@@ -473,6 +477,8 @@ function initialiseAudioControllers() {
       audioState.specific
     );
   }
+
+  updateSectionAvailability();
 }
 
 function createAudioController(sectionKey, audioSrc, initialState = {}) {
@@ -553,6 +559,14 @@ function createAudioController(sectionKey, audioSrc, initialState = {}) {
 
 function handleAudioButtonClick(controller) {
   if (controller.isPlaying || controller.playsUsed >= 2) {
+    return;
+  }
+
+  if (
+    controller.key === "specific" &&
+    audioControllers.general &&
+    audioControllers.general.playsUsed < 2
+  ) {
     return;
   }
 
@@ -640,6 +654,10 @@ function handlePlaybackFailure(controller, error, previousPlays) {
   updateAudioStateFromController(controller);
 
   saveProgressToScorm();
+
+  if (controller.key === "general") {
+    updateSectionAvailability();
+  }
 }
 
 function handleAudioEnded(controller) {
@@ -664,6 +682,10 @@ function handleAudioEnded(controller) {
   updateAudioStateFromController(controller);
 
   saveProgressToScorm();
+
+  if (controller.key === "general") {
+    updateSectionAvailability();
+  }
 }
 
 function finaliseAudioPlayback(controller) {
@@ -682,6 +704,10 @@ function finaliseAudioPlayback(controller) {
     controller,
     "Playback completed. You have used both plays."
   );
+
+  if (controller.key === "general") {
+    updateSectionAvailability();
+  }
 }
 
 function updateAudioStatus(controller, overrideText) {
@@ -716,6 +742,41 @@ function updateAudioStatus(controller, overrideText) {
   const playsRemaining = 2 - controller.playsUsed;
 
   controller.status.textContent = `Plays remaining: ${playsRemaining}`;
+}
+
+function updateSectionAvailability() {
+  const specificSection = elements.specificSection;
+  const specificController = audioControllers.specific;
+  const generalController = audioControllers.general;
+
+  const generalComplete =
+    !generalController || generalController.playsUsed >= 2;
+
+  const shouldLockSpecific = !generalComplete;
+
+  if (specificSection) {
+    specificSection.classList.toggle("locked", shouldLockSpecific);
+  }
+
+  if (specificController && specificController.button) {
+    const isSpecificCompleted = specificController.playsUsed >= 2;
+    const disableSpecific = shouldLockSpecific || isSpecificCompleted;
+
+    specificController.button.disabled = disableSpecific;
+    specificController.button.setAttribute(
+      "aria-disabled",
+      String(disableSpecific)
+    );
+  }
+
+  if (specificController && specificController.status) {
+    if (shouldLockSpecific) {
+      specificController.status.textContent =
+        "Complete Listening 1 to unlock.";
+    } else if (!specificController.isPlaying) {
+      updateAudioStatus(specificController);
+    }
+  }
 }
 
 function applyInitialAudioState(controller, initialState) {
