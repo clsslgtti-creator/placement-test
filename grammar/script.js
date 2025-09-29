@@ -1,441 +1,436 @@
-// Global variables
-let questions = {};
-let selectedQuestions = [];
-const totalQuestions = 50;
-const testDuration = 40 * 60 * 1000; // 40 minutes in milliseconds
-let startTimestamp = null;
-let timerInterval;
-let userAnswers = {};
-let isScormMode = false;
-let scorm;
+/* ============================
+   SLGTTI Grammar Test (SCORM 1.2)
+   Robust, idempotent, resume-capable
+   ============================ */
 
-// DOM elements
-const questionsContainer = document.getElementById("questions-container");
-const checkAnswersBtn = document.getElementById("check-answers");
-const actionsSection = document.querySelector(".actions");
-const timeRemainingElement = document.getElementById("time-remaining");
-const timerBar = document.getElementById("timer-bar");
+(() => {
+  // ---- Per-frame guard: never run this file twice in the same content iframe ----
+  if (window.__SLGTTI_GRAMMAR_LOADED__) {
+    console.warn("[GRAMMAR] script already loaded in this frame — skipping re-register.");
+    return;
+  }
+  window.__SLGTTI_GRAMMAR_LOADED__ = true;
 
-// Load questions only without initializing
-async function loadQuestionsOnly() {
-    try {
-        const response = await fetch("questions.json");
-        const data = await response.json();
-        
-        questions = {
-            set1: data.question_set_1,
-            set2: data.question_set_2,
-            set3: data.question_set_3,
-            set4: data.question_set_4
-        };
-    } catch (error) {
-        console.error("Error loading questions:", error);
-        questionsContainer.innerHTML = '<p class="error">Failed to load questions.</p>';
+  // ---------------- Config ----------------
+  const TOTAL_QUESTIONS = 50;
+  const TEST_DURATION_MS = 40 * 60 * 1000; // 40 minutes
+  const SHEETS_URL = "https://script.google.com/macros/s/AKfycbxZKrhA-wXc_7ymR1wOwX-W_GzyMZwXqj3ORdvJ84QCibx2gt9_D5FvicLJdrXj36nJOQ/exec";
+
+  // ---------------- State ----------------
+  let bank = {};                 // { set1:[], set2:[], set3:[], set4:[] }
+  let selectedQuestions = [];    // array of questions (with .id, .question, .options, .answer)
+  let userAnswers = {};          // { [questionIndex]: "selectedOption" }
+  let startTimestamp = null;     // ms since epoch
+  let timerInterval = null;
+  let finished = false;
+
+  // SCORM
+  let isScormMode = false;
+  let scorm = null;
+
+  // ---------------- DOM ----------------
+  const elQuestions = document.getElementById("questions-container");
+  const elCheckBtn  = document.getElementById("check-answers");
+  const elActions   = document.querySelector(".actions");
+  const elTime      = document.getElementById("time-remaining");
+  const elTimerBar  = document.getElementById("timer-bar");
+
+  const elInstructions  = document.querySelector(".instructions");
+  const elTimer         = document.querySelector(".timer");
+  const elTimerWrap     = document.querySelector(".timer-container");
+  const elContainer     = document.querySelector(".container");
+
+  // ---------------- Utilities ----------------
+  function shuffleArray(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
     }
-}
+    return a;
+  }
 
-// Fetch and initialize questions for new test
-async function fetchQuestions() {
-    try {
-        await loadQuestionsOnly();
-        selectRandomQuestions();
-        initializeTest();
-        renderQuestions();
-        startTimer();
-    } catch (error) {
-        console.error("Error loading questions:", error);
-        questionsContainer.innerHTML = '<p class="error">Failed to load questions.</p>';
-    }
-}
+  function showNotification(message, type = "success") {
+    const n = document.createElement("div");
+    n.className = `notification ${type}`;
+    n.innerHTML = `<i class="fas fa-check-circle"></i>${message}`;
+    document.body.appendChild(n);
+    setTimeout(() => n.remove(), 5000);
+  }
 
-// Initialize SCORM connection
-async function initScorm() {
-    try {
-        scorm = pipwerks.SCORM;
-        console.log("Initializing SCORM connection...");
-        const connected = scorm.init();
+  function msToMMSS(ms) {
+    const m = Math.floor(ms / 60000);
+    const s = Math.floor((ms % 60000) / 1000);
+    return `${String(m).padStart(2,"0")}:${String(s).padStart(2,"0")}`;
+  }
 
-        if (connected) {
-            isScormMode = true;
-            console.log("SCORM connection established");
+  function safeJsonParse(str, fallback = null) {
+    try { return JSON.parse(str); } catch { return fallback; }
+  }
 
-            // Check if test is already completed
-            const lessonStatus = scorm.get("cmi.core.lesson_status");
-            if (lessonStatus === "completed") {
-                showCompletedState();
-                return;
-            }
+  // ---------------- Questions ----------------
+  async function loadQuestionBank() {
+    const res = await fetch("questions.json");
+    const data = await res.json();
+    bank = {
+      set1: data.question_set_1 || [],
+      set2: data.question_set_2 || [],
+      set3: data.question_set_3 || [],
+      set4: data.question_set_4 || []
+    };
+  }
 
-            // Check for existing session
-            const suspendData = scorm.get("cmi.suspend_data");
-            if (suspendData) {
-                try {
-                    const savedState = JSON.parse(suspendData);
-                    
-                    // Check if more than 40 minutes have passed from the original start time
-                    const now = Date.now();
-                    const originalStartTime = parseInt(savedState.startTime);
-                    const elapsedTime = now - originalStartTime;
-                    
-                    if (elapsedTime >= testDuration) {
-                        await endTest(true); // End test and submit results
-                        return;
-                    }
+  // Unique sample of TOTAL_QUESTIONS from all sets combined
+  function pickQuestionsFresh() {
+    const pool = [
+      ...(bank.set1 || []),
+      ...(bank.set2 || []),
+      ...(bank.set3 || []),
+      ...(bank.set4 || []),
+    ].map(q => ({ ...q })); // shallow copy
 
-                    // Restore previous state
-                    console.log("Restoring saved state:", savedState);
-                    startTimestamp = originalStartTime; // Use the original start time
-                    userAnswers = savedState.answers || {};
-                    
-                    // Load questions but don't select new ones
-                    await loadQuestionsOnly();
-                    selectedQuestions = savedState.questionIds.map(id => {
-                        const [set, num] = id.split('_');
-                        return questions[`set${set}`][parseInt(num) - 1];
-                    });
-                    
-                    renderQuestions();
-                    restoreUserAnswers();
-                    startTimer();
-                    return;
-                } catch (error) {
-                    console.error("Error restoring state:", error);
-                }
-            }
-        }
-
-        // Start fresh test only if no saved state exists
-        await fetchQuestions();
-        
-    } catch (error) {
-        console.error("SCORM error:", error);
-        await fetchQuestions(); // Fall back to non-SCORM mode
-    }
-}
-
-// Initialize new test
-function initializeTest() {
-    startTimestamp = Date.now();
-    userAnswers = {};
-    
-    if (isScormMode) {
-        const initialState = {
-            startTime: startTimestamp,
-            questionIds: selectedQuestions.map(q => q.id),
-            answers: {}
-        };
-        console.log("Saving initial state:", initialState);
-        scorm.set("cmi.suspend_data", JSON.stringify(initialState));
-        scorm.save();
-    }
-}
-
-// Select random questions
-function selectRandomQuestions() {
-    selectedQuestions = [];
-    const sets = ["set1", "set2", "set3", "set4"];
-    
-    for (let i = 0; i < totalQuestions; i++) {
-        const randomSet = sets[Math.floor(Math.random() * sets.length)];
-        const questionIndex = i % questions[randomSet].length;
-        const question = JSON.parse(JSON.stringify(questions[randomSet][questionIndex]));
-        question.options = shuffleArray(question.options);
-        selectedQuestions.push(question);
+    if (pool.length < TOTAL_QUESTIONS) {
+      console.warn(`[GRAMMAR] Question pool smaller (${pool.length}) than required (${TOTAL_QUESTIONS}).`);
     }
 
-    selectedQuestions = shuffleArray(selectedQuestions);
-}
-
-// Render questions to page
-function renderQuestions() {
-    questionsContainer.innerHTML = "";
-    
-    selectedQuestions.forEach((question, index) => {
-        const questionElement = document.createElement("div");
-        questionElement.className = "question-item";
-        questionElement.dataset.index = index;
-
-        questionElement.innerHTML = `
-            <div class="question-number">${index + 1}</div>
-            <div class="question-content">
-                <p class="question-text">${question.question}</p>
-                <ul class="options">
-                    ${question.options.map(option => `
-                        <li class="option" data-value="${option}">${option}</li>
-                    `).join("")}
-                </ul>
-            </div>
-        `;
-
-        // Add click listeners to options
-        questionElement.querySelectorAll(".option").forEach(option => {
-            option.addEventListener("click", () => 
-                selectOption(index, option.dataset.value, option)
-            );
-        });
-
-        questionsContainer.appendChild(questionElement);
+    shuffleArray(pool);
+    selectedQuestions = pool.slice(0, TOTAL_QUESTIONS).map(q => {
+      // shuffle options per question
+      return { ...q, options: shuffleArray([...(q.options || [])]) };
     });
-}
+  }
 
-// Handle answer selection
-function selectOption(questionIndex, option, optionElement) {
-    // Remove previous selection
-    const questionElement = optionElement.closest(".question-item");
-    questionElement.querySelectorAll(".option").forEach(opt => opt.classList.remove("selected"));
-    
-    // Mark new selection
-    optionElement.classList.add("selected");
-    userAnswers[questionIndex] = option;
+  function renderQuestions() {
+    elQuestions.innerHTML = "";
 
-    // Save progress in SCORM
-    if (isScormMode) {
-        const currentState = {
-            startTime: startTimestamp,
-            questionIds: selectedQuestions.map(q => q.id),
-            answers: userAnswers
-        };
-        console.log("Saving answer state:", currentState);
-        scorm.set("cmi.suspend_data", JSON.stringify(currentState));
-        scorm.save();
-    }
-}
+    selectedQuestions.forEach((question, index) => {
+      const item = document.createElement("div");
+      item.className = "question-item";
+      item.dataset.index = index;
 
-// Timer functions
-function startTimer() {
-    updateTimerDisplay();
+      const optsHtml = (question.options || [])
+        .map(opt => `<li class="option" data-value="${String(opt)}">${opt}</li>`)
+        .join("");
+
+      item.innerHTML = `
+        <div class="question-number">${index + 1}</div>
+        <div class="question-content">
+          <p class="question-text">${question.question}</p>
+          <ul class="options">${optsHtml}</ul>
+        </div>
+      `;
+
+      item.querySelectorAll(".option").forEach(optEl => {
+        optEl.addEventListener("click", () => {
+          // visual selection
+          item.querySelectorAll(".option").forEach(o => o.classList.remove("selected"));
+          optEl.classList.add("selected");
+
+          // record
+          const val = optEl.dataset.value;
+          userAnswers[index] = val;
+
+          // persist partial answers to SCORM (resume)
+          if (isScormMode) {
+            const state = {
+              startTime: startTimestamp,
+              questionIds: selectedQuestions.map(q => q.id),
+              answers: userAnswers
+            };
+            scorm.set("cmi.suspend_data", JSON.stringify(state));
+            scorm.save();
+          }
+        });
+      });
+
+      elQuestions.appendChild(item);
+    });
+  }
+
+  function restoreSelectionsFromState() {
+    Object.keys(userAnswers).forEach(idx => {
+      const item = elQuestions.querySelector(`.question-item[data-index="${idx}"]`);
+      if (!item) return;
+      const value = userAnswers[idx];
+      const match = [...item.querySelectorAll(".option")].find(o => o.dataset.value === value);
+      if (match) match.classList.add("selected");
+    });
+  }
+
+  // ---------------- Timer ----------------
+  function startTimer() {
+    if (!startTimestamp) startTimestamp = Date.now();
+    updateTimerDisplay(); // immediate tick
     timerInterval = setInterval(updateTimerDisplay, 1000);
-}
+  }
 
-function updateTimerDisplay() {
+  function updateTimerDisplay() {
     const now = Date.now();
-    const elapsedTime = now - startTimestamp;
-    const remainingTime = Math.max(0, testDuration - elapsedTime);
+    const elapsed = now - startTimestamp;
+    const remaining = Math.max(0, TEST_DURATION_MS - elapsed);
 
-    if (remainingTime <= 0) {
-        endTest(true);
-        return;
+    elTime.textContent = msToMMSS(remaining);
+
+    const pct = (remaining / TEST_DURATION_MS) * 100;
+    elTimerBar.style.width = `${pct}%`;
+    elTimerBar.style.backgroundColor = pct < 25 ? "var(--danger-color)" :
+                                       pct < 50 ? "var(--warning-color)" :
+                                                  "var(--primary-color)";
+
+    if (remaining <= 0) {
+      endTest(true);
     }
+  }
 
-    const minutes = Math.floor(remainingTime / 60000);
-    const seconds = Math.floor((remainingTime % 60000) / 1000);
-    timeRemainingElement.textContent = `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+  function stopTimer() {
+    if (timerInterval) {
+      clearInterval(timerInterval);
+      timerInterval = null;
+    }
+  }
 
-    const percentage = (remainingTime / testDuration) * 100;
-    timerBar.style.width = `${percentage}%`;
-    timerBar.style.backgroundColor = percentage < 25 ? "var(--danger-color)" : 
-                                   percentage < 50 ? "var(--warning-color)" : 
-                                   "var(--primary-color)";
-}
+  // ---------------- SCORM Lifecycle ----------------
+  function scormActive() {
+    return scorm && scorm.connection && scorm.connection.isActive;
+  }
 
-// End test and submit results
-async function endTest(isTimeout = false) {
-    clearInterval(timerInterval);
+  function initScormOnce() {
+    if (!window.pipwerks || !window.pipwerks.SCORM) return false;
 
-    // Hide questions and show results
-    questionsContainer.style.display = "none";
-    actionsSection.style.display = "none";
-    document.querySelector('.instructions').style.display = "none";
-    document.querySelector('.timer').style.display = "none";
-    document.querySelector('.timer-container').style.display = "none";
+    scorm = window.pipwerks.SCORM;
+    // Already active?
+    if (scormActive()) return true;
 
-    // Calculate score and time
-    const correctAnswers = Object.keys(userAnswers).reduce((total, index) => {
-        return total + (userAnswers[index] === selectedQuestions[index].answer ? 1 : 0);
+    if (initScormOnce.__running) return scormActive();
+    initScormOnce.__running = true;
+
+    const ok = scorm.init(); // LMSInitialize
+    initScormOnce.__running = false;
+
+    if (ok) {
+      isScormMode = true;
+      return true;
+    }
+    return false;
+  }
+
+  function commitScorm() {
+    if (scormActive()) scorm.save();
+  }
+
+  function quitScormOnce() {
+    if (!scormActive()) return;
+    if (quitScormOnce.__done) return;
+    quitScormOnce.__done = true;
+    try { scorm.save(); } catch {}
+    try { scorm.quit(); } catch {}
+  }
+
+  // ---------------- Completion / Scoring ----------------
+  async function endTest(isTimeout = false) {
+    if (finished) return;
+    finished = true;
+
+    stopTimer();
+
+    // Hide test UI
+    if (elQuestions) elQuestions.style.display = "none";
+    if (elActions) elActions.style.display = "none";
+    if (elInstructions) elInstructions.style.display = "none";
+    if (elTimer) elTimer.style.display = "none";
+    if (elTimerWrap) elTimerWrap.style.display = "none";
+
+    // Score
+    const correct = Object.keys(userAnswers).reduce((sum, idx) => {
+      const i = Number(idx);
+      const ua = userAnswers[i];
+      const ans = selectedQuestions[i]?.answer;
+      return sum + (ua === ans ? 1 : 0);
     }, 0);
-    const marksAwarded = correctAnswers;
-    const maxMarks = totalQuestions;
-    
-    // Calculate time spent
-    const testTimeSpent = Math.min(Date.now() - startTimestamp, testDuration);
-    const testMinutes = Math.floor(testTimeSpent / 60000);
-    const testSeconds = Math.floor((testTimeSpent % 60000) / 1000);
-    const timeDisplay = `${testMinutes.toString().padStart(2, "0")}:${testSeconds.toString().padStart(2, "0")}`;
-    const completionDate = new Date();
-    const completionTime = completionDate.toLocaleString();
-    const completionIso = completionDate.toISOString();
-    
-    // Create completion message
-    const completionDiv = document.createElement('div');
-    completionDiv.className = 'completion-message';
-    
-    completionDiv.innerHTML = `
-        <div class="tick-icon"></div>
-        <h2>Test Completed!</h2>
-        <p class="completion-info">Grammar Test Completed Successfully</p>
-        <div class="score-display">${correctAnswers}/${totalQuestions}</div>
-        <p class="time-spent">Time Spent: ${timeDisplay}</p>
-        <p class="completion-time">Completed at: ${completionTime}</p>
-    `;
-    
-    document.querySelector('.container').appendChild(completionDiv);
+    const maxMarks = TOTAL_QUESTIONS;
 
-    // Submit to SCORM
-    if (isScormMode) {
-        console.log("Submitting marks:", marksAwarded);
-        
-        scorm.set("cmi.core.score.raw", marksAwarded);
-        scorm.set("cmi.core.score.min", "0");
-        scorm.set("cmi.core.score.max", String(maxMarks));
-        
-        // Set completion status
-        scorm.set("cmi.core.lesson_status", "completed");
-        
-        // Persist completion metadata
-        const completionData = {
-            completedAt: completionIso,
-            timeSpent: timeDisplay
-        };
-        scorm.set("cmi.suspend_data", JSON.stringify(completionData));
-        
-        scorm.save();
+    // Time spent
+    const spentMs = Math.min(Date.now() - startTimestamp, TEST_DURATION_MS);
+    const timeDisplay = msToMMSS(spentMs);
+    const completionIso = new Date().toISOString();
+
+    // Completion message
+    const wrap = document.createElement("div");
+    wrap.className = "completion-message";
+    wrap.innerHTML = `
+      <div class="tick-icon"></div>
+      <h2>Test Completed!</h2>
+      <p class="completion-info">Grammar Test Completed Successfully</p>
+      <div class="score-display">${correct}/${maxMarks}</div>
+      <p class="time-spent">Time Spent: ${timeDisplay}</p>
+      <p class="completion-time">Completed at: ${new Date(completionIso).toLocaleString()}</p>
+    `;
+    if (elContainer) elContainer.appendChild(wrap);
+
+    // SCORM submit
+    if (isScormMode && scormActive()) {
+      scorm.set("cmi.core.score.raw", String(correct));
+      scorm.set("cmi.core.score.min", "0");
+      scorm.set("cmi.core.score.max", String(maxMarks));
+      scorm.set("cmi.core.lesson_status", "completed");
+
+      const completionData = { completedAt: completionIso, timeSpent: timeDisplay };
+      scorm.set("cmi.suspend_data", JSON.stringify(completionData));
+      commitScorm();
     }
 
     // Send to Google Sheets
-    await sendToGoogleSheets(correctAnswers, marksAwarded, timeDisplay);
+    await sendToGoogleSheets(correct, correct, timeDisplay);
 
-    // Show completion message
-    showNotification(isTimeout ? "Time's up! Test submitted." : "Test completed successfully!");
-}
+    showNotification(isTimeout ? "Time's up! Test submitted." : "Test completed successfully!", "success");
+  }
 
-// Show completed state
-function showCompletedState() {
-    const score = scorm.get("cmi.core.score.raw");
-    const suspendData = scorm.get("cmi.suspend_data");
-    const maxScore = scorm.get("cmi.core.score.max") || "50";
-    let completedAtDisplay = null;
-    let timeSpentDisplay = null;
-
-    if (suspendData) {
-        try {
-            const parsedData = JSON.parse(suspendData);
-            if (parsedData.completedAt) {
-                const parsedDate = new Date(parsedData.completedAt);
-                if (!Number.isNaN(parsedDate.getTime())) {
-                    completedAtDisplay = parsedDate.toLocaleString();
-                }
-            }
-            if (parsedData.timeSpent) {
-                timeSpentDisplay = parsedData.timeSpent;
-            }
-        } catch (error) {
-            console.error("Error parsing completion data:", error);
-        }
-    }
-
-    const completedAtText = completedAtDisplay || "Unavailable";
-    const timeSpentText = timeSpentDisplay || "Unavailable";
+  function showCompletedStateFromScorm() {
+    const scoreRaw = scorm.get("cmi.core.score.raw");
+    const scoreMax = scorm.get("cmi.core.score.max") || "50";
+    const sdata = safeJsonParse(scorm.get("cmi.suspend_data"), {});
+    const completedAt = sdata.completedAt ? new Date(sdata.completedAt).toLocaleString() : "Unavailable";
+    const timeSpent = sdata.timeSpent || "Unavailable";
 
     document.body.innerHTML = `
-        <div class="container">
-            <div class="completion-message">
-                <div class="tick-icon"></div>
-                <h2>Test Already Completed</h2>
-                <p class="completion-info">Grammar Test was completed in a previous session</p>
-                <div class="score-display">${score}/${maxScore}</div>
-                <p class="time-spent">Time Spent: ${timeSpentText}</p>
-                <p class="completion-time">Completed at: ${completedAtText}</p>
-            </div>
+      <div class="container">
+        <div class="completion-message">
+          <div class="tick-icon"></div>
+          <h2>Test Already Completed</h2>
+          <p class="completion-info">Grammar Test was completed in a previous session</p>
+          <div class="score-display">${scoreRaw}/${scoreMax}</div>
+          <p class="time-spent">Time Spent: ${timeSpent}</p>
+          <p class="completion-time">Completed at: ${completedAt}</p>
         </div>
+      </div>
     `;
-}
+  }
 
-// Restore user's previous answers
-function restoreUserAnswers() {
-    Object.keys(userAnswers).forEach(index => {
-        const answer = userAnswers[index];
-        const questionElement = document.querySelector(`.question-item[data-index="${index}"]`);
-        if (questionElement) {
-            const option = Array.from(questionElement.querySelectorAll('.option'))
-                               .find(opt => opt.dataset.value === answer);
-            if (option) {
-                option.classList.add("selected");
-            }
-        }
+  // ---------------- Sheets ----------------
+  async function sendToGoogleSheets(correctAnswers, marks, timeSpent) {
+    // Build compact answers listing
+    let answersString = "";
+    selectedQuestions.forEach((q, idx) => {
+      const ua = userAnswers[idx] ?? "N/A";
+      const ok = ua === q.answer ? "✓" : "✗";
+      answersString += `${q.id}: ${ua} (${ok}), `;
     });
-}
+    answersString = answersString.replace(/, $/, "");
 
-// Send results to Google Sheets
-async function sendToGoogleSheets(correctAnswers, marks, timeSpent) {
-    const SHEETS_URL = "https://script.google.com/macros/s/AKfycbxZKrhA-wXc_7ymR1wOwX-W_GzyMZwXqj3ORdvJ84QCibx2gt9_D5FvicLJdrXj36nJOQ/exec";
-    
     let studentName = "Anonymous";
     let studentId = "";
-    
-    if (isScormMode) {
-        studentName = scorm.get("cmi.core.student_name") || "Anonymous";
-        studentId = scorm.get("cmi.core.student_id") || "";
+    if (isScormMode && scormActive()) {
+      studentName = scorm.get("cmi.core.student_name") || "Anonymous";
+      studentId   = scorm.get("cmi.core.student_id") || "";
     }
 
-    // Prepare detailed answer data
-    let answersString = "";
-    selectedQuestions.forEach((question, index) => {
-        const userAnswer = userAnswers[index] || "N/A";
-        const isCorrect = userAnswer === question.answer;
-        answersString += `${question.id}: ${userAnswer} (${isCorrect ? '✓' : '✗'}), `;
-    });
-
-    // Remove trailing comma
-    answersString = answersString.replace(/,$/, '');
-    
-    const data = {
-        testType: "Grammar Test",
-        name: studentName,
-        studentId: studentId,
-        correctAnswers: correctAnswers,
-        marks: marks,
-        totalQuestions: totalQuestions,
-        totalMarks: totalQuestions,
-        timeSpent: timeSpent,
-        date: new Date().toISOString(),
-        answers: answersString
+    const payload = {
+      testType: "Grammar Test",
+      name: studentName,
+      studentId,
+      correctAnswers,
+      marks,
+      totalQuestions: TOTAL_QUESTIONS,
+      totalMarks: TOTAL_QUESTIONS,
+      timeSpent,
+      date: new Date().toISOString(),
+      answers: answersString
     };
 
     try {
-        console.log("Sending to Google Sheets:", data);
-        await fetch(SHEETS_URL, {
-            method: "POST",
-            mode: "no-cors",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(data)
-        });
-    } catch (error) {
-        console.error("Error sending to Google Sheets:", error);
+      console.log("Sending to Google Sheets:", payload);
+      await fetch(SHEETS_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+    } catch (e) {
+      console.error("[GRAMMAR] Error sending to Google Sheets:", e);
     }
-}
+  }
 
-// Utility function to shuffle array
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-}
-
-// Show notification
-function showNotification(message) {
-    const notification = document.createElement('div');
-    notification.className = 'notification success';
-    notification.innerHTML = `<i class="fas fa-check-circle"></i>${message}`;
-    document.body.appendChild(notification);
-    setTimeout(() => notification.remove(), 5000);
-}
-
-// Initialize on page load
-document.addEventListener("DOMContentLoaded", () => {
+  // ---------------- Boot ----------------
+  async function boot() {
     console.log("Page loaded, initializing SCORM...");
-    initScorm();
-    
-    // Add event listener for complete button
-    if (checkAnswersBtn) {
-        checkAnswersBtn.addEventListener("click", () => endTest(false));
+
+    // Try SCORM
+    if (initScormOnce()) {
+      // Already completed?
+      const status = scorm.get("cmi.core.lesson_status");
+      if (status === "completed" || status === "passed" || status === "failed") {
+        showCompletedStateFromScorm();
+        return;
+      }
     }
-    
-    // Handle page unload
-    window.addEventListener("beforeunload", () => {
-        if (scorm && scorm.connection.isActive) {
-            scorm.quit();
+
+    // Load bank
+    await loadQuestionBank();
+
+    // If SCORM & suspend_data available, try resume; else fresh test
+    if (isScormMode && scormActive()) {
+      const suspendDataRaw = scorm.get("cmi.suspend_data");
+      const s = safeJsonParse(suspendDataRaw, null);
+
+      if (s && s.startTime && Array.isArray(s.questionIds)) {
+        // Resume path
+        startTimestamp = parseInt(s.startTime, 10);
+        userAnswers = s.answers || {};
+
+        // Build selectedQuestions from saved IDs
+        const idToQuestion = {};
+        // index questions by id across all sets
+        ["set1","set2","set3","set4"].forEach(setKey => {
+          (bank[setKey] || []).forEach(q => { idToQuestion[String(q.id)] = q; });
+        });
+        selectedQuestions = s.questionIds
+          .map(id => idToQuestion[String(id)])
+          .filter(Boolean)
+          .map(q => ({ ...q, options: shuffleArray([...(q.options || [])]) })); // reshuffle options for display
+
+        // If time elapsed is already over, end immediately
+        const elapsed = Date.now() - startTimestamp;
+        if (Number.isFinite(startTimestamp) && elapsed >= TEST_DURATION_MS) {
+          await endTest(true);
+          return;
         }
-    });
-});
+
+        renderQuestions();
+        restoreSelectionsFromState();
+        startTimer();
+        return;
+      }
+    }
+
+    // Fresh test
+    pickQuestionsFresh();
+    renderQuestions();
+
+    // Initialize and persist initial state if SCORM
+    startTimestamp = Date.now();
+    userAnswers = {};
+    if (isScormMode && scormActive()) {
+      const initialState = {
+        startTime: startTimestamp,
+        questionIds: selectedQuestions.map(q => q.id),
+        answers: {}
+      };
+      scorm.set("cmi.core.lesson_status", "incomplete");
+      scorm.set("cmi.suspend_data", JSON.stringify(initialState));
+      commitScorm();
+    }
+
+    startTimer();
+  }
+
+  // Attach once
+  document.addEventListener("DOMContentLoaded", boot, { once: true });
+
+  // End test on button (guarded)
+  if (elCheckBtn) {
+    elCheckBtn.addEventListener("click", () => endTest(false), { once: true });
+  }
+
+  // SCORM terminate on unload (idempotent)
+  window.addEventListener("beforeunload", quitScormOnce, { once: true });
+  window.addEventListener("unload",       quitScormOnce, { once: true });
+})();

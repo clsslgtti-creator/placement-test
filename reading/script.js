@@ -1,487 +1,472 @@
-// Global variables
-let questions = {};
-let selectedSet = null;
-const testDuration = 15 * 60 * 1000; // 15 minutes in milliseconds
-let startTimestamp = null;
-let timerInterval;
-let userAnswers = {};
-let isScormMode = false;
-let scorm;
+/* ============================
+   SLGTTI Reading Test (SCORM 1.2)
+   Idempotent, resume-capable, safe lifecycle
+   ============================ */
 
-// DOM elements
-const passageTitle = document.getElementById("passage-title");
-const passageText = document.getElementById("passage-text");
-const questionsContainer = document.getElementById("questions-container");
-const checkAnswersBtn = document.getElementById("check-answers");
-const actionsSection = document.querySelector(".actions");
-const timeRemainingElement = document.getElementById("time-remaining");
-const timerBar = document.getElementById("timer-bar");
-
-// Fetch and initialize reading test
-async function fetchReadingTest() {
-  try {
-    const response = await fetch("questions.json");
-    const data = await response.json();
-
-    questions = data;
-    selectRandomSet();
-    initializeTest();
-    displayReadingTest();
-    startTimer();
-  } catch (error) {
-    console.error("Error loading reading test:", error);
-    questionsContainer.innerHTML =
-      '<p class="error">Failed to load reading test.</p>';
-  }
-}
-
-// Initialize SCORM connection
-async function initScorm() {
-  try {
-    scorm = pipwerks.SCORM;
-    console.log("Initializing SCORM connection...");
-    const connected = scorm.init();
-
-    if (connected) {
-      isScormMode = true;
-      console.log("SCORM connection established");
-
-      // Check if test is already completed
-      const lessonStatus = scorm.get("cmi.core.lesson_status");
-      if (lessonStatus === "completed") {
-        showCompletedState();
-        return;
-      }
-
-      // Check for existing session
-      const suspendData = scorm.get("cmi.suspend_data");
-      if (suspendData) {
-        try {
-          const savedState = JSON.parse(suspendData);
-
-          // Check if more than 15 minutes have passed
-          const now = Date.now();
-          const elapsedTime = now - savedState.startTime;
-          if (elapsedTime >= testDuration) {
-            await endTest(true); // End test and submit results
-            return;
-          }
-
-          // Restore previous state
-          console.log("Restoring saved state:", savedState);
-          startTimestamp = parseInt(savedState.startTime);
-          userAnswers = savedState.answers || {};
-          selectedSet = savedState.selectedSet;
-
-          // Load questions without initializing new test
-          const response = await fetch("questions.json");
-          questions = await response.json();
-
-          // Restore the shuffled question order
-          const set = questions[selectedSet];
-          if (savedState.questionOrder) {
-            // Recreate shuffled questions array using saved order
-            set.shuffledQuestions = savedState.questionOrder.map(
-              (originalIndex) => ({
-                ...set.question[originalIndex],
-                originalIndex,
-              })
-            );
-          }
-
-          // Display the test with saved state
-          displayReadingTest();
-          restoreUserAnswers();
-          startTimer();
-          return;
-        } catch (error) {
-          console.error("Error restoring state:", error);
-        }
-      }
-    }
-
-    // Start fresh test
-    await fetchReadingTest();
-  } catch (error) {
-    console.error("SCORM error:", error);
-    await fetchReadingTest(); // Fall back to non-SCORM mode
-  }
-}
-
-// Initialize new test
-function initializeTest() {
-  startTimestamp = Date.now();
-  userAnswers = {};
-
-  if (isScormMode) {
-    const set = questions[selectedSet];
-    const initialState = {
-      startTime: startTimestamp,
-      selectedSet: selectedSet,
-      answers: {},
-      // Store the shuffled questions order by their original indices
-      questionOrder: getQuestionOrder(set),
-    };
-    console.log("Saving initial state:", initialState);
-    scorm.set("cmi.suspend_data", JSON.stringify(initialState));
-    scorm.save();
-  }
-}
-
-// Utility function to shuffle array
-function shuffleArray(array) {
-  const newArray = [...array];
-  for (let i = newArray.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
-  }
-  return newArray;
-}
-
-// Build question order for SCORM suspend data
-function getQuestionOrder(set) {
-  if (!set) {
-    return [];
-  }
-
-  if (set.shuffledQuestions && set.shuffledQuestions.length) {
-    return set.shuffledQuestions.map((q) => q.originalIndex);
-  }
-
-  return set.question.map((_, index) => index);
-}
-
-// Select random question set
-function selectRandomSet() {
-  const sets = [
-    "question_set_1",
-    "question_set_2",
-    "question_set_3",
-    "question_set_4",
-  ];
-  selectedSet = sets[Math.floor(Math.random() * sets.length)];
-
-  // Shuffle questions and store their original indices
-  const set = questions[selectedSet];
-  const shuffledQuestions = set.question.map((q, index) => ({
-    ...q,
-    originalIndex: index, // Store original position
-  }));
-
-  // Store shuffled questions in the set
-  set.shuffledQuestions = shuffleArray(shuffledQuestions);
-}
-
-// Display reading test
-function displayReadingTest() {
-  const set = questions[selectedSet];
-  passageTitle.textContent = set.title;
-  passageText.innerHTML = set.passage.replace(/\n/g, "<br>");
-
-  // If no shuffled questions exist (for restored sessions), create them
-  if (!set.shuffledQuestions) {
-    set.shuffledQuestions = set.question.map((q, index) => ({
-      ...q,
-      originalIndex: index,
-    }));
-  }
-
-  questionsContainer.innerHTML = "";
-  set.shuffledQuestions.forEach((q, displayIndex) => {
-    const questionElement = document.createElement("div");
-    questionElement.className = "question-item";
-    questionElement.dataset.index = q.originalIndex; // Store original index for answer mapping
-
-    questionElement.innerHTML = `
-            <div class="question-number">${displayIndex + 1}</div>
-            <div class="question-content">
-                <p class="question-text">${q.question}</p>
-                <ul class="options">
-                    ${shuffleArray(q.options)
-                      .map(
-                        (option) => `
-                        <li class="option" data-value="${option}">${option}</li>
-                    `
-                      )
-                      .join("")}
-                </ul>
-            </div>
-        `;
-
-    questionElement.querySelectorAll(".option").forEach((option) => {
-      option.addEventListener("click", () =>
-        selectOption(q.originalIndex, option.dataset.value, option)
-      );
-    });
-
-    questionsContainer.appendChild(questionElement);
-  });
-}
-
-// Handle answer selection
-function selectOption(questionIndex, option, optionElement) {
-  const questionElement = optionElement.closest(".question-item");
-  questionElement
-    .querySelectorAll(".option")
-    .forEach((opt) => opt.classList.remove("selected"));
-
-  optionElement.classList.add("selected");
-  userAnswers[questionIndex] = option;
-
-  if (isScormMode) {
-    const set = questions[selectedSet];
-    const currentState = {
-      startTime: startTimestamp,
-      selectedSet: selectedSet,
-      answers: userAnswers,
-      questionOrder: getQuestionOrder(set),
-    };
-    console.log("Saving answer state:", currentState);
-    scorm.set("cmi.suspend_data", JSON.stringify(currentState));
-    scorm.save();
-  }
-}
-
-// Timer functions
-function startTimer() {
-  updateTimerDisplay();
-  timerInterval = setInterval(updateTimerDisplay, 1000);
-}
-
-function updateTimerDisplay() {
-  const now = Date.now();
-  const elapsedTime = now - startTimestamp;
-  const remainingTime = Math.max(0, testDuration - elapsedTime);
-
-  if (remainingTime <= 0) {
-    endTest(true);
+(() => {
+  // --- Per-frame guard to prevent double-loading ---
+  if (window.__SLGTTI_READING_LOADED__) {
+    console.warn("[READING] script already loaded in this frame — skipping re-register.");
     return;
   }
+  window.__SLGTTI_READING_LOADED__ = true;
 
-  const minutes = Math.floor(remainingTime / 60000);
-  const seconds = Math.floor((remainingTime % 60000) / 1000);
-  timeRemainingElement.textContent = `${minutes
-    .toString()
-    .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+  // -------- State --------
+  let questions = {};                 // JSON bank
+  let selectedSet = null;             // question_set_1 .. question_set_4
+  const testDuration = 15 * 60 * 1000; // 15 minutes
+  let startTimestamp = null;
+  let timerInterval = null;
+  let userAnswers = {};               // { [originalIndex]: "option" }
+  let isScormMode = false;
+  let scorm = null;
 
-  const percentage = (remainingTime / testDuration) * 100;
-  timerBar.style.width = `${percentage}%`;
-  timerBar.style.backgroundColor =
-    percentage < 25
-      ? "var(--danger-color)"
-      : percentage < 50
-      ? "var(--warning-color)"
-      : "var(--primary-color)";
-}
+  // -------- DOM --------
+  const passageTitle        = document.getElementById("passage-title");
+  const passageText         = document.getElementById("passage-text");
+  const questionsContainer  = document.getElementById("questions-container");
+  const checkAnswersBtn     = document.getElementById("check-answers");
+  const actionsSection      = document.querySelector(".actions");
+  const timeRemainingEl     = document.getElementById("time-remaining");
+  const timerBar            = document.getElementById("timer-bar");
+  const readingContainer    = document.querySelector(".reading-container");
+  const instructionsEl      = document.querySelector(".instructions");
+  const timerEl             = document.querySelector(".timer");
+  const timerWrapEl         = document.querySelector(".timer-container");
+  const containerEl         = document.querySelector(".container");
 
-// End test and submit results
-async function endTest(isTimeout = false) {
-  clearInterval(timerInterval);
-
-  questionsContainer.style.display = "none";
-  actionsSection.style.display = "none";
-  document.querySelector(".reading-container").style.display = "none";
-  document.querySelector(".instructions").style.display = "none";
-  document.querySelector(".timer").style.display = "none";
-  document.querySelector(".timer-container").style.display = "none";
-
-  // Calculate score and time
-  const correctAnswers = Object.keys(userAnswers).reduce((total, index) => {
-    return (
-      total +
-      (userAnswers[index] === questions[selectedSet].question[index].answer
-        ? 1
-        : 0)
-    );
-  }, 0);
-  const questionCount = questions[selectedSet].question.length;
-  const marksPerQuestion = 2;
-  const marksAwarded = correctAnswers * marksPerQuestion;
-  const maxMarks = questionCount * marksPerQuestion;
-
-  // Calculate time spent
-  const testTimeSpent = Math.min(Date.now() - startTimestamp, testDuration);
-  const testMinutes = Math.floor(testTimeSpent / 60000);
-  const testSeconds = Math.floor((testTimeSpent % 60000) / 1000);
-  const timeDisplay = `${testMinutes.toString().padStart(2, "0")}:${testSeconds
-    .toString()
-    .padStart(2, "0")}`;
-  const completionDate = new Date();
-  const completionTime = completionDate.toLocaleString();
-  const completionIso = completionDate.toISOString();
-
-  // Create completion message
-  const completionDiv = document.createElement("div");
-  completionDiv.className = "completion-message";
-
-  completionDiv.innerHTML = `
-        <div class="tick-icon"></div>
-        <h2>Test Completed!</h2>
-        <p class="completion-info">Reading Test Completed Successfully</p>
-        <div class="score-display">${correctAnswers}/${questionCount}</div>
-        <p class="time-spent">Time Spent: ${timeDisplay}</p>
-        <p class="completion-time">Completed at: ${completionTime}</p>
-    `;
-
-  document.querySelector(".container").appendChild(completionDiv);
-
-  if (isScormMode) {
-    console.log("Submitting marks:", marksAwarded);
-
-    scorm.set("cmi.core.score.raw", marksAwarded);
-    scorm.set("cmi.core.score.min", "0");
-    scorm.set("cmi.core.score.max", String(maxMarks));
-    scorm.set("cmi.core.lesson_status", "completed");
-
-    const completionData = {
-      completedAt: completionIso,
-      timeSpent: timeDisplay
-    };
-    scorm.set("cmi.suspend_data", JSON.stringify(completionData));
-
-    scorm.save();
+  // -------- Utils --------
+  function shuffleArray(arr) {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
   }
 
-  await sendToGoogleSheets(correctAnswers, marksAwarded, maxMarks, timeDisplay);
-  showNotification(
-    isTimeout ? "Time's up! Test submitted." : "Test completed successfully!"
-  );
-}
+  function showNotification(message, type = "success") {
+    const n = document.createElement("div");
+    n.className = `notification ${type}`;
+    n.innerHTML = `<i class="fas fa-check-circle"></i>${message}`;
+    document.body.appendChild(n);
+    setTimeout(() => n.remove(), 5000);
+  }
 
-// Show completed state
-function showCompletedState() {
-  const score = scorm.get("cmi.core.score.raw");
-  const suspendData = scorm.get("cmi.suspend_data");
-  const maxScore = scorm.get("cmi.core.score.max") || "10";
-  let completedAtDisplay = null;
-  let timeSpentDisplay = null;
+  // -------- SCORM guards --------
+  function scormActive() {
+    return scorm && scorm.connection && scorm.connection.isActive;
+  }
 
-  if (suspendData) {
+  function initScormOnce() {
     try {
-      const parsedData = JSON.parse(suspendData);
-      if (parsedData.completedAt) {
-        const parsedDate = new Date(parsedData.completedAt);
-        if (!Number.isNaN(parsedDate.getTime())) {
-          completedAtDisplay = parsedDate.toLocaleString();
+      scorm = (window.pipwerks && window.pipwerks.SCORM) ? window.pipwerks.SCORM : null;
+    } catch { scorm = null; }
+    if (!scorm) return false;
+
+    if (scormActive()) return true;             // already inited
+    if (initScormOnce.__running) return scormActive();
+    initScormOnce.__running = true;
+
+    const ok = scorm.init();                    // LMSInitialize
+    initScormOnce.__running = false;
+    if (ok) { isScormMode = true; return true; }
+    return false;
+  }
+
+  function commitScorm() { if (scormActive()) scorm.save(); }
+
+  function quitScormOnce() {
+    if (!scormActive()) return;
+    if (quitScormOnce.__done) return;
+    quitScormOnce.__done = true;
+    try { scorm.save(); } catch {}
+    try { scorm.quit(); } catch {}
+  }
+
+  // -------- Load bank & start flow --------
+  async function fetchReadingTestFresh() {
+    try {
+      const res = await fetch("questions.json");
+      questions = await res.json();
+
+      selectRandomSet();
+      initializeTest();
+      displayReadingTest();
+      startTimer();
+    } catch (err) {
+      console.error("Error loading reading test:", err);
+      if (questionsContainer) {
+        questionsContainer.innerHTML = '<p class="error">Failed to load reading test.</p>';
+      }
+    }
+  }
+
+  async function initScormFlow() {
+    console.log("Page loaded, initializing SCORM...");
+
+    // Try SCORM
+    if (!initScormOnce()) {
+      await fetchReadingTestFresh(); // non-SCORM fallback
+      return;
+    }
+    console.log("SCORM connection established");
+
+    // Completed already?
+    const status = scorm.get("cmi.core.lesson_status");
+    if (status === "completed" || status === "passed" || status === "failed") {
+      showCompletedState();
+      return;
+    }
+
+    // Try resume from suspend_data
+    const sdataRaw = scorm.get("cmi.suspend_data");
+    if (sdataRaw) {
+      try {
+        const saved = JSON.parse(sdataRaw);
+        // time expiry?
+        const now = Date.now();
+        if (saved?.startTime && (now - saved.startTime) >= testDuration) {
+          await endTest(true);
+          return;
         }
+
+        // restore state path
+        console.log("Restoring saved state:", saved);
+        startTimestamp = parseInt(saved.startTime, 10) || Date.now();
+        userAnswers   = saved.answers || {};
+        selectedSet   = saved.selectedSet;
+
+        const res = await fetch("questions.json");
+        questions = await res.json();
+
+        // Rebuild shuffled list using saved order (indexes in original set.question)
+        const set = questions[selectedSet];
+        if (!set) {
+          // bank changed; start fresh
+          await fetchReadingTestFresh();
+          return;
+        }
+
+        if (Array.isArray(saved.questionOrder)) {
+          set.shuffledQuestions = saved.questionOrder.map(idx => ({
+            ...set.question[idx],
+            originalIndex: idx
+          }));
+        } else {
+          // no order saved; fall back to original order
+          set.shuffledQuestions = set.question.map((q, idx) => ({ ...q, originalIndex: idx }));
+        }
+
+        displayReadingTest();
+        restoreUserAnswers();
+        startTimer();
+        return;
+
+      } catch (e) {
+        console.error("Error restoring state:", e);
       }
-      if (parsedData.timeSpent) {
-        timeSpentDisplay = parsedData.timeSpent;
-      }
-    } catch (error) {
-      console.error("Error parsing completion data:", error);
+    }
+
+    // Else, start fresh
+    await fetchReadingTestFresh();
+  }
+
+  // -------- Test setup --------
+  function initializeTest() {
+    startTimestamp = Date.now();
+    userAnswers = {};
+
+    if (isScormMode && scormActive()) {
+      const set = questions[selectedSet];
+      const initialState = {
+        startTime: startTimestamp,
+        selectedSet,
+        answers: {},
+        questionOrder: getQuestionOrder(set),
+      };
+      scorm.set("cmi.core.lesson_status", "incomplete");
+      scorm.set("cmi.suspend_data", JSON.stringify(initialState));
+      commitScorm();
     }
   }
 
-  const completedAtText = completedAtDisplay || "Unavailable";
-  const timeSpentText = timeSpentDisplay || "Unavailable";
+  function selectRandomSet() {
+    const sets = ["question_set_1", "question_set_2", "question_set_3", "question_set_4"];
+    selectedSet = sets[Math.floor(Math.random() * sets.length)];
 
-  document.body.innerHTML = `
-        <div class="container">
-            <div class="completion-message">
-                <div class="tick-icon"></div>
-                <h2>Test Already Completed</h2>
-                <p class="completion-info">Reading Test was completed in a previous session</p>
-                <div class="score-display">${score}/${maxScore}</div>
-                <p class="time-spent">Time Spent: ${timeSpentText}</p>
-                <p class="completion-time">Completed at: ${completedAtText}</p>
-            </div>
+    const set = questions[selectedSet];
+    const base = set.question.map((q, idx) => ({ ...q, originalIndex: idx }));
+    set.shuffledQuestions = shuffleArray(base);
+  }
+
+  function getQuestionOrder(set) {
+    if (!set) return [];
+    if (set.shuffledQuestions?.length) return set.shuffledQuestions.map(q => q.originalIndex);
+    return set.question.map((_, idx) => idx);
+  }
+
+  // -------- Render --------
+  function displayReadingTest() {
+    const set = questions[selectedSet];
+    if (!set) {
+      questionsContainer.innerHTML = '<p class="error">No question set found.</p>';
+      return;
+    }
+
+    passageTitle.textContent = set.title || "Reading";
+    passageText.innerHTML = (set.passage || "").replace(/\n/g, "<br>");
+
+    if (!set.shuffledQuestions) {
+      set.shuffledQuestions = set.question.map((q, idx) => ({ ...q, originalIndex: idx }));
+    }
+
+    questionsContainer.innerHTML = "";
+    set.shuffledQuestions.forEach((q, displayIndex) => {
+      const el = document.createElement("div");
+      el.className = "question-item";
+      // Store the ORIGINAL question index for answer mapping and restore
+      el.dataset.index = q.originalIndex;
+
+      const optionsHtml = shuffleArray(q.options || []).map(opt =>
+        `<li class="option" data-value="${String(opt)}">${opt}</li>`
+      ).join("");
+
+      el.innerHTML = `
+        <div class="question-number">${displayIndex + 1}</div>
+        <div class="question-content">
+          <p class="question-text">${q.question}</p>
+          <ul class="options">${optionsHtml}</ul>
         </div>
-    `;
-}
+      `;
 
-// Restore user's previous answers
-function restoreUserAnswers() {
-  Object.keys(userAnswers).forEach((index) => {
-    const answer = userAnswers[index];
-    const questionElement = document.querySelector(
-      `.question-item[data-index="${index}"]`
-    );
-    if (questionElement) {
-      const option = Array.from(
-        questionElement.querySelectorAll(".option")
-      ).find((opt) => opt.dataset.value === answer);
-      if (option) {
-        option.classList.add("selected");
+      // Allow changing answers => NO { once:true }
+      el.querySelectorAll(".option").forEach(optEl => {
+        optEl.addEventListener("click", () =>
+          selectOption(q.originalIndex, optEl.dataset.value, optEl)
+        );
+      });
+
+      questionsContainer.appendChild(el);
+    });
+  }
+
+  // -------- Answer selection --------
+  function selectOption(originalIndex, option, optionElement) {
+    const item = optionElement.closest(".question-item");
+    if (!item) return;
+
+    item.querySelectorAll(".option").forEach(o => o.classList.remove("selected"));
+    optionElement.classList.add("selected");
+
+    userAnswers[originalIndex] = option;
+
+    if (isScormMode && scormActive()) {
+      const set = questions[selectedSet];
+      const state = {
+        startTime: startTimestamp,
+        selectedSet,
+        answers: userAnswers,
+        questionOrder: getQuestionOrder(set),
+      };
+      scorm.set("cmi.suspend_data", JSON.stringify(state));
+      commitScorm();
+    }
+  }
+
+  function restoreUserAnswers() {
+    Object.keys(userAnswers).forEach((idx) => {
+      const val = userAnswers[idx];
+      const el = document.querySelector(`.question-item[data-index="${idx}"]`);
+      if (!el) return;
+      const target = [...el.querySelectorAll(".option")].find(o => o.dataset.value === val);
+      if (target) target.classList.add("selected");
+    });
+  }
+
+  // -------- Timer --------
+  function startTimer() {
+    updateTimerDisplay();
+    timerInterval = setInterval(updateTimerDisplay, 1000);
+  }
+
+  function updateTimerDisplay() {
+    const now = Date.now();
+    const remaining = Math.max(0, testDuration - (now - startTimestamp));
+
+    if (remaining <= 0) {
+      endTest(true);
+      return;
+    }
+
+    const m = Math.floor(remaining / 60000);
+    const s = Math.floor((remaining % 60000) / 1000);
+    timeRemainingEl.textContent = `${String(m).padStart(2,"0")}:${String(s).padStart(2,"0")}`;
+
+    const pct = (remaining / testDuration) * 100;
+    timerBar.style.width = `${pct}%`;
+    timerBar.style.backgroundColor = pct < 25 ? "var(--danger-color)"
+                                : pct < 50 ? "var(--warning-color)"
+                                           : "var(--primary-color)";
+  }
+
+  // -------- Finish --------
+  async function endTest(isTimeout = false) {
+    if (timerInterval) { clearInterval(timerInterval); timerInterval = null; }
+
+    // Hide UI
+    if (questionsContainer) questionsContainer.style.display = "none";
+    if (actionsSection)     actionsSection.style.display = "none";
+    readingContainer?.style.setProperty("display", "none");
+    instructionsEl?.style.setProperty("display", "none");
+    timerEl?.style.setProperty("display", "none");
+    timerWrapEl?.style.setProperty("display", "none");
+
+    // Score
+    const set = questions[selectedSet];
+    const correctAnswers = Object.keys(userAnswers).reduce((total, idx) => {
+      const i = Number(idx);
+      return total + (userAnswers[i] === set.question[i].answer ? 1 : 0);
+    }, 0);
+    const questionCount    = set.question.length;
+    const marksPerQuestion = 2;
+    const marksAwarded     = correctAnswers * marksPerQuestion;
+    const maxMarks         = questionCount * marksPerQuestion;
+
+    // Time spent
+    const spent = Math.min(Date.now() - startTimestamp, testDuration);
+    const mm = Math.floor(spent / 60000);
+    const ss = Math.floor((spent % 60000) / 1000);
+    const timeDisplay = `${String(mm).padStart(2,"0")}:${String(ss).padStart(2,"0")}`;
+    const completionDate = new Date();
+    const completionIso  = completionDate.toISOString();
+
+    // Completion card
+    const div = document.createElement("div");
+    div.className = "completion-message";
+    div.innerHTML = `
+      <div class="tick-icon"></div>
+      <h2>Test Completed!</h2>
+      <p class="completion-info">Reading Test Completed Successfully</p>
+      <div class="score-display">${correctAnswers}/${questionCount}</div>
+      <p class="time-spent">Time Spent: ${timeDisplay}</p>
+      <p class="completion-time">Completed at: ${completionDate.toLocaleString()}</p>
+    `;
+    containerEl?.appendChild(div);
+
+    // SCORM submit
+    if (isScormMode && scormActive()) {
+      scorm.set("cmi.core.score.raw", String(marksAwarded));
+      scorm.set("cmi.core.score.min", "0");
+      scorm.set("cmi.core.score.max", String(maxMarks));
+      scorm.set("cmi.core.lesson_status", "completed");
+
+      const completionData = { completedAt: completionIso, timeSpent: timeDisplay };
+      scorm.set("cmi.suspend_data", JSON.stringify(completionData));
+      commitScorm();
+    }
+
+    await sendToGoogleSheets(correctAnswers, marksAwarded, maxMarks, timeDisplay);
+
+    showNotification(isTimeout ? "Time's up! Test submitted." : "Test completed successfully!");
+  }
+
+  // -------- Completed view (re-entry) --------
+  function showCompletedState() {
+    const score = scorm.get("cmi.core.score.raw");
+    const maxScore = scorm.get("cmi.core.score.max") || "10"; // your original default
+    const sdata = scorm.get("cmi.suspend_data");
+
+    let completedAt = "Unavailable";
+    let timeSpent   = "Unavailable";
+
+    if (sdata) {
+      try {
+        const parsed = JSON.parse(sdata);
+        if (parsed.completedAt) {
+          const dt = new Date(parsed.completedAt);
+          if (!Number.isNaN(dt.getTime())) completedAt = dt.toLocaleString();
+        }
+        if (parsed.timeSpent) timeSpent = parsed.timeSpent;
+      } catch (e) {
+        console.error("Error parsing completion data:", e);
       }
     }
-  });
-}
 
-// Send results to Google Sheets
-async function sendToGoogleSheets(correctAnswers, marks, totalMarks, timeSpent) {
-  const SHEETS_URL =
-    "https://script.google.com/macros/s/AKfycbxZKrhA-wXc_7ymR1wOwX-W_GzyMZwXqj3ORdvJ84QCibx2gt9_D5FvicLJdrXj36nJOQ/exec";
-
-  let studentName = "Anonymous";
-  let studentId = "";
-
-  if (isScormMode) {
-    studentName = scorm.get("cmi.core.student_name") || "Anonymous";
-    studentId = scorm.get("cmi.core.student_id") || "";
+    document.body.innerHTML = `
+      <div class="container">
+        <div class="completion-message">
+          <div class="tick-icon"></div>
+          <h2>Test Already Completed</h2>
+          <p class="completion-info">Reading Test was completed in a previous session</p>
+          <div class="score-display">${score}/${maxScore}</div>
+          <p class="time-spent">Time Spent: ${timeSpent}</p>
+          <p class="completion-time">Completed at: ${completedAt}</p>
+        </div>
+      </div>
+    `;
   }
 
-  // Prepare detailed answer data
-  const set = questions[selectedSet];
-  let answersString = "";
-  set.question.forEach((question, index) => {
-    const userAnswer = userAnswers[index] || "N/A";
-    const isCorrect = userAnswer === question.answer;
-    answersString += `${question.id}: ${userAnswer} (${
-      isCorrect ? "✓" : "✗"
-    }), `;
-  });
+  // -------- Sheets --------
+  async function sendToGoogleSheets(correctAnswers, marks, totalMarks, timeSpent) {
+    const SHEETS_URL = "https://script.google.com/macros/s/AKfycbxZKrhA-wXc_7ymR1wOwX-W_GzyMZwXqj3ORdvJ84QCibx2gt9_D5FvicLJdrXj36nJOQ/exec";
 
-  answersString = answersString.replace(/,$/, "");
-
-  const data = {
-    testType: "Reading Test",
-    name: studentName,
-    studentId: studentId,
-    correctAnswers: correctAnswers,
-    marks: marks,
-    totalQuestions: set.question.length,
-    totalMarks: totalMarks,
-    timeSpent: timeSpent,
-    date: new Date().toISOString(),
-    answers: answersString,
-    passageTitle: set.title,
-  };
-
-  try {
-    console.log("Sending to Google Sheets:", data);
-    await fetch(SHEETS_URL, {
-      method: "POST",
-      mode: "no-cors",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
-  } catch (error) {
-    console.error("Error sending to Google Sheets:", error);
-  }
-}
-
-// Show notification
-function showNotification(message) {
-  const notification = document.createElement("div");
-  notification.className = "notification success";
-  notification.innerHTML = `<i class="fas fa-check-circle"></i>${message}`;
-  document.body.appendChild(notification);
-  setTimeout(() => notification.remove(), 5000);
-}
-
-// Initialize on page load
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("Page loaded, initializing SCORM...");
-  initScorm();
-
-  if (checkAnswersBtn) {
-    checkAnswersBtn.addEventListener("click", () => endTest(false));
-  }
-
-  window.addEventListener("beforeunload", () => {
-    if (scorm && scorm.connection.isActive) {
-      scorm.quit();
+    let studentName = "Anonymous";
+    let studentId   = "";
+    if (isScormMode && scormActive()) {
+      studentName = scorm.get("cmi.core.student_name") || "Anonymous";
+      studentId   = scorm.get("cmi.core.student_id")   || "";
     }
-  });
-});
+
+    const set = questions[selectedSet];
+    // answersString uses ORIGINAL index to align with scoring
+    let answersString = "";
+    set.question.forEach((q, idx) => {
+      const ua = userAnswers[idx] ?? "N/A";
+      const ok = ua === q.answer;
+      answersString += `${q.id}: ${ua} (${ok ? "✓" : "✗"}), `;
+    });
+    answersString = answersString.replace(/, $/, "");
+
+    const payload = {
+      testType: "Reading Test",
+      name: studentName,
+      studentId,
+      correctAnswers,
+      marks,
+      totalQuestions: set.question.length,
+      totalMarks,
+      timeSpent,
+      date: new Date().toISOString(),
+      answers: answersString,
+      passageTitle: set.title,
+    };
+
+    try {
+      console.log("Sending to Google Sheets:", payload);
+      await fetch(SHEETS_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+    } catch (e) {
+      console.error("Error sending to Google Sheets:", e);
+    }
+  }
+
+  // -------- Boot --------
+  document.addEventListener("DOMContentLoaded", () => {
+    initScormFlow();
+
+    if (checkAnswersBtn) {
+      // single final submit is OK to be once:true
+      checkAnswersBtn.addEventListener("click", () => endTest(false), { once: true });
+    }
+
+    // Idempotent terminate
+    window.addEventListener("beforeunload", quitScormOnce, { once: true });
+    window.addEventListener("unload",       quitScormOnce, { once: true });
+  }, { once: true });
+
+})();
