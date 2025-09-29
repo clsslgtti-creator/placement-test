@@ -1,7 +1,7 @@
 {
   "MT": {
     "question_1": {
-      "instruction": "Look at the grid and make sentences in the present tense, using the same verbs in the correct form as in the example. Make other changes where appropriate.",
+      "instruction": "Look at the grid and make sentences in the present tense, using the same verbs in the correct form as in the example. Make other changes where appropriate.\nஅட்டவணையைப் பார்த்து எடுத்துக்காட்டில் உள்ளபடி, அதே வினைச்சொற்களை சரியான வடிவில் பயன்படுத்தி நிகழ்கால வாக்கியங்களை உருவாக்கவும். தேவையான இடங்களில் பிற மாற்றங்களைச் செய்யவும்.\nජාලය බලන්න සහ උදාහරණයේ පරිදි, ඒම ක්‍රියාවන් නිවැරදි ආකාරයෙන් භාවිතා කර, වර්තමාන කාලයේ වාක්‍ය සාදන්න. අවශ්‍ය විට වෙනත් වෙනස්කම් කරන්න.",
       "question": [
         {
           "question": ["Hameed", "bank", "bus", "2.00 p.m.", "tired"],
@@ -48,7 +48,7 @@
       ]
     },
     "question_2": {
-      "instruction": "Unscramble the sentences. Drag and Drop the words to make correct sentences.",
+      "instruction": "Unscramble the sentence by clicking the words in the correct order. To undo, click a word again.\nசொற்களை சரியான வரிசையில் கிளிக் செய்து வாக்கியத்தை சரிசெய்க. ரத்து செய்ய, ஒரு சொல்லை மீண்டும் கிளிக் செய்யவும்.\nනිවැරදි අනුපිළිවෙලින් ක්ලික් කිරීමෙන් වාක්‍යය ගලපන්න. අවලංගු කිරීමට, වචනයක් නැවත ක්ලික් කරන්න.",
       "question": [
         {
           "question": [
@@ -101,7 +101,7 @@
   },
   "AT": {
     "question_1": {
-      "instruction": "Look at the grid and make sentences in the present tense, using the same verbs in the correct form as in the example. Make other changes where appropriate.",
+      "instruction": "Look at the grid and make sentences in the present tense, using the same verbs in the correct form as in the example. Make other changes where appropriate.\nஅட்டவணையைப் பார்த்து எடுத்துக்காட்டில் உள்ளபடி, அதே வினைச்சொற்களை சரியான வடிவில் பயன்படுத்தி நிகழ்கால வாக்கியங்களை உருவாக்கவும். தேவையான இடங்களில் பிற மாற்றங்களைச் செய்யவும்.\nජාලය බලන්න සහ උදාහරණයේ පරිදි, ඒම ක්‍රියාවන් නිවැරදි ආකාරයෙන් භාවිතා කර, වර්තමාන කාලයේ වාක්‍ය සාදන්න. අවශ්‍ය විට වෙනත් වෙනස්කම් කරන්න.",
       "question": [
         {
           "question": ["Hameed", "bank", "bus", "2.00 p.m.", "tired"],
@@ -142,7 +142,7 @@
       ]
     },
     "question_2": {
-      "instruction": "Unscramble the sentences. Drag and Drop the words to make correct sentences.",
+      "instruction": "Unscramble the sentence by clicking the words in the correct order. To undo, click a word again.\nசொற்களை சரியான வரிசையில் கிளிக் செய்து வாக்கியத்தை சரிசெய்க. ரத்து செய்ய, ஒரு சொல்லை மீண்டும் கிளிக் செய்யவும்.\nනිවැරදි අනුපිළිවෙලින් ක්ලික් කිරීමෙන් වාක්‍යය ගලපන්න. අවලංගු කිරීමට, වචනයක් නැවත ක්ලික් කරන්න.",
       "question": [
         {
           "question": ["garage", "the", "busy", "very", "was", "two weeks ago"],
@@ -191,7 +191,7 @@
   },
   "ET": {
     "question_1": {
-      "instruction": "Look at the grid and make sentences in the present tense, using the same verbs in the correct form as in the example. Make other changes where appropriate.",
+      "instruction": "Look at the grid and make sentences in the present tense, using the same verbs in the correct form as in the example. Make other changes where appropriate.\nஅட்டவணையைப் பார்த்து எடுத்துக்காட்டில் உள்ளபடி, அதே வினைச்சொற்களை சரியான வடிவில் பயன்படுத்தி நிகழ்கால வாக்கியங்களை உருவாக்கவும். தேவையான இடங்களில் பிற மாற்றங்களைச் செய்யவும்.\nජාලය බලන්න සහ උදාහරණයේ පරිදි, ඒම ක්‍රියාවන් නිවැරදි ආකාරයෙන් භාවිතා කර, වර්තමාන කාලයේ වාක්‍ය සාදන්න. අවශ්‍ය විට වෙනත් වෙනස්කම් කරන්න.",
       "question": [
         {
           "question": ["Hameed", "bank", "bus", "2.00 p.m.", "tired"],
@@ -232,7 +232,7 @@
       ]
     },
     "question_2": {
-      "instruction": "Unscramble the sentences. Drag and Drop the words to make correct sentences.",
+      "instruction": "Unscramble the sentence by clicking the words in the correct order. To undo, click a word again.\nசொற்களை சரியான வரிசையில் கிளிக் செய்து வாக்கியத்தை சரிசெய்க. ரத்து செய்ய, ஒரு சொல்லை மீண்டும் கிளிக் செய்யவும்.\nනිවැරදි අනුපිළිවෙලින් ක්ලික් කිරීමෙන් වාක්‍යය ගලපන්න. අවලංගු කිරීමට, වචනයක් නැවත ක්ලික් කරන්න.",
       "question": [
         {
           "question": [
@@ -275,7 +275,7 @@
   },
   "FT": {
     "question_1": {
-      "instruction": "Look at the grid and make sentences in the present tense, using the same verbs in the correct form as in the example. Make other changes where appropriate.",
+      "instruction": "Look at the grid and make sentences in the present tense, using the same verbs in the correct form as in the example. Make other changes where appropriate.\nஅட்டவணையைப் பார்த்து எடுத்துக்காட்டில் உள்ளபடி, அதே வினைச்சொற்களை சரியான வடிவில் பயன்படுத்தி நிகழ்கால வாக்கியங்களை உருவாக்கவும். தேவையான இடங்களில் பிற மாற்றங்களைச் செய்யவும்.\nජාලය බලන්න සහ උදාහරණයේ පරිදි, ඒම ක්‍රියාවන් නිවැරදි ආකාරයෙන් භාවිතා කර, වර්තමාන කාලයේ වාක්‍ය සාදන්න. අවශ්‍ය විට වෙනත් වෙනස්කම් කරන්න.",
       "question": [
         {
           "question": ["Hameed", "bank", "bus", "2.00 p.m.", "tired"],
@@ -322,7 +322,7 @@
       ]
     },
     "question_2": {
-      "instruction": "Unscramble the sentences. Drag and Drop the words to make correct sentences.",
+      "instruction": "Unscramble the sentence by clicking the words in the correct order. To undo, click a word again.\nசொற்களை சரியான வரிசையில் கிளிக் செய்து வாக்கியத்தை சரிசெய்க. ரத்து செய்ய, ஒரு சொல்லை மீண்டும் கிளிக் செய்யவும்.\nනිවැරදි අනුපිළිවෙලින් ක්ලික් කිරීමෙන් වාක්‍යය ගලපන්න. අවලංගු කිරීමට, වචනයක් නැවත ක්ලික් කරන්න.",
       "question": [
         {
           "question": [
@@ -369,7 +369,7 @@
   },
   "CT": {
     "question_1": {
-      "instruction": "Look at the grid and make sentences in the present tense, using the same verbs in the correct form as in the example. Make other changes where appropriate.",
+      "instruction": "Look at the grid and make sentences in the present tense, using the same verbs in the correct form as in the example. Make other changes where appropriate.\nஅட்டவணையைப் பார்த்து எடுத்துக்காட்டில் உள்ளபடி, அதே வினைச்சொற்களை சரியான வடிவில் பயன்படுத்தி நிகழ்கால வாக்கியங்களை உருவாக்கவும். தேவையான இடங்களில் பிற மாற்றங்களைச் செய்யவும்.\nජාලය බලන්න සහ උදාහරණයේ පරිදි, ඒම ක්‍රියාවන් නිවැරදි ආකාරයෙන් භාවිතා කර, වර්තමාන කාලයේ වාක්‍ය සාදන්න. අවශ්‍ය විට වෙනත් වෙනස්කම් කරන්න.",
       "question": [
         {
           "question": ["Hameed", "bank", "bus", "2.00 p.m.", "tired"],
@@ -410,7 +410,7 @@
       ]
     },
     "question_2": {
-      "instruction": "Unscramble the sentences. Drag and Drop the words to make correct sentences.",
+      "instruction": "Unscramble the sentence by clicking the words in the correct order. To undo, click a word again.\nசொற்களை சரியான வரிசையில் கிளிக் செய்து வாக்கியத்தை சரிசெய்க. ரத்து செய்ய, ஒரு சொல்லை மீண்டும் கிளிக் செய்யவும்.\nනිවැරදි අනුපිළිවෙලින් ක්ලික් කිරීමෙන් වාක්‍යය ගලපන්න. අවලංගු කිරීමට, වචනයක් නැවත ක්ලික් කරන්න.",
       "question": [
         {
           "question": [
@@ -456,7 +456,7 @@
   },
   "ICT": {
     "question_1": {
-      "instruction": "Look at the grid and make sentences in the present tense, using the same verbs in the correct form as in the example. Make other changes where appropriate.",
+      "instruction": "Look at the grid and make sentences in the present tense, using the same verbs in the correct form as in the example. Make other changes where appropriate.\nஅட்டவணையைப் பார்த்து எடுத்துக்காட்டில் உள்ளபடி, அதே வினைச்சொற்களை சரியான வடிவில் பயன்படுத்தி நிகழ்கால வாக்கியங்களை உருவாக்கவும். தேவையான இடங்களில் பிற மாற்றங்களைச் செய்யவும்.\nජාලය බලන්න සහ උදාහරණයේ පරිදි, ඒම ක්‍රියාවන් නිවැරදි ආකාරයෙන් භාවිතා කර, වර්තමාන කාලයේ වාක්‍ය සාදන්න. අවශ්‍ය විට වෙනත් වෙනස්කම් කරන්න.",
       "question": [
         {
           "question": ["Hameed", "bank", "bus", "2.00 p.m.", "tired"],
@@ -497,7 +497,7 @@
       ]
     },
     "question_2": {
-      "instruction": "Unscramble the sentences. Drag and Drop the words to make correct sentences.",
+      "instruction": "Unscramble the sentence by clicking the words in the correct order. To undo, click a word again.\nசொற்களை சரியான வரிசையில் கிளிக் செய்து வாக்கியத்தை சரிசெய்க. ரத்து செய்ய, ஒரு சொல்லை மீண்டும் கிளிக் செய்யவும்.\nනිවැරදි අනුපිළිවෙලින් ක්ලික් කිරීමෙන් වාක්‍යය ගලපන්න. අවලංගු කිරීමට, වචනයක් නැවත ක්ලික් කරන්න.",
       "question": [
         {
           "question": [
