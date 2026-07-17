@@ -1,7 +1,7 @@
 {
   "MT": {
     "question_1": {
-      "instruction": "Look at the grid and make sentences in the present tense, using the same verbs in the correct form as in the example. Make other changes where appropriate.\nஅட்டவணையைப் பார்த்து எடுத்துக்காட்டில் உள்ளபடி, அதே வினைச்சொற்களை சரியான வடிவில் பயன்படுத்தி நிகழ்கால வாக்கியங்களை உருவாக்கவும். தேவையான இடங்களில் பிற மாற்றங்களைச் செய்யவும்.\nජාලය බලන්න සහ උදාහරණයේ පරිදි, ඒම ක්‍රියාවන් නිවැරදි ආකාරයෙන් භාවිතා කර, වර්තමාන කාලයේ වාක්‍ය සාදන්න. අවශ්‍ය විට වෙනත් වෙනස්කම් කරන්න.",
+      "instruction": "Look at the grid and make sentences in the present tense, using the same verbs in the correct form as in the example. Make other changes where appropriate.\nஅட்டவணையைப் பார்த்து எடுத்துக்காட்டில் உள்ளபடி, அதே வினைச்சொற்களை சரியான வடிவில் பயன்படுத்தி நிகழ்கால வாக்கியங்களை உருவாக்கவும். தேவையான இடங்களில் பிற மாற்றங்களைச் செய்யவும்.\nජාලකය බලන්න. උදාහරණයේ පරිදි, ඒම ක්‍රියාපද නිවැරදි ආකාරයෙන් භාවිතා කර, වර්තමාන කාලයේ වාක්‍ය සාදන්න. අවශ්‍ය විට වෙනත් වෙනස්කම් කරන්න.",
       "question": [
         {
           "question": ["Hameed", "bank", "bus", "2.00 p.m.", "tired"],
@@ -113,7 +113,7 @@
   },
   "AT": {
     "question_1": {
-      "instruction": "Look at the grid and make sentences in the present tense, using the same verbs in the correct form as in the example. Make other changes where appropriate.\nஅட்டவணையைப் பார்த்து எடுத்துக்காட்டில் உள்ளபடி, அதே வினைச்சொற்களை சரியான வடிவில் பயன்படுத்தி நிகழ்கால வாக்கியங்களை உருவாக்கவும். தேவையான இடங்களில் பிற மாற்றங்களைச் செய்யவும்.\nජාලය බලන්න සහ උදාහරණයේ පරිදි, ඒම ක්‍රියාවන් නිවැරදි ආකාරයෙන් භාවිතා කර, වර්තමාන කාලයේ වාක්‍ය සාදන්න. අවශ්‍ය විට වෙනත් වෙනස්කම් කරන්න.",
+      "instruction": "Look at the grid and make sentences in the present tense, using the same verbs in the correct form as in the example. Make other changes where appropriate.\nஅட்டவணையைப் பார்த்து எடுத்துக்காட்டில் உள்ளபடி, அதே வினைச்சொற்களை சரியான வடிவில் பயன்படுத்தி நிகழ்கால வாக்கியங்களை உருவாக்கவும். தேவையான இடங்களில் பிற மாற்றங்களைச் செய்யவும்.\nජාලකය බලන්න. උදාහරණයේ පරිදි, ඒම ක්‍රියාපද නිවැරදි ආකාරයෙන් භාවිතා කර, වර්තමාන කාලයේ වාක්‍ය සාදන්න. අවශ්‍ය විට වෙනත් වෙනස්කම් කරන්න.",
       "question": [
         {
           "question": ["Hameed", "bank", "bus", "2.00 p.m.", "tired"],
@@ -215,7 +215,7 @@
   },
   "ET": {
     "question_1": {
-      "instruction": "Look at the grid and make sentences in the present tense, using the same verbs in the correct form as in the example. Make other changes where appropriate.\nஅட்டவணையைப் பார்த்து எடுத்துக்காட்டில் உள்ளபடி, அதே வினைச்சொற்களை சரியான வடிவில் பயன்படுத்தி நிகழ்கால வாக்கியங்களை உருவாக்கவும். தேவையான இடங்களில் பிற மாற்றங்களைச் செய்யவும்.\nජාලය බලන්න සහ උදාහරණයේ පරිදි, ඒම ක්‍රියාවන් නිවැරදි ආකාරයෙන් භාවිතා කර, වර්තමාන කාලයේ වාක්‍ය සාදන්න. අවශ්‍ය විට වෙනත් වෙනස්කම් කරන්න.",
+      "instruction": "Look at the grid and make sentences in the present tense, using the same verbs in the correct form as in the example. Make other changes where appropriate.\nஅட்டவணையைப் பார்த்து எடுத்துக்காட்டில் உள்ளபடி, அதே வினைச்சொற்களை சரியான வடிவில் பயன்படுத்தி நிகழ்கால வாக்கியங்களை உருவாக்கவும். தேவையான இடங்களில் பிற மாற்றங்களைச் செய்யவும்.\nජාලකය බලන්න. උදාහරණයේ පරිදි, ඒම ක්‍රියාපද නිවැරදි ආකාරයෙන් භාවිතා කර, වර්තමාන කාලයේ වාක්‍ය සාදන්න. අවශ්‍ය විට වෙනත් වෙනස්කම් කරන්න.",
       "question": [
         {
           "question": ["Hameed", "bank", "bus", "2.00 p.m.", "tired"],
@@ -311,7 +311,7 @@
   },
   "FT": {
     "question_1": {
-      "instruction": "Look at the grid and make sentences in the present tense, using the same verbs in the correct form as in the example. Make other changes where appropriate.\nஅட்டவணையைப் பார்த்து எடுத்துக்காட்டில் உள்ளபடி, அதே வினைச்சொற்களை சரியான வடிவில் பயன்படுத்தி நிகழ்கால வாக்கியங்களை உருவாக்கவும். தேவையான இடங்களில் பிற மாற்றங்களைச் செய்யவும்.\nජාලය බලන්න සහ උදාහරණයේ පරිදි, ඒම ක්‍රියාවන් නිවැරදි ආකාරයෙන් භාවිතා කර, වර්තමාන කාලයේ වාක්‍ය සාදන්න. අවශ්‍ය විට වෙනත් වෙනස්කම් කරන්න.",
+      "instruction": "Look at the grid and make sentences in the present tense, using the same verbs in the correct form as in the example. Make other changes where appropriate.\nஅட்டவணையைப் பார்த்து எடுத்துக்காட்டில் உள்ளபடி, அதே வினைச்சொற்களை சரியான வடிவில் பயன்படுத்தி நிகழ்கால வாக்கியங்களை உருவாக்கவும். தேவையான இடங்களில் பிற மாற்றங்களைச் செய்யவும்.\nජාලකය බලන්න. උදාහරණයේ පරිදි, ඒම ක්‍රියාපද නිවැරදි ආකාරයෙන් භාවිතා කර, වර්තමාන කාලයේ වාක්‍ය සාදන්න. අවශ්‍ය විට වෙනත් වෙනස්කම් කරන්න.",
       "question": [
         {
           "question": ["Hameed", "bank", "bus", "2.00 p.m.", "tired"],
@@ -417,7 +417,7 @@
   },
   "CT": {
     "question_1": {
-      "instruction": "Look at the grid and make sentences in the present tense, using the same verbs in the correct form as in the example. Make other changes where appropriate.\nஅட்டவணையைப் பார்த்து எடுத்துக்காட்டில் உள்ளபடி, அதே வினைச்சொற்களை சரியான வடிவில் பயன்படுத்தி நிகழ்கால வாக்கியங்களை உருவாக்கவும். தேவையான இடங்களில் பிற மாற்றங்களைச் செய்யவும்.\nජාලය බලන්න සහ උදාහරණයේ පරිදි, ඒම ක්‍රියාවන් නිවැරදි ආකාරයෙන් භාවිතා කර, වර්තමාන කාලයේ වාක්‍ය සාදන්න. අවශ්‍ය විට වෙනත් වෙනස්කම් කරන්න.",
+      "instruction": "Look at the grid and make sentences in the present tense, using the same verbs in the correct form as in the example. Make other changes where appropriate.\nஅட்டவணையைப் பார்த்து எடுத்துக்காட்டில் உள்ளபடி, அதே வினைச்சொற்களை சரியான வடிவில் பயன்படுத்தி நிகழ்கால வாக்கியங்களை உருவாக்கவும். தேவையான இடங்களில் பிற மாற்றங்களைச் செய்யவும்.\nජාලකය බලන්න. උදාහරණයේ පරිදි, ඒම ක්‍රියාපද නිවැරදි ආකාරයෙන් භාවිතා කර, වර්තමාන කාලයේ වාක්‍ය සාදන්න. අවශ්‍ය විට වෙනත් වෙනස්කම් කරන්න.",
       "question": [
         {
           "question": ["Hameed", "bank", "bus", "2.00 p.m.", "tired"],
@@ -516,7 +516,7 @@
   },
   "ICT": {
     "question_1": {
-      "instruction": "Look at the grid and make sentences in the present tense, using the same verbs in the correct form as in the example. Make other changes where appropriate.\nஅட்டவணையைப் பார்த்து எடுத்துக்காட்டில் உள்ளபடி, அதே வினைச்சொற்களை சரியான வடிவில் பயன்படுத்தி நிகழ்கால வாக்கியங்களை உருவாக்கவும். தேவையான இடங்களில் பிற மாற்றங்களைச் செய்யவும்.\nජාලය බලන්න සහ උදාහරණයේ පරිදි, ඒම ක්‍රියාවන් නිවැරදි ආකාරයෙන් භාවිතා කර, වර්තමාන කාලයේ වාක්‍ය සාදන්න. අවශ්‍ය විට වෙනත් වෙනස්කම් කරන්න.",
+      "instruction": "Look at the grid and make sentences in the present tense, using the same verbs in the correct form as in the example. Make other changes where appropriate.\nஅட்டவணையைப் பார்த்து எடுத்துக்காட்டில் உள்ளபடி, அதே வினைச்சொற்களை சரியான வடிவில் பயன்படுத்தி நிகழ்கால வாக்கியங்களை உருவாக்கவும். தேவையான இடங்களில் பிற மாற்றங்களைச் செய்யவும்.\nජාලකය බලන්න. උදාහරණයේ පරිදි, ඒම ක්‍රියාපද නිවැරදි ආකාරයෙන් භාවිතා කර, වර්තමාන කාලයේ වාක්‍ය සාදන්න. අවශ්‍ය විට වෙනත් වෙනස්කම් කරන්න.",
       "question": [
         {
           "question": ["Hameed", "bank", "bus", "2.00 p.m.", "tired"],
