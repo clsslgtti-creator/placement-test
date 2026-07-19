@@ -152,8 +152,8 @@
     },
     {
       "question": "I _____ on a park bench at the moment.",
-      "options": ["sitting", "I'm sitting", "sit", "sat", "seated"],
-      "answer": "I'm sitting",
+      "options": ["sitting", "am sitting", "sit", "sat", "seated"],
+      "answer": "am sitting",
       "id": "1_26"
     },
     {
@@ -230,7 +230,7 @@
     },
     {
       "question": "_____ much is that suitcase?",
-      "options": ["What", "When", "How", "Very", "When"],
+      "options": ["What", "When", "How", "Very", "Where"],
       "answer": "How",
       "id": "1_39"
     },
