@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vocabulary Placement Test - Demo</title>
+    <link rel="stylesheet" href="../assets/css/shared.css" />
+    <link rel="stylesheet" href="../assets/css/notifications.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      .demo-note {
+        margin-top: 12px;
+        color: #4c5a6a;
+        font-size: 0.95rem;
+      }
+
+      .demo-field {
+        margin-bottom: 12px;
+      }
+
+      .demo-field label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>PLACEMENT TEST - VOCABULARY DEMO</h1>
+        <p class="instructions">
+          Tester mode: choose the programme and exact vocabulary set to inspect.
+        </p>
+      </header>
+
+      <div class="timer hidden" id="timer">
+        <i class="fas fa-clock"></i>
+        Time Remaining: <span id="time-remaining">05:00</span>
+      </div>
+      <div class="timer-container hidden" id="timer-container">
+        <div class="timer-bar" id="timer-bar"></div>
+      </div>
+
+      <div id="program-banner" class="program-banner hidden">
+        Training Programme: <span id="selected-program-name"></span>
+      </div>
+
+      <div class="vocabulary-content hidden" id="vocabulary-content">
+        <section class="vocab-section">
+          <h2>Vocabulary Matching</h2>
+          <div class="task-instruction">
+            Choose a word chip, then place it into the matching definition box.
+          </div>
+          <div class="word-bank" id="word-bank"></div>
+          <div class="matching-grid" id="matching-grid"></div>
+        </section>
+      </div>
+
+      <div class="actions text-center hidden" id="actions">
+        <button id="submit-test" class="btn btn-primary">Complete Test</button>
+      </div>
+    </div>
+
+    <div id="program-selection" class="program-overlay">
+      <div class="program-modal">
+        <h2>Vocabulary Demo Controls</h2>
+
+        <div class="demo-field">
+          <label for="programme-select">Training Programme</label>
+          <select id="programme-select" class="programme-select">
+            <option value="">-- Select Programme --</option>
+          </select>
+        </div>
+
+        <div class="demo-field">
+          <label for="set-select">Vocabulary Set</label>
+          <select id="set-select" class="programme-select">
+            <option value="__random__">Random vocabulary set</option>
+          </select>
+        </div>
+
+        <button id="start-test" class="btn btn-primary start-btn">Start Vocabulary Demo</button>
+        <p id="demo-note" class="demo-note"></p>
+      </div>
+    </div>
+
+    <script src="demo-script.js"></script>
+  </body>
+</html>

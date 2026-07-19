@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listening Placement Test - Demo</title>
+    <link rel="stylesheet" href="../assets/css/shared.css" />
+    <link rel="stylesheet" href="../assets/css/notifications.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      .demo-note {
+        margin-top: 12px;
+        color: #4c5a6a;
+        font-size: 0.95rem;
+      }
+
+      .demo-field {
+        margin-bottom: 12px;
+      }
+
+      .demo-field label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>PLACEMENT TEST - LISTENING DEMO</h1>
+        <p class="instructions">
+          Tester mode: choose programme, general set and specific set directly.
+        </p>
+      </header>
+
+      <div class="timer hidden" id="timer">
+        <i class="fas fa-clock"></i>
+        Time Remaining: <span id="time-remaining">20:00</span>
+      </div>
+      <div class="timer-container hidden" id="timer-container">
+        <div class="timer-bar" id="timer-bar"></div>
+      </div>
+
+      <div id="program-banner" class="program-banner hidden">
+        Training Programme: <span id="selected-program-name"></span>
+      </div>
+
+      <div class="listening-content hidden" id="listening-content">
+        <section class="listening-section" id="listening-general">
+          <h2>Listening 1 - General</h2>
+          <div class="audio-panel">
+            <button class="btn btn-secondary audio-play-button" data-section="general">
+              <i class="fas fa-play"></i>
+              <span class="label">Play Recording</span>
+            </button>
+            <span class="audio-status" id="general-audio-status">Plays remaining: 2</span>
+          </div>
+          <div class="questions" id="general-questions"></div>
+        </section>
+
+        <section class="listening-section" id="listening-specific">
+          <h2>Listening 2 - Programme Specific</h2>
+          <div class="audio-panel">
+            <button class="btn btn-secondary audio-play-button" data-section="specific">
+              <i class="fas fa-play"></i>
+              <span class="label">Play Recording</span>
+            </button>
+            <span class="audio-status" id="specific-audio-status">Plays remaining: 2</span>
+          </div>
+          <div class="questions" id="specific-questions"></div>
+        </section>
+      </div>
+
+      <div class="actions text-center hidden" id="actions">
+        <button id="submit-test" class="btn btn-primary">Complete Test</button>
+      </div>
+    </div>
+
+    <div id="program-selection" class="program-overlay">
+      <div class="program-modal">
+        <h2>Listening Demo Controls</h2>
+
+        <div class="demo-field">
+          <label for="programme-select">Training Programme</label>
+          <select id="programme-select" class="programme-select">
+            <option value="">-- Select Programme --</option>
+          </select>
+        </div>
+
+        <div class="demo-field">
+          <label for="general-set-select">General Set</label>
+          <select id="general-set-select" class="programme-select">
+            <option value="__random__">Random general set</option>
+          </select>
+        </div>
+
+        <div class="demo-field">
+          <label for="specific-set-select">Programme-Specific Set</label>
+          <select id="specific-set-select" class="programme-select">
+            <option value="__random__">Random programme-specific set</option>
+          </select>
+        </div>
+
+        <button id="start-test" class="btn btn-primary start-btn">Start Listening Demo</button>
+        <p id="demo-note" class="demo-note"></p>
+      </div>
+    </div>
+
+    <script src="demo-script.js"></script>
+  </body>
+</html>

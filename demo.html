@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Placement Test Demo Hub</title>
+    <link rel="stylesheet" href="assets/css/shared.css" />
+    <style>
+      .demo-hub {
+        max-width: 920px;
+        margin: 40px auto;
+      }
+
+      .demo-intro {
+        margin-bottom: 24px;
+      }
+
+      .demo-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 16px;
+      }
+
+      .demo-card {
+        display: block;
+        padding: 20px;
+        border: 1px solid #d7deea;
+        border-radius: 16px;
+        background: #f7f9fc;
+        color: inherit;
+        text-decoration: none;
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+      }
+
+      .demo-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 24px rgba(28, 45, 64, 0.08);
+      }
+
+      .demo-card h2 {
+        margin: 0 0 8px;
+        font-size: 1.1rem;
+      }
+
+      .demo-card p {
+        margin: 0;
+        color: #526172;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container demo-hub">
+      <header class="demo-intro">
+        <h1>PLACEMENT TEST - DEMO HUB</h1>
+        <p class="instructions">
+          Open any tester-only demo page from here. The live test pages remain
+          unchanged.
+        </p>
+      </header>
+
+      <section class="demo-grid">
+        <a class="demo-card" href="grammar/demo.html">
+          <h2>Grammar Demo</h2>
+          <p>Inspect one grammar set or run the random 50-question sample.</p>
+        </a>
+
+        <a class="demo-card" href="reading/demo.html">
+          <h2>Reading Demo</h2>
+          <p>Open a specific reading passage set or keep random selection.</p>
+        </a>
+
+        <a class="demo-card" href="listening/demo.html">
+          <h2>Listening Demo</h2>
+          <p>Pick the programme, general set, and specific listening set.</p>
+        </a>
+
+        <a class="demo-card" href="vocabulary/demo.html">
+          <h2>Vocabulary Demo</h2>
+          <p>Pick the programme and exact vocabulary set for testing.</p>
+        </a>
+
+        <a class="demo-card" href="writing/index.html">
+          <h2>Writing</h2>
+          <p>Open the existing writing test page from the demo hub.</p>
+        </a>
+      </section>
+    </div>
+  </body>
+</html>

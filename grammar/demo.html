@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grammar Placement Test - Demo</title>
+    <link rel="stylesheet" href="../assets/css/shared.css" />
+    <link rel="stylesheet" href="../assets/css/notifications.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      .demo-toolbar {
+        margin: 0 0 24px;
+        padding: 16px;
+        border: 1px solid #d7deea;
+        border-radius: 14px;
+        background: #f7f9fc;
+      }
+
+      .demo-controls {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .demo-meta {
+        margin-top: 10px;
+        font-size: 0.95rem;
+        color: #51606f;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>PLACEMENT TEST - GRAMMAR DEMO</h1>
+        <p class="instructions">
+          Tester mode: load the same random 50-question sample or inspect one
+          full question set directly.
+        </p>
+      </header>
+
+      <section class="demo-toolbar">
+        <div class="demo-controls">
+          <label for="set-select" class="sr-only">Grammar Set</label>
+          <select id="set-select" class="programme-select">
+            <option value="">Loading sets...</option>
+          </select>
+          <button id="start-demo" class="btn btn-primary">Load Demo Set</button>
+        </div>
+        <div id="demo-meta" class="demo-meta"></div>
+      </section>
+
+      <div class="timer">
+        <i class="fas fa-clock"></i>
+        Time Remaining: <span id="time-remaining">40:00</span>
+      </div>
+      <div class="timer-container">
+        <div class="timer-bar" id="timer-bar"></div>
+      </div>
+
+      <div id="questions-container"></div>
+
+      <div class="actions text-center">
+        <button id="check-answers" class="btn btn-primary">Complete Test</button>
+      </div>
+    </div>
+
+    <script src="demo-script.js"></script>
+  </body>
+</html>
