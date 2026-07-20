@@ -83,17 +83,6 @@
           "id": "AT_1_2"
         },
         {
-          "question": "What should they remind each other about?",
-          "options": [
-            "The radiator",
-            "The gearbox",
-            "Using the correct tool",
-            "Using correct measurements"
-          ],
-          "answer": "Using the correct tool",
-          "id": "AT_1_3"
-        },
-        {
           "question": "What mistake did one helper make?",
           "options": [
             "He left the van outside",
@@ -103,6 +92,17 @@
           ],
           "answer": "He forgot to clean the tools",
           "id": "AT_1_4"
+        },
+        {
+          "question": "What should they remind each other about?",
+          "options": [
+            "The radiator",
+            "The gearbox",
+            "Using the correct tool",
+            "Using correct measurements"
+          ],
+          "answer": "Using the correct tool",
+          "id": "AT_1_3"
         },
         {
           "question": "By next Friday, what is expected?",
@@ -178,6 +178,17 @@
       "audio": "assets/audio/CT/1.mp3",
       "question": [
         {
+          "question": "What had the engineer done two days before the work began?",
+          "options": [
+            "He explained the safety instructions",
+            "He checked the transport arrangements",
+            "He prepared the concrete",
+            "He ignored the safety instructions"
+          ],
+          "answer": "He explained the safety instructions",
+          "id": "CT_1_2"
+        },
+        {
           "question": "Why was it easier to prepare the soil yesterday?",
           "options": [
             "Because the workers used new machines",
@@ -189,15 +200,15 @@
           "id": "CT_1_1"
         },
         {
-          "question": "What had the engineer done two days before the work began?",
+          "question": "What did the supervisor insist about safety?",
           "options": [
-            "He explained the safety instructions",
-            "He checked the transport arrangements",
-            "He prepared the concrete",
-            "He ignored the safety instructions"
+            "Workers should sometimes remove helmets",
+            "Only the carpenters should wear boots",
+            "Everyone must keep protective gear on",
+            "Helmets are not required for masons"
           ],
-          "answer": "He explained the safety instructions",
-          "id": "CT_1_2"
+          "answer": "Everyone must keep protective gear on",
+          "id": "CT_1_5"
         },
         {
           "question": "What will the team do tomorrow?",
@@ -220,17 +231,6 @@
           ],
           "answer": "Because the festival deadline is close",
           "id": "CT_1_4"
-        },
-        {
-          "question": "What did the supervisor insist about safety?",
-          "options": [
-            "Workers should sometimes remove helmets",
-            "Only the carpenters should wear boots",
-            "Everyone must keep protective gear on",
-            "Helmets are not required for masons"
-          ],
-          "answer": "Everyone must keep protective gear on",
-          "id": "CT_1_5"
         }
       ]
     },
@@ -484,7 +484,7 @@
         },
         {
           "question": "Who is the trainee preparing the cold room with?",
-          "options": ["Alone", "Other trainees", "Alone", "Other teachers"],
+          "options": ["Alone", "Other trainees", "Section head", "Other teachers"],
           "answer": "Other trainees",
           "id": "FT_2_2"
         },
@@ -759,10 +759,10 @@
           "options": [
             "Cardamom curry and kottu rotti",
             "Hoppers",
-            "Kottu roti and flavoured coffee",
-            "Kottu roti and flavoured tea"
+            "Fish curry and flavoured coffee",
+            "Fish curry and flavoured tea"
           ],
-          "answer": "Kottu roti and flavoured coffee",
+          "answer": "Fish curry and flavoured coffee",
           "id": "MT_2_5"
         }
       ]
