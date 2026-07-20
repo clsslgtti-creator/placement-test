@@ -26,7 +26,7 @@
     },
     {
       "question": "Asoka _____ at seven o'clock.",
-      "options": ["goes up", "gets", "gets up", "get up", "up"],
+      "options": ["go up", "gets", "gets up", "get up", "up"],
       "answer": "gets up",
       "id": "1_5"
     },
@@ -211,7 +211,7 @@
       "id": "1_35"
     },
     {
-      "question": "Have you _____ been on a Roller coaster ride?",
+      "question": "Have you _____ been on a roller coaster ride?",
       "options": ["always", "ever", "soon", "like", "gone"],
       "answer": "ever",
       "id": "1_36"

@@ -13,49 +13,57 @@
             "Hameed works at a bank. He goes to work by bus. He eats lunch at 2 p.m. He is tired.",
             "Hameed works in a bank. He goes to work by bus. He eats lunch at 2 p.m. He is tired.",
             "Hameed works at a bank. He goes to work by bus. He eats his lunch at 2 p.m. He is tired.",
-            "Hameed works in a bank. He goes to work by bus. He eats his lunch at 2 p.m. He is tired."            
+            "Hameed works in a bank. He goes to work by bus. He eats his lunch at 2 p.m. He is tired."
           ],
-          "id": "MT_Example"
+          "id": "GT_Example"
         },
         {
           "question": [
-            "Mr & Mrs. Perera",
-            "shop",
-            "walk",
+            "Mala & Anura",
+            "factory",
+            "lorry",
             "12.30 p.m.",
-            "happy"
+            "busy"
           ],
           "answers": [
-            "Mr. & Mrs. Perera work at a shop. They walk to work. They have lunch at 12.30 p.m. They are happy.",
-            "Mr. & Mrs. Perera work in a shop. They walk to work. They have lunch at 12.30 p.m. They are happy.",
-            "Mr. & Mrs. Perera work at a shop. They walk to work. They have lunch their at 12.30 p.m. They are happy.",
-            "Mr. & Mrs. Perera work in a shop. They walk to work. They have lunch their at 12.30 p.m. They are happy.",
-            "Mr. & Mrs. Perera work at a shop. They walk to work. They eat lunch at 12.30 p.m. They are happy.",
-            "Mr. & Mrs. Perera work in a shop. They walk to work. They eat lunch at 12.30 p.m. They are happy.",
-            "Mr. & Mrs. Perera work at a shop. They walk to work. They eat lunch their at 12.30 p.m. They are happy.",
-            "Mr. & Mrs. Perera work in a shop. They walk to work. They eat lunch their at 12.30 p.m. They are happy."
+            "Mala and Anura work at a factory. They go to work by lorry. They have lunch at 12.30 p.m. They are busy.",
+            "Mala and Anura work in a factory. They go to work by lorry. They have lunch at 12.30 p.m. They are busy.",
+            "Mala and Anura work at a factory. They go to work by lorry. They have their lunch at 12.30 p.m. They are busy.",
+            "Mala and Anura work in a factory. They go to work by lorry. They have their lunch at 12.30 p.m. They are busy.",
+            "Mala and Anura work at a factory. They go to work by lorry. They eat lunch at 12.30 p.m. They are busy.",
+            "Mala and Anura work in a factory. They go to work by lorry. They eat lunch at 12.30 p.m. They are busy.",
+            "Mala and Anura work at a factory. They go to work by lorry. They eat their lunch at 12.30 p.m. They are busy.",
+            "Mala and Anura work in a factory. They go to work by lorry. They eat their lunch at 12.30 p.m. They are busy.",  
+            "Mala & Anura work at a factory. They go to work by lorry. They have lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work in a factory. They go to work by lorry. They have lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work at a factory. They go to work by lorry. They have their lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work in a factory. They go to work by lorry. They have their lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work at a factory. They go to work by lorry. They eat lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work in a factory. They go to work by lorry. They eat lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work at a factory. They go to work by lorry. They eat their lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work in a factory. They go to work by lorry. They eat their lunch at 12.30 p.m. They are busy."
           ],
-          "id": "MT_1_1"
+          "id": "GT_1_1"
         },
         {
           "question": [
-            "Meena",
-            "government office",
-            "train",
-            "12 noon",
-            "stressed"
+            "Thilini",
+            "office",
+            "scooter",
+            "1.15 p.m.",
+            "careful"
           ],
           "answers": [
-            "Meena works at a government office. She goes to work by train. She has lunch at 12 noon. She is stressed.",
-            "Meena works in a government office. She goes to work by train. She has lunch at 12 noon. She is stressed.",
-            "Meena works at a government office. She goes to work by train. She has her lunch at 12 noon. She is stressed.",
-            "Meena works in a government office. She goes to work by train. She has her lunch at 12 noon. She is stressed.",
-            "Meena works at a government office. She goes to work by train. She eats lunch at 12 noon. She is stressed.",
-            "Meena works in a government office. She goes to work by train. She eats lunch at 12 noon. She is stressed.",
-            "Meena works at a government office. She goes to work by train. She eats her lunch at 12 noon. She is stressed.",
-            "Meena works in a government office. She goes to work by train. She eats her lunch at 12 noon. She is stressed."
+            "Thilini works at a office. She goes to work by scooter. She has lunch at 1.15 p.m. She is careful.",
+            "Thilini works in a office. She goes to work by scooter. She has lunch at 1.15 p.m. She is careful.",
+            "Thilini works at a office. She goes to work by scooter. She has her lunch at 1.15 p.m. She is careful.",
+            "Thilini works in a office. She goes to work by scooter. She has her lunch at 1.15 p.m. She is careful.",
+            "Thilini works at a office. She goes to work by scooter. She eats lunch at 1.15 p.m. She is careful.",
+            "Thilini works in a office. She goes to work by scooter. She eats lunch at 1.15 p.m. She is careful.",
+            "Thilini works at a office. She goes to work by scooter. She eats her lunch at 1.15 p.m. She is careful.",
+            "Thilini works in a office. She goes to work by scooter. She eats her lunch at 1.15 p.m. She is careful."
           ],
-          "id": "MT_1_2"
+          "id": "GT_1_2"
         }
       ]
     },
@@ -74,7 +82,9 @@
           ],
           "answers": [
             "The bearings were greased carefully last night.",
-            "Last night the bearings were greased carefully."
+            "The bearings were carefully greased last night.",
+            "Last night the bearings were greased carefully.",
+            "Last night the bearings were carefully greased."
           ],
           "id": "MT_2_1"
         },
@@ -125,43 +135,57 @@
             "Hameed works at a bank. He goes to work by bus. He eats lunch at 2 p.m. He is tired.",
             "Hameed works in a bank. He goes to work by bus. He eats lunch at 2 p.m. He is tired.",
             "Hameed works at a bank. He goes to work by bus. He eats his lunch at 2 p.m. He is tired.",
-            "Hameed works in a bank. He goes to work by bus. He eats his lunch at 2 p.m. He is tired."  
+            "Hameed works in a bank. He goes to work by bus. He eats his lunch at 2 p.m. He is tired."
           ],
-          "id": "AT_Example"
+          "id": "GT_Example"
         },
         {
           "question": [
-            "Ruwan & Amal",
-            "garage",
-            "bicycle",
+            "Mala & Anura",
+            "factory",
+            "lorry",
             "12.30 p.m.",
             "busy"
           ],
           "answers": [
-            "Ruwan and Amal work at a garage. They go to work by bicycle. They have lunch at 12.30 p.m. They are busy.",
-            "Ruwan and Amal work in a garage. They go to work by bicycle. They have lunch at 12.30 p.m. They are busy.",
-            "Ruwan and Amal work at a garage. They go to work by bicycle. They have their lunch at 12.30 p.m. They are busy.",
-            "Ruwan and Amal work in a garage. They go to work by bicycle. They have their lunch at 12.30 p.m. They are busy.",
-            "Ruwan and Amal work at a garage. They go to work by bicycle. They eat lunch at 12.30 p.m. They are busy.",
-            "Ruwan and Amal work in a garage. They go to work by bicycle. They eat lunch at 12.30 p.m. They are busy.",
-            "Ruwan and Amal work at a garage. They go to work by bicycle. They eat their lunch at 12.30 p.m. They are busy.",
-            "Ruwan and Amal work in a garage. They go to work by bicycle. They eat their lunch at 12.30 p.m. They are busy."
+            "Mala and Anura work at a factory. They go to work by lorry. They have lunch at 12.30 p.m. They are busy.",
+            "Mala and Anura work in a factory. They go to work by lorry. They have lunch at 12.30 p.m. They are busy.",
+            "Mala and Anura work at a factory. They go to work by lorry. They have their lunch at 12.30 p.m. They are busy.",
+            "Mala and Anura work in a factory. They go to work by lorry. They have their lunch at 12.30 p.m. They are busy.",
+            "Mala and Anura work at a factory. They go to work by lorry. They eat lunch at 12.30 p.m. They are busy.",
+            "Mala and Anura work in a factory. They go to work by lorry. They eat lunch at 12.30 p.m. They are busy.",
+            "Mala and Anura work at a factory. They go to work by lorry. They eat their lunch at 12.30 p.m. They are busy.",
+            "Mala and Anura work in a factory. They go to work by lorry. They eat their lunch at 12.30 p.m. They are busy.",  
+            "Mala & Anura work at a factory. They go to work by lorry. They have lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work in a factory. They go to work by lorry. They have lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work at a factory. They go to work by lorry. They have their lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work in a factory. They go to work by lorry. They have their lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work at a factory. They go to work by lorry. They eat lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work in a factory. They go to work by lorry. They eat lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work at a factory. They go to work by lorry. They eat their lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work in a factory. They go to work by lorry. They eat their lunch at 12.30 p.m. They are busy."
           ],
-          "id": "AT_1_1"
+          "id": "GT_1_1"
         },
         {
-          "question": ["Kumara", "workshop", "tuk-tuk", "1.00 p.m.", "relaxed"],
-          "answers": [
-            "Kumara works at a workshop. He goes to work by tuk-tuk. He has lunch at 1.00 p.m. He is relaxed.",
-            "Kumara works in a workshop. He goes to work by tuk-tuk. He has lunch at 1.00 p.m. He is relaxed.",
-            "Kumara works at a workshop. He goes to work by tuk-tuk. He has his lunch at 1.00 p.m. He is relaxed.",
-            "Kumara works in a workshop. He goes to work by tuk-tuk. He has his lunch at 1.00 p.m. He is relaxed.",
-            "Kumara works at a workshop. He goes to work by tuk-tuk. He eats lunch at 1.00 p.m. He is relaxed.",
-            "Kumara works in a workshop. He goes to work by tuk-tuk. He eats lunch at 1.00 p.m. He is relaxed.",
-            "Kumara works at a workshop. He goes to work by tuk-tuk. He eats his lunch at 1.00 p.m. He is relaxed.",
-            "Kumara works in a workshop. He goes to work by tuk-tuk. He eats his lunch at 1.00 p.m. He is relaxed."
+          "question": [
+            "Thilini",
+            "office",
+            "scooter",
+            "1.15 p.m.",
+            "careful"
           ],
-          "id": "AT_1_2"
+          "answers": [
+            "Thilini works at a office. She goes to work by scooter. She has lunch at 1.15 p.m. She is careful.",
+            "Thilini works in a office. She goes to work by scooter. She has lunch at 1.15 p.m. She is careful.",
+            "Thilini works at a office. She goes to work by scooter. She has her lunch at 1.15 p.m. She is careful.",
+            "Thilini works in a office. She goes to work by scooter. She has her lunch at 1.15 p.m. She is careful.",
+            "Thilini works at a office. She goes to work by scooter. She eats lunch at 1.15 p.m. She is careful.",
+            "Thilini works in a office. She goes to work by scooter. She eats lunch at 1.15 p.m. She is careful.",
+            "Thilini works at a office. She goes to work by scooter. She eats her lunch at 1.15 p.m. She is careful.",
+            "Thilini works in a office. She goes to work by scooter. She eats her lunch at 1.15 p.m. She is careful."
+          ],
+          "id": "GT_1_2"
         }
       ]
     },
@@ -227,43 +251,57 @@
             "Hameed works at a bank. He goes to work by bus. He eats lunch at 2 p.m. He is tired.",
             "Hameed works in a bank. He goes to work by bus. He eats lunch at 2 p.m. He is tired.",
             "Hameed works at a bank. He goes to work by bus. He eats his lunch at 2 p.m. He is tired.",
-            "Hameed works in a bank. He goes to work by bus. He eats his lunch at 2 p.m. He is tired."  
+            "Hameed works in a bank. He goes to work by bus. He eats his lunch at 2 p.m. He is tired."
           ],
-          "id": "ET_Example"
+          "id": "GT_Example"
         },
         {
           "question": [
-            "Manoj & Sanjeewa",
-            "power plant",
-            "van",
-            "12 noon",
-            "tired"
+            "Mala & Anura",
+            "factory",
+            "lorry",
+            "12.30 p.m.",
+            "busy"
           ],
           "answers": [
-            "Manoj and Sanjeewa work at a power plant. They go to work by van. They have lunch at 12 noon. They are tired.",
-            "Manoj and Sanjeewa work in a power plant. They go to work by van. They have lunch at 12 noon. They are tired.",
-            "Manoj and Sanjeewa work at a power plant. They go to work by van. They have their lunch at 12 noon. They are tired.",
-            "Manoj and Sanjeewa work in a power plant. They go to work by van. They have their lunch at 12 noon. They are tired.",
-            "Manoj and Sanjeewa work at a power plant. They go to work by van. They eat lunch at 12 noon. They are tired.",
-            "Manoj and Sanjeewa work in a power plant. They go to work by van. They eat lunch at 12 noon. They are tired.",
-            "Manoj and Sanjeewa work at a power plant. They go to work by van. They eat their lunch at 12 noon. They are tired.",
-            "Manoj and Sanjeewa work in a power plant. They go to work by van. They eat their lunch at 12 noon. They are tired."
+            "Mala and Anura work at a factory. They go to work by lorry. They have lunch at 12.30 p.m. They are busy.",
+            "Mala and Anura work in a factory. They go to work by lorry. They have lunch at 12.30 p.m. They are busy.",
+            "Mala and Anura work at a factory. They go to work by lorry. They have their lunch at 12.30 p.m. They are busy.",
+            "Mala and Anura work in a factory. They go to work by lorry. They have their lunch at 12.30 p.m. They are busy.",
+            "Mala and Anura work at a factory. They go to work by lorry. They eat lunch at 12.30 p.m. They are busy.",
+            "Mala and Anura work in a factory. They go to work by lorry. They eat lunch at 12.30 p.m. They are busy.",
+            "Mala and Anura work at a factory. They go to work by lorry. They eat their lunch at 12.30 p.m. They are busy.",
+            "Mala and Anura work in a factory. They go to work by lorry. They eat their lunch at 12.30 p.m. They are busy.",  
+            "Mala & Anura work at a factory. They go to work by lorry. They have lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work in a factory. They go to work by lorry. They have lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work at a factory. They go to work by lorry. They have their lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work in a factory. They go to work by lorry. They have their lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work at a factory. They go to work by lorry. They eat lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work in a factory. They go to work by lorry. They eat lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work at a factory. They go to work by lorry. They eat their lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work in a factory. They go to work by lorry. They eat their lunch at 12.30 p.m. They are busy."
           ],
-          "id": "ET_1_1"
+          "id": "GT_1_1"
         },
         {
-          "question": ["Nirmala", "workshop", "bus", "12.45 p.m.", "cheerful"],
-          "answers": [
-            "Nirmala works at a workshop. She goes to work by bus. She has lunch at 12.45 p.m. She is cheerful.",
-            "Nirmala works in a workshop. She goes to work by bus. She has lunch at 12.45 p.m. She is cheerful.",
-            "Nirmala works at a workshop. She goes to work by bus. She has her lunch at 12.45 p.m. She is cheerful.",
-            "Nirmala works in a workshop. She goes to work by bus. She has her lunch at 12.45 p.m. She is cheerful.",
-            "Nirmala works at a workshop. She goes to work by bus. She eats lunch at 12.45 p.m. She is cheerful.",
-            "Nirmala works in a workshop. She goes to work by bus. She eats lunch at 12.45 p.m. She is cheerful.",
-            "Nirmala works at a workshop. She goes to work by bus. She eats her lunch at 12.45 p.m. She is cheerful.",
-            "Nirmala works in a workshop. She goes to work by bus. She eats her lunch at 12.45 p.m. She is cheerful."
+          "question": [
+            "Thilini",
+            "office",
+            "scooter",
+            "1.15 p.m.",
+            "careful"
           ],
-          "id": "ET_1_2"
+          "answers": [
+            "Thilini works at a office. She goes to work by scooter. She has lunch at 1.15 p.m. She is careful.",
+            "Thilini works in a office. She goes to work by scooter. She has lunch at 1.15 p.m. She is careful.",
+            "Thilini works at a office. She goes to work by scooter. She has her lunch at 1.15 p.m. She is careful.",
+            "Thilini works in a office. She goes to work by scooter. She has her lunch at 1.15 p.m. She is careful.",
+            "Thilini works at a office. She goes to work by scooter. She eats lunch at 1.15 p.m. She is careful.",
+            "Thilini works in a office. She goes to work by scooter. She eats lunch at 1.15 p.m. She is careful.",
+            "Thilini works at a office. She goes to work by scooter. She eats her lunch at 1.15 p.m. She is careful.",
+            "Thilini works in a office. She goes to work by scooter. She eats her lunch at 1.15 p.m. She is careful."
+          ],
+          "id": "GT_1_2"
         }
       ]
     },
@@ -323,9 +361,9 @@
             "Hameed works at a bank. He goes to work by bus. He eats lunch at 2 p.m. He is tired.",
             "Hameed works in a bank. He goes to work by bus. He eats lunch at 2 p.m. He is tired.",
             "Hameed works at a bank. He goes to work by bus. He eats his lunch at 2 p.m. He is tired.",
-            "Hameed works in a bank. He goes to work by bus. He eats his lunch at 2 p.m. He is tired."  
+            "Hameed works in a bank. He goes to work by bus. He eats his lunch at 2 p.m. He is tired."
           ],
-          "id": "FT_Example"
+          "id": "GT_Example"
         },
         {
           "question": [
@@ -343,29 +381,37 @@
             "Mala and Anura work at a factory. They go to work by lorry. They eat lunch at 12.30 p.m. They are busy.",
             "Mala and Anura work in a factory. They go to work by lorry. They eat lunch at 12.30 p.m. They are busy.",
             "Mala and Anura work at a factory. They go to work by lorry. They eat their lunch at 12.30 p.m. They are busy.",
-            "Mala and Anura work in a factory. They go to work by lorry. They eat their lunch at 12.30 p.m. They are busy."
+            "Mala and Anura work in a factory. They go to work by lorry. They eat their lunch at 12.30 p.m. They are busy.",  
+            "Mala & Anura work at a factory. They go to work by lorry. They have lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work in a factory. They go to work by lorry. They have lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work at a factory. They go to work by lorry. They have their lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work in a factory. They go to work by lorry. They have their lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work at a factory. They go to work by lorry. They eat lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work in a factory. They go to work by lorry. They eat lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work at a factory. They go to work by lorry. They eat their lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work in a factory. They go to work by lorry. They eat their lunch at 12.30 p.m. They are busy."
           ],
-          "id": "FT_1_1"
+          "id": "GT_1_1"
         },
         {
           "question": [
-            "Nadeesha",
-            "kitchen",
+            "Thilini",
+            "office",
             "scooter",
             "1.15 p.m.",
             "careful"
           ],
           "answers": [
-            "Nadeesha works at a kitchen. She goes to work by scooter. She has lunch at 1.15 p.m. She is careful.",
-            "Nadeesha works in a kitchen. She goes to work by scooter. She has lunch at 1.15 p.m. She is careful.",
-            "Nadeesha works at a kitchen. She goes to work by scooter. She has her lunch at 1.15 p.m. She is careful.",
-            "Nadeesha works in a kitchen. She goes to work by scooter. She has her lunch at 1.15 p.m. She is careful.",
-            "Nadeesha works at a kitchen. She goes to work by scooter. She eats lunch at 1.15 p.m. She is careful.",
-            "Nadeesha works in a kitchen. She goes to work by scooter. She eats lunch at 1.15 p.m. She is careful.",
-            "Nadeesha works at a kitchen. She goes to work by scooter. She eats her lunch at 1.15 p.m. She is careful.",
-            "Nadeesha works in a kitchen. She goes to work by scooter. She eats her lunch at 1.15 p.m. She is careful."
+            "Thilini works at a office. She goes to work by scooter. She has lunch at 1.15 p.m. She is careful.",
+            "Thilini works in a office. She goes to work by scooter. She has lunch at 1.15 p.m. She is careful.",
+            "Thilini works at a office. She goes to work by scooter. She has her lunch at 1.15 p.m. She is careful.",
+            "Thilini works in a office. She goes to work by scooter. She has her lunch at 1.15 p.m. She is careful.",
+            "Thilini works at a office. She goes to work by scooter. She eats lunch at 1.15 p.m. She is careful.",
+            "Thilini works in a office. She goes to work by scooter. She eats lunch at 1.15 p.m. She is careful.",
+            "Thilini works at a office. She goes to work by scooter. She eats her lunch at 1.15 p.m. She is careful.",
+            "Thilini works in a office. She goes to work by scooter. She eats her lunch at 1.15 p.m. She is careful."
           ],
-          "id": "FT_1_2"
+          "id": "GT_1_2"
         }
       ]
     },
@@ -429,43 +475,57 @@
             "Hameed works at a bank. He goes to work by bus. He eats lunch at 2 p.m. He is tired.",
             "Hameed works in a bank. He goes to work by bus. He eats lunch at 2 p.m. He is tired.",
             "Hameed works at a bank. He goes to work by bus. He eats his lunch at 2 p.m. He is tired.",
-            "Hameed works in a bank. He goes to work by bus. He eats his lunch at 2 p.m. He is tired."  
+            "Hameed works in a bank. He goes to work by bus. He eats his lunch at 2 p.m. He is tired."
           ],
-          "id": "CT_Example"
+          "id": "GT_Example"
         },
         {
           "question": [
-            "Sunil & Ajith",
-            "government hospital",
-            "bicycle",
-            "12.45 p.m.",
-            "energetic"
+            "Mala & Anura",
+            "factory",
+            "lorry",
+            "12.30 p.m.",
+            "busy"
           ],
           "answers": [
-            "Sunil and Ajith work at a government hospital. They go to work by bicycle. They have lunch at 12.45 p.m. They are energetic.",
-            "Sunil and Ajith work in a government hospital. They go to work by bicycle. They have lunch at 12.45 p.m. They are energetic.",
-            "Sunil and Ajith work at a government hospital. They go to work by bicycle. They have their lunch at 12.45 p.m. They are energetic.",
-            "Sunil and Ajith work in a government hospital. They go to work by bicycle. They have their lunch at 12.45 p.m. They are energetic.",
-            "Sunil and Ajith work at a government hospital. They go to work by bicycle. They eat lunch at 12.45 p.m. They are energetic.",
-            "Sunil and Ajith work in a government hospital. They go to work by bicycle. They eat lunch at 12.45 p.m. They are energetic.",
-            "Sunil and Ajith work at a government hospital. They go to work by bicycle. They eat their lunch at 12.45 p.m. They are energetic.",
-            "Sunil and Ajith work in a government hospital. They go to work by bicycle. They eat their lunch at 12.45 p.m. They are energetic."
+            "Mala and Anura work at a factory. They go to work by lorry. They have lunch at 12.30 p.m. They are busy.",
+            "Mala and Anura work in a factory. They go to work by lorry. They have lunch at 12.30 p.m. They are busy.",
+            "Mala and Anura work at a factory. They go to work by lorry. They have their lunch at 12.30 p.m. They are busy.",
+            "Mala and Anura work in a factory. They go to work by lorry. They have their lunch at 12.30 p.m. They are busy.",
+            "Mala and Anura work at a factory. They go to work by lorry. They eat lunch at 12.30 p.m. They are busy.",
+            "Mala and Anura work in a factory. They go to work by lorry. They eat lunch at 12.30 p.m. They are busy.",
+            "Mala and Anura work at a factory. They go to work by lorry. They eat their lunch at 12.30 p.m. They are busy.",
+            "Mala and Anura work in a factory. They go to work by lorry. They eat their lunch at 12.30 p.m. They are busy.",  
+            "Mala & Anura work at a factory. They go to work by lorry. They have lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work in a factory. They go to work by lorry. They have lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work at a factory. They go to work by lorry. They have their lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work in a factory. They go to work by lorry. They have their lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work at a factory. They go to work by lorry. They eat lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work in a factory. They go to work by lorry. They eat lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work at a factory. They go to work by lorry. They eat their lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work in a factory. They go to work by lorry. They eat their lunch at 12.30 p.m. They are busy."
           ],
-          "id": "CT_1_1"
+          "id": "GT_1_1"
         },
         {
-          "question": ["Priyantha", "bank", "motorbike", "1.00 p.m.", "tired"],
-          "answers": [
-            "Priyantha works at a bank. He goes to work by motorbike. He has lunch at 1.00 p.m. He is tired.",
-            "Priyantha works in a bank. He goes to work by motorbike. He has lunch at 1.00 p.m. He is tired.",
-            "Priyantha works at a bank. He goes to work by motorbike. He has his lunch at 1.00 p.m. He is tired.",
-            "Priyantha works in a bank. He goes to work by motorbike. He has his lunch at 1.00 p.m. He is tired.",
-            "Priyantha works at a bank. He goes to work by motorbike. He eats lunch at 1.00 p.m. He is tired.",
-            "Priyantha works in a bank. He goes to work by motorbike. He eats lunch at 1.00 p.m. He is tired.",
-            "Priyantha works at a bank. He goes to work by motorbike. He eats his lunch at 1.00 p.m. He is tired.",
-            "Priyantha works in a bank. He goes to work by motorbike. He eats his lunch at 1.00 p.m. He is tired."
+          "question": [
+            "Thilini",
+            "office",
+            "scooter",
+            "1.15 p.m.",
+            "careful"
           ],
-          "id": "CT_1_2"
+          "answers": [
+            "Thilini works at a office. She goes to work by scooter. She has lunch at 1.15 p.m. She is careful.",
+            "Thilini works in a office. She goes to work by scooter. She has lunch at 1.15 p.m. She is careful.",
+            "Thilini works at a office. She goes to work by scooter. She has her lunch at 1.15 p.m. She is careful.",
+            "Thilini works in a office. She goes to work by scooter. She has her lunch at 1.15 p.m. She is careful.",
+            "Thilini works at a office. She goes to work by scooter. She eats lunch at 1.15 p.m. She is careful.",
+            "Thilini works in a office. She goes to work by scooter. She eats lunch at 1.15 p.m. She is careful.",
+            "Thilini works at a office. She goes to work by scooter. She eats her lunch at 1.15 p.m. She is careful.",
+            "Thilini works in a office. She goes to work by scooter. She eats her lunch at 1.15 p.m. She is careful."
+          ],
+          "id": "GT_1_2"
         }
       ]
     },
@@ -484,7 +544,9 @@
           ],
           "answers": [
             "The bricks were stacked neatly this morning.",
-            "This morning the bricks were stacked neatly."
+            "The bricks were neatly stacked this morning.",
+            "This morning the bricks were stacked neatly.",
+            "This morning the bricks were neatly stacked."
           ],
           "id": "CT_2_1"
         },
@@ -528,43 +590,57 @@
             "Hameed works at a bank. He goes to work by bus. He eats lunch at 2 p.m. He is tired.",
             "Hameed works in a bank. He goes to work by bus. He eats lunch at 2 p.m. He is tired.",
             "Hameed works at a bank. He goes to work by bus. He eats his lunch at 2 p.m. He is tired.",
-            "Hameed works in a bank. He goes to work by bus. He eats his lunch at 2 p.m. He is tired."  
+            "Hameed works in a bank. He goes to work by bus. He eats his lunch at 2 p.m. He is tired."
           ],
-          "id": "ICT_Example"
+          "id": "GT_Example"
         },
         {
           "question": [
-            "Anil & Kasun",
-            "computer lab",
-            "motorbike",
-            "12 noon",
-            "focused"
+            "Mala & Anura",
+            "factory",
+            "lorry",
+            "12.30 p.m.",
+            "busy"
           ],
           "answers": [
-            "Anil and Kasun work at a computer lab. They go to work by motorbike. They have lunch at 12 noon. They are focused.",
-            "Anil and Kasun work in a computer lab. They go to work by motorbike. They have lunch at 12 noon. They are focused.",
-            "Anil and Kasun work at a computer lab. They go to work by motorbike. They have their lunch at 12 noon. They are focused.",
-            "Anil and Kasun work in a computer lab. They go to work by motorbike. They have their lunch at 12 noon. They are focused.",
-            "Anil and Kasun work at a computer lab. They go to work by motorbike. They eat lunch at 12 noon. They are focused.",
-            "Anil and Kasun work in a computer lab. They go to work by motorbike. They eat lunch at 12 noon. They are focused.",
-            "Anil and Kasun work at a computer lab. They go to work by motorbike. They eat their lunch at 12 noon. They are focused.",
-            "Anil and Kasun work in a computer lab. They go to work by motorbike. They eat their lunch at 12 noon. They are focused."
+            "Mala and Anura work at a factory. They go to work by lorry. They have lunch at 12.30 p.m. They are busy.",
+            "Mala and Anura work in a factory. They go to work by lorry. They have lunch at 12.30 p.m. They are busy.",
+            "Mala and Anura work at a factory. They go to work by lorry. They have their lunch at 12.30 p.m. They are busy.",
+            "Mala and Anura work in a factory. They go to work by lorry. They have their lunch at 12.30 p.m. They are busy.",
+            "Mala and Anura work at a factory. They go to work by lorry. They eat lunch at 12.30 p.m. They are busy.",
+            "Mala and Anura work in a factory. They go to work by lorry. They eat lunch at 12.30 p.m. They are busy.",
+            "Mala and Anura work at a factory. They go to work by lorry. They eat their lunch at 12.30 p.m. They are busy.",
+            "Mala and Anura work in a factory. They go to work by lorry. They eat their lunch at 12.30 p.m. They are busy.",  
+            "Mala & Anura work at a factory. They go to work by lorry. They have lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work in a factory. They go to work by lorry. They have lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work at a factory. They go to work by lorry. They have their lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work in a factory. They go to work by lorry. They have their lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work at a factory. They go to work by lorry. They eat lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work in a factory. They go to work by lorry. They eat lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work at a factory. They go to work by lorry. They eat their lunch at 12.30 p.m. They are busy.",
+            "Mala & Anura work in a factory. They go to work by lorry. They eat their lunch at 12.30 p.m. They are busy."
           ],
-          "id": "ICT_1_1"
+          "id": "GT_1_1"
         },
         {
-          "question": ["Anjali", "office", "bus", "1.00 p.m.", "worried"],
-          "answers": [
-            "Anjali works at an office. She goes to work by bus. She has lunch at 1.00 p.m. She is worried.",
-            "Anjali works in an office. She goes to work by bus. She has lunch at 1.00 p.m. She is worried.",
-            "Anjali works at an office. She goes to work by bus. She has her lunch at 1.00 p.m. She is worried.",
-            "Anjali works in an office. She goes to work by bus. She has her lunch at 1.00 p.m. She is worried.",
-            "Anjali works at an office. She goes to work by bus. She eats lunch at 1.00 p.m. She is worried.",
-            "Anjali works in an office. She goes to work by bus. She eats lunch at 1.00 p.m. She is worried.",
-            "Anjali works at an office. She goes to work by bus. She eats her lunch at 1.00 p.m. She is worried.",
-            "Anjali works in an office. She goes to work by bus. She eats her lunch at 1.00 p.m. She is worried."
+          "question": [
+            "Thilini",
+            "office",
+            "scooter",
+            "1.15 p.m.",
+            "careful"
           ],
-          "id": "ICT_1_2"
+          "answers": [
+            "Thilini works at a office. She goes to work by scooter. She has lunch at 1.15 p.m. She is careful.",
+            "Thilini works in a office. She goes to work by scooter. She has lunch at 1.15 p.m. She is careful.",
+            "Thilini works at a office. She goes to work by scooter. She has her lunch at 1.15 p.m. She is careful.",
+            "Thilini works in a office. She goes to work by scooter. She has her lunch at 1.15 p.m. She is careful.",
+            "Thilini works at a office. She goes to work by scooter. She eats lunch at 1.15 p.m. She is careful.",
+            "Thilini works in a office. She goes to work by scooter. She eats lunch at 1.15 p.m. She is careful.",
+            "Thilini works at a office. She goes to work by scooter. She eats her lunch at 1.15 p.m. She is careful.",
+            "Thilini works in a office. She goes to work by scooter. She eats her lunch at 1.15 p.m. She is careful."
+          ],
+          "id": "GT_1_2"
         }
       ]
     },
