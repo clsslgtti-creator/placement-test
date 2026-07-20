@@ -260,7 +260,7 @@
           "id": "CT_2_2"
         },
         {
-          "question": "By which day will the masons start the brickwork?",
+          "question": "By which day should the masons start the brickwork?",
           "options": ["Tuesday", "Wednesday", "Sunday", "Friday"],
           "answer": "Friday",
           "id": "CT_2_3"
@@ -281,7 +281,7 @@
           "options": [
             "A hospital renovation",
             "A school construction",
-            "A hotel in Matara",
+            "A hotel in Colombo",
             "A private school project"
           ],
           "answer": "A school construction",
