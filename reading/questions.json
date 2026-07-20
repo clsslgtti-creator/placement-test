@@ -17,45 +17,45 @@
       {
         "question": "What is the plan for tomorrow?",
         "options": [
-          "Take different bus to Colombo",
-          "Try out the train",
-          "Take the train back to Colombo",
-          "Walk to Galle"
+          "Take different bus to Colombo.",
+          "Try out the train.",
+          "Take the train back to Colombo.",
+          "Walk to Galle."
         ],
-        "answer": "Try out the train",
+        "answer": "Try out the train.",
         "id": "1_2"
       },
       {
         "question": "Why might less luggage be better?",
         "options": [
-          "It was too heavy",
-          "the bus was very crowded",
+          "This time the luggage was too heavy.",
+          "The bus was very crowded.",
           "The student had too many bags.",
           "There was no one to help me with the bags."
         ],
-        "answer": "the bus was very crowded",
+        "answer": "This time the luggage was too heavy.",
         "id": "1_3"
       },
       {
         "question": "What was happening while the student was looking for a seat?",
         "options": [
           "The bus took off.",
-          "Tickets were being sold",
+          "Tickets were being sold.",
           "It was very noisy.",
           "He was thinking about sorting his tickets."
         ],
-        "answer": "Tickets were being sold",
+        "answer": "Tickets were being sold.",
         "id": "1_4"
       },
       {
         "question": "By the end of next month, what will be finished?",
         "options": [
-          "Only one trip",
-          "Many journeys",
-          "A holiday",
-          "Tickets for all the trips"
+          "Only one trip.",
+          "Many journeys.",
+          "A holiday.",
+          "Tickets for all the trips."
         ],
-        "answer": "Many journeys",
+        "answer": "Many journeys.",
         "id": "1_5"
       }
     ]
