@@ -84,8 +84,7 @@ function populateProgramOptions() {
 
 function attachEventListeners() {
   if (elements.startButton) {
-    // single start button click is fine to use once:true
-    elements.startButton.addEventListener("click", handleProgrammeStart, { once: true });
+    elements.startButton.addEventListener("click", handleProgrammeStart);
   }
   if (elements.submitButton) {
     elements.submitButton.addEventListener("click", () => endTest(false), { once: true });

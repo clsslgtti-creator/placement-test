@@ -74,7 +74,7 @@
 
   function attachEventListeners() {
     if (elements.startButton) {
-      elements.startButton.addEventListener("click", handleProgrammeStart, { once: true });
+      elements.startButton.addEventListener("click", handleProgrammeStart);
     }
     if (elements.submitButton) {
       // Single final submit — once is OK
