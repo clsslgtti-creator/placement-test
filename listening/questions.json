@@ -241,11 +241,11 @@
           "question": "What problem did Dilshan find with the scaffolding?",
           "options": [
             "The joints were tight",
-            "The platform was uneven",
+            "A platform was uneven",
             "The screws were rusty",
-            "The platform was shaky"
+            "A platform was shaky"
           ],
-          "answer": "The platform was uneven",
+          "answer": "A platform was uneven",
           "id": "CT_2_1"
         },
         {
@@ -729,7 +729,7 @@
             "Oiling all metal parts in the workshop",
             "Oiling food sorting machines"
           ],
-          "answer": "Oiling food serving machines",
+          "answer": "Oiling food sorting machines",
           "id": "MT_2_2"
         },
         {
